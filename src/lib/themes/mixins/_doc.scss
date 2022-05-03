@@ -1,0 +1,97 @@
+@use "./shadow";
+@use "./section";
+
+@mixin article {
+  @include shadow.strong;
+
+  @include section.width;
+
+  min-height: calc(100vh - var(--nav-height) - 1.45rem);
+
+  @media (min-width: 576px) {
+    aspect-ratio: 210 / 297;
+    min-height: auto;
+  }
+
+  padding: 1.75rem;
+  margin: 0.75rem auto;
+
+  @media (min-width: 768px) {
+    padding: 4.75rem;
+    margin: 0.25rem auto;
+  }
+
+  outline: none;
+
+  white-space: pre-wrap;
+
+  font-size: 125%;
+}
+
+@mixin spacing {
+  > * {
+    margin: 0 auto 1.75rem;
+  }
+
+  > h1,
+  > h2,
+  > h3 {
+    &:not(:first-child) {
+      margin-bottom: 0.45rem;
+    }
+  }
+
+  deckgo-highlight-code,
+  figure {
+    margin: 2rem auto;
+  }
+}
+
+@mixin paragraphs {
+  deckgo-highlight-code {
+    --deckgo-highlight-code-token-atrule: var(--color-primary-opaque);
+    --deckgo-highlight-code-token-comment: var(--color-theme);
+    --deckgo-highlight-code-token-comment-rgb: var(--color-primary-opaque-rgb);
+    --deckgo-highlight-code-token-function: var(--color-secondary);
+    --deckgo-highlight-code-token-operator: var(--color-theme);
+    --deckgo-highlight-code-token-property: var(--color-primary);
+    --deckgo-highlight-code-token-punctuation: var(--color-theme);
+    --deckgo-highlight-code-token-selector: var(--color-primary);
+    --deckgo-highlight-code-token-regex: var(--color-primary);
+    --deckgo-highlight-code-line-height: var(--line-height-title);
+  }
+
+  hr {
+    height: 4em;
+    margin: 0 auto;
+    overflow: visible;
+    position: relative;
+    display: block;
+    border: none;
+    outline: none;
+  }
+
+  hr:before {
+    content: "▪▪▪";
+    display: inline-block;
+    color: black;
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 0.6em;
+    letter-spacing: 0.6em;
+  }
+
+  h1:first-child {
+    @media (min-width: 768px) {
+      font-size: calc(2 * var(--font-size-h1));
+    }
+  }
+}
+
+@mixin placeholder {
+  :global(figcaption:empty:not(:focus):after) {
+    content: "Type caption for image (optional)";
+  }
+}

@@ -1,0 +1,18 @@
+@media print {
+  body {
+    --nav-height: 0 !important;
+  }
+
+  nav {
+    display: none !important;
+  }
+
+  body deckgo-studio-doc article.deckgo-doc {
+    box-shadow: none;
+    border: none;
+  }
+
+  body deckgo-studio-doc stylo-editor {
+    display: none;
+  }
+}

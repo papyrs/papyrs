@@ -1,0 +1,132 @@
+{
+  "core": {
+    "close": "Close",
+    "loading": "Loading...",
+    "in_progress": "In progress...",
+    "yes": "Yes",
+    "no": "No",
+    "reset": "Reset",
+    "ok": "Ok",
+    "save": "Save",
+    "delete": "Delete",
+    "sure": "Are you absolutely sure?",
+    "add": "Add",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "got_it": "Got it",
+    "back": "Back"
+  },
+  "nav": {
+    "menu": "Menu",
+    "sign_out": "Sign out",
+    "sign_in": "Sign in",
+    "ready_to_share": "Ready to share?",
+    "settings": "Settings",
+    "billing": "Billing",
+    "more": "More"
+  },
+  "menu": {
+    "assets": "Assets",
+    "posts": "Posts"
+  },
+  "sign_in": {
+    "title": "Unleash the full power of Papyrs",
+    "overview": "By signing in you can save your posts online, publish them, and more.",
+    "internet_identity": "Sign in with Internet Identity"
+  },
+  "settings": {
+    "cannot_undone": "This action cannot be undone. This will permanently delete your user.",
+    "type_ddg_to_confirm": "Please type {0} to confirm.",
+    "i_understand": "I understand, delete my user",
+    "customization": "Customization",
+    "profile": "Profile",
+    "access_settings": "{0} to access your profile and settings.",
+    "access_posts": "{0} to share your blog posts online.",
+    "access_assets": "{0} to access your online assets (images and data).",
+    "name": "Name",
+    "email": "Email",
+    "newsletter": "Send me newsletter emails",
+    "username": "Username",
+    "danger_zone": "Danger zone",
+    "no_way_back": "Once you delete your user, there is no going back. Please be certain.",
+    "delete_user": "Delete my user",
+    "profile_picture": "Profile picture",
+    "profile_picture_tips": "Tips: a square image is best suited",
+    "summary": "Summary",
+    "bio": "Your short biography or how do you introduce yourself",
+    "custom": "Custom",
+    "custom_url": "Your website or any url (for example: {0})",
+    "switch_theme": "Switch theme colors to {0}"
+  },
+  "dashboard": {
+    "published": "Published",
+    "edited": "Edited"
+  },
+  "editor": {
+    "your_collection_empty": "Your collection is empty.",
+    "languages": "Languages",
+    "language": "Language",
+    "display_line_number": "Display line numbers",
+    "action_cannot_undone": "This action cannot be undone",
+    "delete_question": "Delete?",
+    "code": "Code",
+    "gifs": "GIFs",
+    "stock_photo": "Unsplash",
+    "photos_by_unsplash": "Photos by Unsplash",
+    "searching": "Searching",
+    "help": "Help",
+    "share": "Share",
+    "export": "Export",
+    "search_term": "Search term",
+    "upload_image": "Upload a new image",
+    "unplash_credit": "Photo by {0} on {1}"
+  },
+  "publish_done": {
+    "hooray": "Hooray",
+    "did_it": "You did it",
+    "applause": "Applause",
+    "thumbs_up": "Thumbs up",
+    "post_published": "Your article has been published.",
+    "share": "{0} it with the world!"
+  },
+  "publish_edit": {
+    "title_max_chars": "The title should be provided with latin characters, arabic numerals, spaces and dash. It must not be longer than {0} characters.",
+    "description": "Description (optional)",
+    "tags": "Tags (optional)",
+    "title": "Title",
+    "publish_now": "Publish",
+    "canonical_url": "Canonical URL (optional)"
+  },
+  "tools": {
+    "new": "New",
+    "open": "Open",
+    "user": "User",
+    "profile_image": "Profile image"
+  },
+  "sync": {
+    "cloud": "Cloud",
+    "cloud_error": "Cloud sync encountered an error",
+    "cloud_in_progress": "Saving...",
+    "cloud_idle": "All changes saved.",
+    "cloud_pending": "Saving...",
+    "cloud_init": "Initializing...",
+    "info": "Every change that you make is automatically saved to your cloud.",
+    "status": "Cloud Status",
+    "wait": "Wait until your cloud is synced."
+  },
+  "links": {
+    "terms_of_use": "Terms of use",
+    "privacy_policy": "Privacy Policy"
+  },
+  "share": {
+    "content_by": "{0} by {1} created with {2}",
+    "content_no_author": "{0} created with {1}",
+    "a_blog_post": "A blog post"
+  },
+  "billing": {
+    "beta": "While in beta, Papyrs can be used free of charge. Ultimately we will introduce a subscription model and options that will allow you to monetize your content.",
+    "smart_contracts": "Smart contracts",
+    "principal_id": "Your principal id",
+    "cycles": "{0} are used to pay for running your canister smart contracts which hold your data and provide your blog posts on the web. If you ever get too few computing power, reach out on {1}."
+  }
+}

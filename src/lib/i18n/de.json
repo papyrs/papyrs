@@ -1,0 +1,132 @@
+{
+  "core": {
+    "close": "Schließen",
+    "loading": "Laden...",
+    "in_progress": "Wird bearbeitet...",
+    "yes": "Ja",
+    "no": "Nein",
+    "reset": "Zurücksetzen",
+    "ok": "Ok",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "sure": "Bist du ganz sicher?",
+    "add": "Hinzufügen",
+    "submit": "Submit",
+    "cancel": "Abbrechen",
+    "got_it": "Verstanden",
+    "back": "Zurück"
+  },
+  "nav": {
+    "menu": "Menu",
+    "sign_out": "Ausloggen",
+    "sign_in": "Einloggen",
+    "ready_to_share": "Bereit zum Teilen?",
+    "settings": "Einstellungen",
+    "billing": "Abrechnung",
+    "more": "Mehr"
+  },
+  "menu": {
+    "assets": "Medien",
+    "posts": "Posts"
+  },
+  "sign_in": {
+    "title": "Unleash the full power of Papyrs",
+    "overview": "Wenn du dich anmeldest, kannst du deine Beiträge online speichern, veröffentlichen und vieles mehr.",
+    "internet_identity": "Log in mit Internet Identity"
+  },
+  "settings": {
+    "cannot_undone": "Diese Aktion kann nicht rückgängig gemacht werden. Damit wird deinen Benutzer dauerhaft gelöscht.",
+    "type_ddg_to_confirm": "Gib {0} zur Bestätigung ein.",
+    "i_understand": "Ich verstehe, lösche meinen Account.",
+    "customization": "Anpassen",
+    "profile": "Profil",
+    "access_settings": "{0} um zu deinem Profil und Einstellungen zu gelangen.",
+    "access_posts": "{0} um deine Blogbeiträge Online zu teilen.",
+    "access_assets": "{0} um auf Ihren Online-Medien zuzugreifen (Bilder und Daten).",
+    "name": "Name",
+    "email": "Email",
+    "newsletter": "Schicke mir den Newsletter",
+    "username": "Nutzername",
+    "danger_zone": "Gefahrenzone",
+    "no_way_back": "Sobald dein Account gelöscht wurde, gibt es kein zurück. Bitte, sei sicher.",
+    "delete_user": "Lösche meinen Account",
+    "profile_picture": "Profilbild",
+    "profile_picture_tips": "Tipp: ein quadratisches Bild ist am besten geeignet",
+    "summary": "Zusammenfassung",
+    "bio": "Deine Kurz-Biografie oder wie stellst du dich vor",
+    "custom": "Benutzerdefiniert",
+    "custom_url": "Deine Website oder URL (zum Beispiel: {0})",
+    "switch_theme": "Schalte die Themenfarben um {0}"
+  },
+  "dashboard": {
+    "published": "Veröffentlicht am",
+    "edited": "Bearbeitet am"
+  },
+  "editor": {
+    "your_collection_empty": "Deine Sammlung ist leer.",
+    "languages": "Sprachen",
+    "language": "Sprache",
+    "display_line_number": "Zeige Zeilennummern",
+    "action_cannot_undone": "Diese Aktion kann nicht rückgängig gemacht werden",
+    "delete_question": "Löschen?",
+    "code": "Code",
+    "gifs": "GIFs",
+    "stock_photo": "Unsplash",
+    "photos_by_unsplash": "Fotos von Unsplash",
+    "searching": "Suchen",
+    "help": "Hilfe",
+    "share": "Teilen",
+    "export": "Export",
+    "search_term": "Suchbegriff",
+    "upload_image": "Lade neues Bild hoch",
+    "unplash_credit": "Photo by {0} on {1}"
+  },
+  "publish_done": {
+    "hooray": "Hurra",
+    "did_it": "Du hast es geschafft!",
+    "applause": "Applaus",
+    "thumbs_up": "Daumen hoch",
+    "post_published": "Dein Beitrag wurde veröffentlicht.",
+    "share": "{0} es mit der Welt!"
+  },
+  "publish_edit": {
+    "title_max_chars": "Der Titel darf Buchstaben, Zahlen, Leerzeichen und Bindestriche beinhalten und darf nicht länger als {0} Zeichen sein.",
+    "description": "Beschreibung (Optional)",
+    "tags": "Tags (Optional)",
+    "title": "Titel",
+    "publish_now": "Veröffentlichen",
+    "canonical_url": "Canonical URL (Optional)"
+  },
+  "tools": {
+    "new": "Neu",
+    "open": "Öffnen",
+    "user": "Benutzer*in",
+    "profile_image": "Profilbild"
+  },
+  "sync": {
+    "cloud": "Cloud",
+    "cloud_error": "Bei der Cloud-Synchronisierung ist ein Fehler aufgetreten",
+    "cloud_in_progress": "Wird gespeichert...",
+    "cloud_idle": "In Cloud gespeichert.",
+    "cloud_pending": "Wird gespeichert...",
+    "cloud_init": "Initialisierend...",
+    "info": "Alle Änderungen werden automatisch in dem Cloud gespeichert.",
+    "status": "Cloud Status",
+    "wait": "Warte, bis die letzten Änderungen mit dem Cloud synchronisiert wurden."
+  },
+  "links": {
+    "terms_of_use": "Nutzungsbedingungen",
+    "privacy_policy": "Datenschutzbestimmungen"
+  },
+  "share": {
+    "content_by": "{0} von {1} erstellt mit {2}",
+    "content_no_author": "{0} erstellt mit {1}",
+    "a_blog_post": "Ein Blogbeitrag "
+  },
+  "billing": {
+    "beta": "Während der Betaphase kann Papyrs kostenlos verwendet werden. Letztendlich werden wir ein Subscriptionsmodel und Optionen einführen, mit denen du deine Inhalte monetarisieren kannst.",
+    "smart_contracts": "Smart contracts",
+    "principal_id": "Dein Principal id",
+    "cycles": "{0} werden verwendet, um für die Ausführung deiner Canister Smart Contracts zu bezahlen, die deine Daten enthalten und Blog-Posts im Internet bereitstellen. Wenn du jemals zu wenig Rechenleistung bekommst, wendest du dich an {1}."
+  }
+}

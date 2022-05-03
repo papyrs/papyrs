@@ -1,0 +1,132 @@
+{
+  "core": {
+    "close": "Sluiten",
+    "loading": "Aan het laden...",
+    "in_progress": "Bezig...",
+    "yes": "Ja",
+    "no": "Nee",
+    "reset": "Reset",
+    "ok": "Ok",
+    "save": "Opslaan",
+    "delete": "Verwijderen",
+    "sure": "Weet u het absoluut zeker?",
+    "add": "Toevoegen",
+    "submit": "Versturen",
+    "cancel": "Annuleren",
+    "got_it": "Begrepen",
+    "back": "Rug"
+  },
+  "nav": {
+    "menu": "Menu",
+    "sign_out": "Uitloggen",
+    "sign_in": "Log in",
+    "ready_to_share": "Klaar om te delen?",
+    "settings": "Instellingen",
+    "billing": "Facturering",
+    "more": "Meer"
+  },
+  "menu": {
+    "assets": "Media",
+    "posts": "Posts"
+  },
+  "sign_in": {
+    "title": "Unleash the full power of Papyrs",
+    "overview": "Door u aan te melden kunt u uw berichten online opslaan, publiceren en meer.",
+    "internet_identity": "Log in met Internet Identity"
+  },
+  "settings": {
+    "cannot_undone": "Deze actie kan niet ongedaan gemaakt worden. Hiermee wordt uw gebruiker definitief verwijderd.",
+    "type_ddg_to_confirm": "Typ {0} om te bevestigen.",
+    "i_understand": "Ik begrijp het, verwijder mijn gebruiker",
+    "customization": "Personalisering",
+    "profile": "Profiel",
+    "access_settings": "{0} om toegang te krijgen tot uw profiel en instellingen.",
+    "access_posts": "{0} om uw blogberichten online op te delen.",
+    "access_assets": "{0} om toegang te krijgen tot uw online media (afbeeldingen en gegevens).",
+    "name": "Naam",
+    "email": "E-mail",
+    "newsletter": "Stuur mij nieuwsbrief e-mails",
+    "username": "Gebruikersnaam",
+    "danger_zone": "Gevarenzone",
+    "no_way_back": "Zodra u uw gebruiker verwijdert, is er geen weg meer terug. Wees alstublieft zeker.",
+    "delete_user": "Verwijder mijn gebruiker",
+    "profile_picture": "Profielfoto",
+    "profile_picture_tips": "Tips: vierkante afbeelding is het meest geschikt",
+    "summary": "Samenvatting",
+    "bio": "Uw korte biografie of hoe u uzelf voorstelt",
+    "custom": "Aangepast",
+    "custom_url": "Uw website of elke url (bijvoorbeeld: {0})",
+    "switch_theme": "Themakleuren overschakelen naar {0}"
+  },
+  "dashboard": {
+    "published": "Gepubliceerd",
+    "edited": "Bewerkt"
+  },
+  "editor": {
+    "your_collection_empty": "Uw collectie is leeg",
+    "languages": "Talen",
+    "language": "Taal",
+    "display_line_number": "Geef regelnummers weer",
+    "action_cannot_undone": "Deze actie kan niet ongedaan gemaakt worden",
+    "delete_question": "Verwijderen?",
+    "code": "Code",
+    "gifs": "GIFs",
+    "stock_photo": "Unsplash",
+    "photos_by_unsplash": "Foto's door Unsplash",
+    "searching": "Zoeken",
+    "help": "Help",
+    "share": "Delen",
+    "export": "Exporteren",
+    "search_term": "Zoekterm",
+    "upload_image": "Upload een nieuwe afbeelding",
+    "unplash_credit": "Photo by {0} on {1}"
+  },
+  "publish_done": {
+    "hooray": "Hoera",
+    "did_it": "U hebt het gedaan",
+    "applause": "Applaus",
+    "thumbs_up": "Duimen omhoog",
+    "post_published": "Uw artikel is gepubliceerd.",
+    "share": "{0} met de wereld!"
+  },
+  "publish_edit": {
+    "title_max_chars": "De titel kan bestaan uit Latijnse karakters, Arabische cijfers, spaties en streepjes. Het mag niet langer zijn dan {0} tekens.",
+    "description": "Omschrijving (optioneel)",
+    "tags": "Tags (optioneel)",
+    "title": "Titel",
+    "publish_now": "Publiceer",
+    "canonical_url": "Canonical URL (optioneel)"
+  },
+  "tools": {
+    "new": "Nieuw",
+    "open": "Openen",
+    "user": "Gebruiker",
+    "profile_image": "Profielfoto"
+  },
+  "sync": {
+    "cloud": "Cloud",
+    "cloud_error": "Er is een fout opgetreden bij cloudsynchronisatie",
+    "cloud_in_progress": "Bezig met opslaan...",
+    "cloud_idle": "Alle wijzigingen opgeslagen.",
+    "cloud_pending": "Bezig met opslaan...",
+    "cloud_init": "Initialiseren...",
+    "info": "Elke wijziging die u aanbrengt, wordt automatisch opgeslagen in uw cloud.",
+    "status": "Cloud Status",
+    "wait": "Wacht tot de laatste wijzigingen zijn gesynchroniseerd met uw cloud. "
+  },
+  "links": {
+    "terms_of_use": "Gebruiksvoorwaarden",
+    "privacy_policy": "Privacy Policy"
+  },
+  "share": {
+    "content_by": "{0} door {1} gecreëerd met {2}",
+    "content_no_author": "{0} gecreëerd met {1}",
+    "a_blog_post": "Een blogbericht"
+  },
+  "billing": {
+    "beta": "In bèta kan Papyrs gratis worden gebruikt. Uiteindelijk zullen we een subscription model en opties introduceren waarmee u inkomsten kunt genereren met uw inhoud.",
+    "smart_contracts": "Smart contracts",
+    "principal_id": "Uw principal id",
+    "cycles": "{0} worden gebruikt om te betalen voor het uitvoeren van slimme contracten voor uw bus die uw gegevens bevatten en uw blogberichten op internet aanbieden. Als je ooit te weinig rekenkracht krijgt, neem dan contact op met {1}."
+  }
+}

@@ -1,0 +1,19 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+.idea/
+.vscode/
+.sass-cache/
+node_modules/
+$RECYCLE.BIN/
+
+.DS_Store
+Thumbs.db
+
+.svelte-kit/
+build/
+package/
+
+static/workers

@@ -1,0 +1,54 @@
+<script lang="ts">
+  import {fade, scale} from 'svelte/transition';
+  import {quintOut} from 'svelte/easing';
+  import {i18n} from '$lib/stores/i18n.store';
+  import IconClose from '$lib/components/icons/IconClose.svelte';
+
+  export let visible = false;
+  export let anchor: HTMLElement | undefined;
+  export let direction: 'ltr' | 'rtl' = 'ltr';
+  export let center = false;
+  export let closeButton = false;
+
+  let bottom, left: number;
+
+  const initPosition = () =>
+    ({bottom, left} = anchor ? anchor.getBoundingClientRect() : {bottom: 0, left: 0});
+
+  $: anchor, initPosition();
+
+  const close = () => (visible = false);
+</script>
+
+<svelte:window on:resize={initPosition} />
+
+{#if visible}
+  <div
+    role="menu"
+    aria-orientation="vertical"
+    transition:fade
+    class="popover"
+    style="--popover-top: {`${bottom}px`}; --popover-left: {`${left}px`}">
+    <div class="backdrop" on:click|stopPropagation={() => (visible = false)} />
+    <div
+      transition:scale={{delay: 25, duration: 150, easing: quintOut}}
+      class="wrapper"
+      class:center
+      class:rtl={direction === 'rtl'}>
+      {#if closeButton}
+        <button on:click|stopPropagation={close} aria-label={$i18n.core.close} class="close icon"
+          ><IconClose /></button>
+      {/if}
+
+      <slot />
+    </div>
+  </div>
+{/if}
+
+<style lang="scss">
+  @use '../../themes/mixins/overlay';
+
+  .popover {
+    @include overlay.popover;
+  }
+</style>

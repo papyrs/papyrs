@@ -1,0 +1,22 @@
+{
+  "printWidth": 100,
+  "singleQuote": true,
+  "arrowParens": "always",
+  "bracketSpacing": false,
+  "bracketSameLine": true,
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.scss", "*.css"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
