@@ -20,7 +20,7 @@
   let timer;
   let visible = false;
 
-  onMount(() => (timer = setTimeout(() => (visible = true), 250)));
+  onMount(() => (timer = setTimeout(() => (visible = true), 50)));
   onDestroy(() => clearTimeout(timer));
 </script>
 
