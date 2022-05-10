@@ -15,7 +15,7 @@
 
 ## Papyrs
 
-[Papyrs] is an open-source, privacy-first, decentralized blogging platform that lives 100% on chain. Papyrs runs on [DFINITY](https://dfinity.org/)'s Internet Computer, the world's first blockchain that runs at web speed and serves content on the web.
+[Papyrs] is an open-source, privacy-first, decentralized blogging platform that lives 100% on chain. Papyrs runs on the [Internet Computer](https://smartcontracts.org/), the world's first blockchain that runs at web speed and serves content on the web.
 
 ### Links & Projects
 
