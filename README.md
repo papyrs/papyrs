@@ -7,7 +7,7 @@
 
   <br/>
 
-[![GitHub release](https://img.shields.io/github/release/papyrs/editor/all?logo=GitHub&style=flat-square)](https://github.com/papyrs/papyrs/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/papyrs/papyrs/all?logo=GitHub&style=flat-square)](https://github.com/papyrs/papyrs/releases/latest)
 [![Follow Papyrs on Twitter](https://img.shields.io/twitter/follow/papyrsapp.svg?label=follow+papyrs&logo=twitter&style=flat-square)](https://twitter.com/PapyrsApp)
 [![Chat on Discord](https://img.shields.io/badge/chat-Discord-lightgrey?logo=Discord&style=flat-square)](https://discord.gg/EV76WqDuZW)
 
