@@ -79,7 +79,8 @@
     "export": "Exporteren",
     "search_term": "Zoekterm",
     "upload_image": "Upload een nieuwe afbeelding",
-    "unplash_credit": "Photo by {0} on {1}"
+    "unplash_credit": "Photo by {0} on {1}",
+    "edit_code": "Code bewerken"
   },
   "publish_done": {
     "hooray": "Hoera",

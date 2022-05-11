@@ -79,7 +79,8 @@
     "export": "Export",
     "search_term": "Suchbegriff",
     "upload_image": "Lade neues Bild hoch",
-    "unplash_credit": "Photo by {0} on {1}"
+    "unplash_credit": "Photo by {0} on {1}",
+    "edit_code": "Code bearbeiten"
   },
   "publish_done": {
     "hooray": "Hurra",
