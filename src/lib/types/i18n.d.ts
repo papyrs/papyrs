@@ -89,6 +89,8 @@ interface I18nEditor {
   search_term: string;
   upload_image: string;
   unplash_credit: string;
+  edit_code: string;
+  delete_code: string;
 }
 
 interface I18nPublish_done {
