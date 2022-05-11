@@ -80,7 +80,8 @@
     "search_term": "Término de búsqueda",
     "upload_image": "Subir una nueva imagen",
     "unplash_credit": "Photo by {0} on {1}",
-    "edit_code": "Editar código"
+    "edit_code": "Editar código",
+    "delete_code": "Borrar código"
   },
   "publish_done": {
     "hooray": "Hooray",

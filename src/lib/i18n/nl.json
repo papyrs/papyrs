@@ -80,7 +80,8 @@
     "search_term": "Zoekterm",
     "upload_image": "Upload een nieuwe afbeelding",
     "unplash_credit": "Photo by {0} on {1}",
-    "edit_code": "Code bewerken"
+    "edit_code": "Code bewerken",
+    "delete_code": "Verwijder code"
   },
   "publish_done": {
     "hooray": "Hoera",
