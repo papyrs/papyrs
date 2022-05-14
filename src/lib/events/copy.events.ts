@@ -39,12 +39,16 @@ const clipboardParagraphs = ({range}: {range: Range}): ClipboardItems => {
   const div = document.createElement('div');
   div.appendChild(range.cloneContents());
 
-  // We preserve contenteditable because <figure contenteditable="false" />
+  // We preserve:
+  // - contenteditable because <figure contenteditable="false" />
+  // - custom-loader to lazy load the <deckgo-lazy-img />
   const clean: Node | null = cleanNode({
     node: div,
     deep: true,
     attributes: [
-      ...dirtyAttributes.filter((attr: string) => attr !== 'contenteditable'),
+      ...dirtyAttributes.filter(
+        (attr: string) => !['contenteditable', 'custom-loader'].includes(attr)
+      ),
       'paragraph_id'
     ]
   });
