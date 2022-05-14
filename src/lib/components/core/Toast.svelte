@@ -60,14 +60,17 @@
       max-width: var(--section-max-width);
     }
 
+    background: var(--color-primary);
+    color: var(--color-primary-contrast);
+
     &.error {
       background: var(--color-error);
       color: var(--color-error-contrast);
     }
 
     &.warn {
-      background: var(--color-primary);
-      color: var(--color-primary-contrast);
+      background: var(--color-warning);
+      color: var(--color-warning-contrast);
     }
   }
 

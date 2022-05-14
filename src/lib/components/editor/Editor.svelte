@@ -10,6 +10,7 @@
   import {DocEvents, loadDoc, resetDoc} from '@deckdeckgo/sync';
   import {cleanCopy} from '../../events/copy.events';
   import Quote from '../ui/Quote.svelte';
+  import {cleanPaste} from "../../events/paste.events";
 
   let studioEditorRef: Components.DeckgoStudioDoc | undefined;
 
@@ -83,7 +84,7 @@
 
 <svelte:window on:papyReloadEditor={initNewDoc} on:ddgBusy={onBusy} on:papySignOut={initNewDoc} />
 
-<main on:copy={cleanCopy}>
+<main on:copy={cleanCopy} on:paste={cleanPaste}>
   {#if loaded}
     <deckgo-studio-doc
       bind:this={studioEditorRef}
