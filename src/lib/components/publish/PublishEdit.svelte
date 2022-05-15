@@ -50,7 +50,6 @@
     busy.stop();
   };
 
-  let w: number;
   let title: string | undefined = $doc.doc?.data?.meta?.title ?? $doc.doc?.data?.name;
   let description: string | undefined = $doc.doc?.data?.meta?.description;
   let canonical: string | undefined = $doc.doc?.data?.meta?.canonical;
@@ -70,7 +69,6 @@
 <h1>{$i18n.nav.ready_to_share}</h1>
 
 <form
-  bind:clientWidth={w}
   on:submit={async ($event) => await handleSubmit($event)}
   on:keypress={($event) => {
     $event.key === 'Enter' && $event.preventDefault();

@@ -1,10 +1,10 @@
-import type {EndpointOutput} from '@sveltejs/kit/types/private';
+import type {ResponseBody} from '@sveltejs/kit';
 
 const url = 'https://app.papy.rs/';
 
 const staticPages: string[] = [];
 
-export const get = async (): Promise<EndpointOutput> => {
+export const get = async (): Promise<ResponseBody> => {
   const headers: Record<string, string> = {
     'Cache-Control': 'max-age=3600',
     'Content-Type': 'application/xml'

@@ -1,7 +1,7 @@
 <script lang="ts">
   import Editor from '$lib/components/editor/Editor.svelte';
   import {onDestroy, onMount} from 'svelte';
-  import type {SyncEvent} from '@deckdeckgo/editor/lib/esm/index';
+  import type {SyncEvent} from '@deckdeckgo/editor';
   import Toolbar from '$lib/components/toolbar/Toolbar.svelte';
   import {sync, initSyncState} from '@deckdeckgo/sync';
   import Modals from '$lib/components/modals/Modals.svelte';

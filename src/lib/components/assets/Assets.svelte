@@ -65,7 +65,7 @@
     imageLoadEvents.destroy();
   });
 
-  let empty;
+  let empty: boolean;
   $: empty = items.length === 0;
 </script>
 

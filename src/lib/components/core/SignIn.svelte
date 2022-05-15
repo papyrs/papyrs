@@ -2,7 +2,7 @@
   import I18n from '$lib/components/ui/I18n.svelte';
   import {i18n} from '$lib/stores/i18n.store';
 
-  export let text;
+  export let text: string;
 </script>
 
 <section>

@@ -17,7 +17,7 @@ const initUserStore: UserStore = {
   social: undefined
 };
 
-const start = (set) => {
+const start = (set: (value: UserStore) => void) => {
   let subscriber: () => void | undefined = undefined;
 
   (async () => {

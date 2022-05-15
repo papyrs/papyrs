@@ -10,7 +10,8 @@
   export let center = false;
   export let closeButton = false;
 
-  let bottom, left: number;
+  let bottom: number;
+  let left: number;
 
   const initPosition = () =>
     ({bottom, left} = anchor ? anchor.getBoundingClientRect() : {bottom: 0, left: 0});

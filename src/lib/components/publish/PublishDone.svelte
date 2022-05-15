@@ -1,7 +1,7 @@
 <script lang="ts">
   import {i18n} from '$lib/stores/i18n.store';
   import I18n from '$lib/components/ui/I18n.svelte';
-  import {share} from '$lib/services/share.services.ts';
+  import {share} from '$lib/services/share.services';
 
   const keywordIndex = Math.floor(Math.random() * 4);
 

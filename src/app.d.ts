@@ -1,6 +1,6 @@
 /// <reference types="@sveltejs/kit" />
 
-/*eslint-disable */
+/* eslint-disable */
 
 // See https://kit.svelte.dev/docs/typescript
 // for information about these interfaces
@@ -14,4 +14,20 @@ declare namespace App {
   interface Stuff {}
 }
 
-/*eslint-enable */
+// eslint window checks for custom events
+declare namespace svelte.JSX {
+  interface HTMLAttributes<T> {
+    onddgLog?: (event: any) => any;
+    onddgSignOut?: (event: any) => any;
+    onpapyShare?: (event: any) => any;
+    onsubmit?: (event: any) => any;
+    onpapyPublish?: (event: any) => any;
+    onpapyModal?: (event: any) => any;
+    onpapyReloadEditor?: (event: any) => any;
+    onddgError?: (event: any) => any;
+    onddgBusy?: (event: any) => any;
+    onpapySignOut?: (event: any) => any;
+  }
+}
+
+/* eslint-enable */

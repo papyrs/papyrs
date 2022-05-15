@@ -86,7 +86,7 @@
   onDestroy(() => imageLoadEvents.destroy());
 </script>
 
-<Modal on:papyClose={async () => await close(undefined)} on:introend={() => input?.focus()}>
+<Modal on:papyClose={async () => await close()} on:introend={() => input?.focus()}>
   <span slot="title">
     <slot name="title" />
   </span>

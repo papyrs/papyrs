@@ -6,7 +6,7 @@
   import Assets from '$lib/components/assets/Assets.svelte';
   import type {StorageFile} from '@deckdeckgo/editor';
 
-  const openAsset = ({detail}: StorageFile) => {
+  const openAsset = ({detail}: CustomEvent<StorageFile>) => {
     const {downloadUrl} = detail;
     window.open(downloadUrl, '_blank', 'noopener,noreferrer');
   };

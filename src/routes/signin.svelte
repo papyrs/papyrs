@@ -22,9 +22,7 @@
     loaded = true;
   });
 
-  const onSignInSuccess = async (
-    credentials: {uid: string | undefined; githubAccessToken: string | undefined} | undefined
-  ) => {
+  const onSignInSuccess = async () => {
     await goto('/', {replaceState: true});
 
     await initAuth();

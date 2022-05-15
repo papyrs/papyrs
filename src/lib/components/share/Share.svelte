@@ -10,7 +10,15 @@
   import IconTelegram from '$lib/components/icons/IconTelegram.svelte';
   import {importWebSocialShare} from '$lib/utils/import.utils';
 
-  let webSocialShareRef: HTMLElement | undefined;
+  // For simplicity reason we do not add the lib to the project but only fetch it through a script
+  /*eslint-disable*/
+  interface WebSocialShareHTMLElement extends HTMLElement {
+    show: boolean;
+    share: any;
+  }
+  /* eslint-enable */
+
+  let webSocialShareRef: WebSocialShareHTMLElement | undefined;
 
   let visible = false;
 

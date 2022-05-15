@@ -36,7 +36,7 @@
   };
 </script>
 
-<Modal on:papyClose={async () => await close(undefined)}>
+<Modal on:papyClose={async () => await close()}>
   <span slot="title">
     {$i18n.menu.assets}
   </span>

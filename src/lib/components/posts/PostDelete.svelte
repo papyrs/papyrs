@@ -9,7 +9,6 @@
   export let doc: Doc;
 
   let visible = false;
-  let button: HTMLButtonElement | undefined;
 
   let deleting = false;
 

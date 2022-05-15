@@ -31,7 +31,7 @@
   const filterDoc = ({detail}: CustomEvent<Doc>) =>
     (docs = docs.filter(({id}: Doc) => id !== detail.id));
 
-  let empty;
+  let empty: boolean;
   $: empty = docs.length === 0;
 </script>
 
@@ -39,7 +39,7 @@
   <Spinner />
 {:else if empty}
   <section>
-    <h1>{$i18n.menu.documents}</h1>
+    <h1>{$i18n.menu.posts}</h1>
     <p>{$i18n.editor.your_collection_empty}</p>
   </section>
 {:else}

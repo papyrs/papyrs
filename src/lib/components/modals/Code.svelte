@@ -14,6 +14,7 @@
   // Load workers from unpkg because there is an unresolved issue with Fleek while fetching ts.worker.js
   // Fleek return an error 502 - Internal server error trying to get the file
 
+  /* eslint-disable */
   // @ts-ignore
   self.MonacoEnvironment = self.MonacoEnvironment ?? {
     getWorkerUrl: function (_moduleId, label) {
@@ -42,6 +43,7 @@
       );
     }
   };
+  /* eslint-enable */
 
   const workerImportScript = (url: string): string =>
     `data:text/javascript;charset=utf-8,${encodeURIComponent(`
@@ -77,7 +79,7 @@
     const code: string | undefined = await codeEditor?.save();
 
     await closeEditor();
-    await emitCode({code, language, lineNumbers});
+    emitCode({code, language, lineNumbers});
     dispatch('papyClose');
   };
 

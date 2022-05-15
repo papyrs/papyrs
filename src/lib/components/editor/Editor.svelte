@@ -44,7 +44,7 @@
       i18n: {
         lang: $i18n.lang,
         custom: {...$i18n.editor}
-      } as I18n
+      } as unknown as I18n
     };
 
     if (!studioEditorRef) {

@@ -17,6 +17,7 @@
 
   let index: number = Math.floor(Math.random() * quotes.length);
 
+  // eslint-disable-next-line
   let timer;
   let visible = false;
 

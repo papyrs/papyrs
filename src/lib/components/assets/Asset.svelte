@@ -9,9 +9,8 @@
   export let deleteAsset = true;
 
   let name: string;
-  let downloadUrl: string | undefined;
 
-  $: ({downloadUrl, name} = item);
+  $: ({name} = item);
 </script>
 
 <article role="button" on:click>

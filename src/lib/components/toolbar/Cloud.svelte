@@ -1,7 +1,7 @@
 <script lang="ts">
   import {sync} from '$lib/stores/sync.store';
   import {i18n} from '$lib/stores/i18n.store';
-  import {SvelteComponent} from 'svelte';
+  import type {SvelteComponent} from 'svelte';
   import IconCloud from '$lib/components/icons/IconCloud.svelte';
   import IconSync from '$lib/components/icons/IconSync.svelte';
   import Button from '$lib/components/ui/Button.svelte';
@@ -27,7 +27,7 @@
     }
   };
 
-  const syncIcon = (): SvelteComponent => {
+  const syncIcon = (): typeof SvelteComponent => {
     if (['in_progress', 'pending', 'init'].includes($sync.sync)) {
       return IconSync;
     }
