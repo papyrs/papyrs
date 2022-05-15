@@ -3,6 +3,8 @@
   "compilerOptions": {
     "typeRoots": ["./node_modules/@types", "./node_modules/@deckdeckgo"],
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "module": "es2022",
+    "moduleResolution": "Node"
   }
 }
