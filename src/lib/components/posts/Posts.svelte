@@ -44,7 +44,7 @@
   </section>
 {:else}
   <section class="grid">
-    {#each docs as doc}
+    {#each docs as doc (doc.id)}
       <Post {doc} on:papyDocDeleted={filterDoc} />
     {/each}
   </section>
