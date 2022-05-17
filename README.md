@@ -35,6 +35,9 @@ This repo is the web editor of Papyrs. It can be used as a standalone app but us
 - [Kit](https://github.com/papyrs/kit): the templates for the blog posts we deploy for the users
 - [DeckDeckGo](https://github.com/deckgo/deckdeckgo/): various web components, utilities and the providers for the offline persistence and synchronization of the data
 
+Other handy tools:
+- [Papyrs to markdown](https://chrome.google.com/webstore/detail/papyrs-to-markdown/caacmbgdcjpdpmccocmbiljodkbkjglh): Chrome markdown-plugin that can be used to convert a blog post to markdown
+
 ## Architecture overview
 
 All programs on the Internet Computer are Wasm modules, or canisters (canister smart contracts). The Papyrs web editor is deployed on the IC through [Fleek](https://fleek.co).
