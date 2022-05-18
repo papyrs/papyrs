@@ -15,15 +15,19 @@
 </button>
 
 <Popover bind:visible center={true}>
-  <div class="info">
-    <p>Current edited document cannot be deleted.</p>
+  <div class="content">
+    <p>{$i18n.settings.no_delete}</p>
+
+    <button type="button" on:click|stopPropagation={() => (visible = false)}>
+      {$i18n.core.ok}
+    </button>
   </div>
 </Popover>
 
 <style lang="scss">
   @use '../../themes/mixins/overlay';
 
-  .info {
+  .content {
     @include overlay.content;
   }
 

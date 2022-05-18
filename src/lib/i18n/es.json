@@ -56,7 +56,8 @@
     "bio": "Su breve biografía o cómo se presenta",
     "custom": "Personalizado",
     "custom_url": "Su sitio web o cualquier url (por ejemplo: {0})",
-    "switch_theme": "Cambia los colores del tema a {0}"
+    "switch_theme": "Cambia los colores del tema a {0}",
+    "no_delete": "El documento que se está editando no se puede borrar."
   },
   "dashboard": {
     "published": "Publicado",

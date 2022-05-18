@@ -56,7 +56,8 @@
     "bio": "Deine Kurz-Biografie oder wie stellst du dich vor",
     "custom": "Benutzerdefiniert",
     "custom_url": "Deine Website oder URL (zum Beispiel: {0})",
-    "switch_theme": "Schalte die Themenfarben um {0}"
+    "switch_theme": "Schalte die Themenfarben um {0}",
+    "no_delete": "Das zu bearbeitende Dokument kann nicht gelöscht werden."
   },
   "dashboard": {
     "published": "Veröffentlicht am",

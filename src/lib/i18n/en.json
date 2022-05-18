@@ -56,7 +56,8 @@
     "bio": "Your short biography or how do you introduce yourself",
     "custom": "Custom",
     "custom_url": "Your website or any url (for example: {0})",
-    "switch_theme": "Switch theme colors to {0}"
+    "switch_theme": "Switch theme colors to {0}",
+    "no_delete": "The document that is being edited cannot be deleted."
   },
   "dashboard": {
     "published": "Published",

@@ -23,7 +23,7 @@
     <h3>{$i18n.editor.delete_question}</h3>
 
     <p>
-      <small>{$i18n.editor.action_cannot_undone}</small>
+      {$i18n.editor.action_cannot_undone}
     </p>
 
     <button type="button" on:click|stopPropagation={() => (visible = false)} disabled={deleting}>
