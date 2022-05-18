@@ -29,6 +29,7 @@
     aria-orientation="vertical"
     transition:fade
     class="popover"
+    tabindex="-1"
     style="--popover-top: {`${bottom}px`}; --popover-left: {`${left}px`}">
     <div class="backdrop" on:click|stopPropagation={() => (visible = false)} />
     <div
