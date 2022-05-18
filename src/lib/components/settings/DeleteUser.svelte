@@ -11,7 +11,6 @@
 
   let saving = false;
   let visible = false;
-  let button: HTMLButtonElement | undefined;
 
   let confirmText: string | undefined;
   let validConfirm = false;
@@ -48,12 +47,11 @@
 <button
   type="button"
   disabled={saving || $auth.authUser === null || !$auth.loggedIn}
-  bind:this={button}
   on:click={() => (visible = true)}>
   {$i18n.settings.delete_user}
 </button>
 
-<Popover bind:visible anchor={button} center={true} closeButton={true}>
+<Popover bind:visible center={true} closeButton={true}>
   <div class="content">
     <p>{$i18n.settings.cannot_undone}</p>
 

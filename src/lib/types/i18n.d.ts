@@ -64,6 +64,7 @@ interface I18nSettings {
   custom: string;
   custom_url: string;
   switch_theme: string;
+  no_delete: string;
 }
 
 interface I18nDashboard {

@@ -56,7 +56,8 @@
     "bio": "Uw korte biografie of hoe u uzelf voorstelt",
     "custom": "Aangepast",
     "custom_url": "Uw website of elke url (bijvoorbeeld: {0})",
-    "switch_theme": "Themakleuren overschakelen naar {0}"
+    "switch_theme": "Themakleuren overschakelen naar {0}",
+    "no_delete": "Het document dat wordt bewerkt, kan niet worden verwijderd."
   },
   "dashboard": {
     "published": "Gepubliceerd",

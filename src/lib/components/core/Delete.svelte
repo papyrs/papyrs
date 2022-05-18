@@ -4,8 +4,6 @@
   import IconDelete from '$lib/components/icons/IconDelete.svelte';
   import {createEventDispatcher} from 'svelte';
 
-  let button: HTMLButtonElement | undefined;
-
   export let visible = false;
   export let deleting: boolean;
 
@@ -20,12 +18,12 @@
   <IconDelete />
 </button>
 
-<Popover bind:visible anchor={button} center={true}>
+<Popover bind:visible center={true}>
   <div class="content">
     <h3>{$i18n.editor.delete_question}</h3>
 
     <p>
-      <small>{$i18n.editor.action_cannot_undone}</small>
+      {$i18n.editor.action_cannot_undone}
     </p>
 
     <button type="button" on:click|stopPropagation={() => (visible = false)} disabled={deleting}>

@@ -4,8 +4,8 @@
   import {i18n} from '$lib/stores/i18n.store';
   import IconClose from '$lib/components/icons/IconClose.svelte';
 
+  export let anchor: HTMLElement | undefined = undefined;
   export let visible = false;
-  export let anchor: HTMLElement | undefined;
   export let direction: 'ltr' | 'rtl' = 'ltr';
   export let center = false;
   export let closeButton = false;
@@ -29,6 +29,7 @@
     aria-orientation="vertical"
     transition:fade
     class="popover"
+    tabindex="-1"
     style="--popover-top: {`${bottom}px`}; --popover-left: {`${left}px`}">
     <div class="backdrop" on:click|stopPropagation={() => (visible = false)} />
     <div
