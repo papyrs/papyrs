@@ -11,6 +11,7 @@
   import {busy} from '$lib/stores/busy.store';
   import {toasts} from '$lib/stores/toasts.store';
   import {i18n} from '$lib/stores/i18n.store';
+  import PostNoDelete from './PostNoDelete.svelte';
 
   export let doc: Doc;
 
@@ -42,7 +43,10 @@
   $: shareDoc = doc.data.meta?.published ?? false;
 </script>
 
-<article role="button" on:click={async () => await navigateDoc(doc)} class:active={!deleteDoc}>
+<article
+  role="button"
+  on:click={async () => await navigateDoc(doc)}
+  class:active={!deleteDoc}>
   <div class="info">
     <h3>{doc.data.name}</h3>
 
@@ -60,6 +64,8 @@
 
     {#if deleteDoc}
       <PostDelete {doc} on:papyDocDeleted />
+    {:else}
+      <PostNoDelete />
     {/if}
   </div>
 </article>
