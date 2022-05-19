@@ -27,6 +27,4 @@ export const cleanPaste = ($event: ClipboardEvent) => {
       level: 'warn'
     });
   }
-
-  console.log('1')
 };
