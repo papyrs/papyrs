@@ -18,7 +18,7 @@ npm ci
 
 ## Run locally with offline persistence only
 
-If you are not looking to test or develop any features that requires the IC, you can start the local dev server.
+If you are not looking to test or develop any features that require the IC, you can start the local dev server.
 
 ```
 npm run dev
@@ -54,11 +54,20 @@ Our backend canisters need to be deployed locally and the related providers need
 git clone https://github.com/papyrs/ic
 cd ic
 npm ci
-dfx deploy --no-wallet # if dfx < 0.10.X, add: '--argument null'
+dfx deploy
 npm run start --workspace=providers/ic
 ```
 
-You might get different canister ids for the "manager" and the Internet Identity canisters than the default ones configured in the app. Find the actual IDs in `.dfx/local/canister_ids.json` and adjust it accordingly in the `.env.development` configuration file of the app (keys `VITE_IC_MANAGER_CANISTER_ID` and `VITE_IC_LOCAL_IDENTITY_CANISTER_ID`).
+In addition, you will also need to deploy [Internet Identity](https://github.com/dfinity/internet-identity/) locally:
+
+```
+git clone https://github.com/dfinity/internet-identity
+cd internet-identity/demos/using-dev-build
+npm ci
+dfx deploy --no-wallet --argument '(null)'
+```
+
+You might get different canister ids for the "manager" and the Internet Identity canisters than the default ones configured in the app. Find the actual IDs in related `.dfx/local/canister_ids.json` of each project and adjust it accordingly in the `.env.development` configuration file of the app (keys `VITE_IC_MANAGER_CANISTER_ID` and `VITE_IC_LOCAL_IDENTITY_CANISTER_ID`).
 
 ### Run application
 
