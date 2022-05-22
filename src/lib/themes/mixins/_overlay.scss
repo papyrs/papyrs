@@ -34,7 +34,7 @@
     top: calc(var(--popover-top) + 0.45rem);
     left: var(--popover-left);
 
-    pointer-events: none;
+    cursor: initial;
 
     &.center {
       top: 50%;

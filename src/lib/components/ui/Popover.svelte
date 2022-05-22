@@ -30,7 +30,8 @@
     transition:fade
     class="popover"
     tabindex="-1"
-    style="--popover-top: {`${bottom}px`}; --popover-left: {`${left}px`}">
+    style="--popover-top: {`${bottom}px`}; --popover-left: {`${left}px`}"
+    on:click|stopPropagation>
     <div class="backdrop" on:click|stopPropagation={() => (visible = false)} />
     <div
       transition:scale={{delay: 25, duration: 150, easing: quintOut}}
