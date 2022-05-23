@@ -5,6 +5,7 @@
   import Log from '$lib/components/core/Log.svelte';
   import {i18n} from '$lib/stores/i18n.store';
   import IconClose from '$lib/components/icons/IconClose.svelte';
+  import Version from "./Version.svelte";
 
   let visible: boolean;
   $: visible = $busy !== undefined;
@@ -26,6 +27,10 @@
 
       {#if $busy.log}
         <Log />
+      {/if}
+
+      {#if $busy.log && !$busy.spinner}
+        <Version />
       {/if}
 
       {#if $busy.spinner}
