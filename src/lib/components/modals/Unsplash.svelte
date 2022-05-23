@@ -21,7 +21,7 @@
 
   const registerDownload = async (asset: Image): Promise<void> => {
     await registerUnsplashDownload(asset as UnsplashPhoto);
-  }
+  };
 </script>
 
 <AssetsModal {search} {registerDownload} on:papyClose>

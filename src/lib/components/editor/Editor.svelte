@@ -10,7 +10,7 @@
   import {DocEvents, loadDoc, resetDoc} from '@deckdeckgo/sync';
   import {cleanCopy} from '../../events/copy.events';
   import Quote from '../ui/Quote.svelte';
-  import {cleanPaste} from "../../events/paste.events";
+  import {cleanPaste} from '../../events/paste.events';
 
   let studioEditorRef: Components.DeckgoStudioDoc | undefined;
 

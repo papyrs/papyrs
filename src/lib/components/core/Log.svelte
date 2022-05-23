@@ -2,6 +2,7 @@
   import {logs} from '$lib/stores/logs.store';
   import {afterUpdate} from 'svelte';
   import {round} from '$lib/utils/number.utils';
+  import {APP_VERSION} from '../../constants/constants';
 
   let div: HTMLDivElement | undefined;
 
@@ -13,6 +14,8 @@
     <span>$ {msg} {duration ? `${round(duration / 1000)}s` : ''}</span>
   {/each}
 </div>
+
+<span class="version">Papyrs v{APP_VERSION}</span>
 
 <style lang="scss">
   @use '../../themes/mixins/text';
@@ -42,5 +45,11 @@
     &::-webkit-scrollbar-thumb {
       background-color: black;
     }
+  }
+
+  .version {
+    color: white;
+    font-size: calc(var(--font-size-very-small) * 0.8);
+    margin-top: 0.75rem;
   }
 </style>

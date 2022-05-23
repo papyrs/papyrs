@@ -43,10 +43,7 @@
   $: shareDoc = doc.data.meta?.published ?? false;
 </script>
 
-<article
-  role="button"
-  on:click={async () => await navigateDoc(doc)}
-  class:active={!deleteDoc}>
+<article role="button" on:click={async () => await navigateDoc(doc)} class:active={!deleteDoc}>
   <div class="info">
     <h3>{doc.data.name}</h3>
 

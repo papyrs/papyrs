@@ -30,4 +30,6 @@ declare namespace svelte.JSX {
   }
 }
 
+declare const VITE_APP_VERSION: string;
+
 /* eslint-enable */
