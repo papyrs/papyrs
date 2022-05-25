@@ -58,7 +58,7 @@
     "@deckdeckgo/social-img": "^1.3.0",
     "@deckdeckgo/studio": "^0.0.19",
     "@deckdeckgo/sync": "^0.0.27",
-    "@papyrs/stylo": "^0.0.22-3",
+    "@papyrs/stylo": "^0.0.22-4",
     "@stencil/core": "^2.15.2",
     "web-social-share": "^8.0.1"
   }
