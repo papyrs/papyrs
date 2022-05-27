@@ -133,8 +133,8 @@
 
   &:hover,
   &:focus {
-    color: var(--button-text-color, inherit);
+    color: inherit;
     background: transparent;
-    border-bottom: 1px solid var(--button-text-color, inherit);
+    text-decoration: underline;
   }
 }

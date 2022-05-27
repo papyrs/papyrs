@@ -92,6 +92,6 @@
   }
 
   .text {
-    --button-text-color: white;
+    color: white;
   }
 </style>

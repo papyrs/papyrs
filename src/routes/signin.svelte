@@ -6,6 +6,7 @@
   import Nav from '$lib/components/core/Nav.svelte';
   import Spinner from '$lib/components/ui/Spinner.svelte';
   import {toasts} from '$lib/stores/toasts.store';
+  import WhatsII from "../lib/components/modals/WhatsII.svelte";
 
   let loaded = false;
 
@@ -55,6 +56,8 @@
           <Spinner />
         </div>
       </ic-signin>
+
+      <WhatsII />
     {:else}
       <Spinner />
     {/if}
@@ -64,7 +67,12 @@
 <style lang="scss">
   ic-signin {
     --padding: 3rem;
-    --font-size-very-small: 0.6rem;
+    --font-size-very-small: var(--font-size-ultra-small);
+
+    :global(p.terms) {
+      margin-bottom: 0;
+      padding-bottom: 0.45rem;
+    }
   }
 
   main {
