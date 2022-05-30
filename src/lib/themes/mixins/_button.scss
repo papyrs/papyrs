@@ -131,10 +131,11 @@
   background: transparent;
   color: var(--button-text-color, inherit);
 
+  text-decoration: underline;
+
   &:hover,
   &:focus {
     color: inherit;
     background: transparent;
-    text-decoration: underline;
   }
 }
