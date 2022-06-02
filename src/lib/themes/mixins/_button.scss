@@ -132,6 +132,7 @@
   color: var(--button-text-color, inherit);
 
   text-decoration: underline;
+  text-underline-offset: 0.025rem;
 
   &:hover,
   &:focus {
