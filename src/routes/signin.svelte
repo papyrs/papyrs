@@ -81,6 +81,11 @@
       flex-direction: column;
       justify-content: center;
     }
+
+    @supports (-webkit-touch-callout: none) {
+      padding: inherit;
+      height: -webkit-fill-available;
+    }
   }
 
   section {
