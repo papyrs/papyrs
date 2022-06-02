@@ -99,6 +99,12 @@
     @media (min-width: 768px) {
       flex-grow: unset;
     }
+
+    margin-bottom: 0.25rem;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 
   .sign-in {
