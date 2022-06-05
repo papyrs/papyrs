@@ -1,3 +1,16 @@
+# 0.0.3 (2022-06-05)
+
+### Features
+
+- display a modal that summarizes what is Internet Identity
+
+### Fix
+
+- minor improvements at selecting the placeholders
+- various Stylo patches
+- lazy load all offline images
+- style sign-in screen size on iOS
+
 # 0.0.2 (2022-05-23)
 
 ### Features
