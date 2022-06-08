@@ -47,7 +47,7 @@ The web editor persists blog post data in the browser in [indexedDB](https://dev
 
 ![Architecture with offline data only](/docs/papyrs-architecture-offline.png) <!-- this is an excalidraw.com image, source is docs/papyrs-architecture -->
 
-However, if users are looking to save their data "in the cloud" automatically and looking to share their blog posts online, authentication with [Internet Identity](https://identity.ic0.app/) will be required. Once authenticated each user gets two canisters:
+However, if users are interested in storing their data "in the cloud" automatically and sharing their blog posts online, authentication with [Internet Identity](https://identity.ic0.app/) will be required. Once authenticated each user gets two canisters:
 
 - a private "data" canister that contains raw blog post data, used in the editor, and
 - a "storage" canister that holds and publicly serves blog post and asset data (html, images, js, css, etc).
