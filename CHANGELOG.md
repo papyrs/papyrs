@@ -1,3 +1,9 @@
+# 0.0.3-1 (2022-06-05)
+
+### Build
+
+- bump dependencies and Stylo v0.0.28
+
 # 0.0.3 (2022-06-05)
 
 ### Features
