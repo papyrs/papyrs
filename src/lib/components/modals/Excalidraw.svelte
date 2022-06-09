@@ -5,8 +5,10 @@
   import {importDeckGoExcalidraw} from '$lib/utils/import.utils';
   import {emit} from '$lib/utils/events.utils';
   import type {PapyModalCodeDetail} from '$lib/types/modal';
-  import type {SaveCode} from '$lib/types/code';
   import Spinner from '../ui/Spinner.svelte';
+  import type {StorageFile} from '@deckdeckgo/editor';
+  import {uploadOfflineFile} from '@deckdeckgo/offline';
+  import type {SaveExcalidraw} from '../../types/excalidraw';
 
   let codeEditor: HTMLDeckgoMonacoEditorElement | null;
   let displayEditor = false;
@@ -21,16 +23,24 @@
 
   export let detail: PapyModalCodeDetail | undefined = undefined;
 
+  // TODO: unique filename
+  const blobToFile = (blob: Blob): File => {
+    return new File([blob], 'schema.webp', {lastModified: new Date().getTime(), type: blob.type});
+  };
+
+  // TODO: save data
   const save = async () => {
-    // const code: string | undefined = await codeEditor?.save();
-    //
-    // await closeEditor();
-    // emitCode({code, language, lineNumbers});
+    const blob = await codeEditor.toBlob();
+
+    const imgFile: StorageFile = await uploadOfflineFile(blobToFile(blob), 'images', 10485760);
+
+    await closeEditor();
+    emitCode({imgFile});
     dispatch('papyClose');
   };
 
-  const emitCode = (detail: SaveCode | undefined) =>
-    emit<SaveCode | undefined>({message: 'papySaveCode', detail});
+  const emitCode = (detail: SaveExcalidraw | undefined) =>
+    emit<SaveExcalidraw | undefined>({message: 'papySaveExcalidraw', detail});
 
   const closeEditor = async () => {
     displayEditor = false;
@@ -45,7 +55,6 @@
     emitCode(undefined);
     dispatch('papyClose');
   };
-
 </script>
 
 <Modal on:papyClose={async () => await close()} on:introend={loadEditor}>
