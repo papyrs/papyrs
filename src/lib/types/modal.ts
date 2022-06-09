@@ -6,6 +6,6 @@ export interface PapyModalCodeDetail {
 }
 
 export interface PapyModal {
-  type: 'publish' | 'code' | 'unsplash' | 'tenor' | 'storage';
+  type: 'publish' | 'code' | 'unsplash' | 'tenor' | 'storage' | 'excalidraw';
   detail?: PapyModalCodeDetail;
 }

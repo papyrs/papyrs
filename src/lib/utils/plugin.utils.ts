@@ -131,6 +131,21 @@ export const openNewCodeModal = async ({
   emit<PapyModal>({message: 'papyModal', detail: {type: 'code'}});
 };
 
+export const openExcalidrawModal = async ({
+  pluginParams
+}: {
+  pluginParams: StyloPluginCreateParagraphsParams;
+}) => {
+  document.addEventListener(
+    'papySaveExcalidraw',
+    async ({detail}: CustomEvent<SaveCode | undefined | null>) =>
+      await addCode({pluginParams, detail}),
+    {once: true}
+  );
+
+  emit<PapyModal>({message: 'papyModal', detail: {type: 'excalidraw'}});
+};
+
 const addImage = async ({
   detail,
   pluginParams

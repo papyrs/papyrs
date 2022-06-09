@@ -125,18 +125,16 @@
 
         <CodeLineNumbers bind:lineNumbers on:papyLineNumbers={updateLineNumbers} />
       </div>
-
-      <div class="actions">
-        <button type="button" on:click={save}>
-          {$i18n.core.save}
-        </button>
-      </div>
-    {/if}
-
-    {#if loading}
-      <Spinner />
     {/if}
   </section>
+
+  <button type="button" slot="footer" on:click={save} disabled={!displayEditor}>
+    {$i18n.core.save}
+  </button>
+
+  {#if loading}
+    <Spinner />
+  {/if}
 </Modal>
 
 <style lang="scss">
@@ -145,7 +143,7 @@
   section {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: calc(100% - (2 * 1.45rem) - 80px - 60px) 80px 60px;
+    grid-template-rows: calc(100% - (2 * 1.45rem) - 80px) 80px;
     grid-gap: 1.45rem;
 
     height: calc(100% - (2 * 1.45rem));
@@ -154,7 +152,7 @@
     @media (min-width: 768px) {
       --grid-code-width: calc(100% - 1.45rem);
       grid-template-columns: calc(var(--grid-code-width) * 0.8) calc(var(--grid-code-width) * 0.2);
-      grid-template-rows: repeat(2, auto);
+      grid-template-rows: auto;
     }
   }
 
@@ -162,15 +160,6 @@
     display: block;
 
     @include shadow.strong;
-  }
-
-  .actions {
-    display: flex;
-    justify-content: center;
-
-    @media (min-width: 768px) {
-      grid-column: 1 / 3;
-    }
   }
 
   .options {
