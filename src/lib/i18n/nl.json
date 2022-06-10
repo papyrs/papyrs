@@ -82,7 +82,8 @@
     "upload_image": "Upload een nieuwe afbeelding",
     "unplash_credit": "Photo by {0} on {1}",
     "edit_code": "Code bewerken",
-    "delete_code": "Verwijder code"
+    "delete_code": "Verwijder code",
+    "edit_excalidraw": "Excalidraw bewerken"
   },
   "publish_done": {
     "hooray": "Hoera",
