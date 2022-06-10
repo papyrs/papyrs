@@ -29,7 +29,7 @@
 
   // TODO: save data
   const save = async () => {
-    const filename = `excalidraw-${new Date().getTime()};`;
+    const filename = `excalidraw-${new Date().getTime()}`;
 
     const blob: Blob = await codeEditor.toBlob();
     const imgFile: StorageFile = await uploadOfflineFile(
