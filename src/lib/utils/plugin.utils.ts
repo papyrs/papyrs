@@ -131,7 +131,7 @@ const addExcalidraw = ({
 
   const {container, paragraph} = pluginParams;
 
-  const {imgFile} = detail;
+  const {imgFile, dataFile} = detail;
 
   const deckgoImg = document.createElement('deckgo-lazy-img');
 
@@ -139,6 +139,8 @@ const addExcalidraw = ({
     element: deckgoImg,
     image: imgFile
   });
+
+  img.setAttribute('data-src', dataFile.downloadUrl);
 
   transformParagraph({
     elements: [img, createEmptyElement({nodeName: 'div'})],

@@ -23,19 +23,30 @@
 
   export let detail: PapyModalCodeDetail | undefined = undefined;
 
-  // TODO: unique filename
-  const blobToFile = (blob: Blob): File => {
-    return new File([blob], 'schema.webp', {lastModified: new Date().getTime(), type: blob.type});
+  const blobToFile = ({blob, filename}: {blob: Blob; filename: string}): File => {
+    return new File([blob], filename, {lastModified: new Date().getTime(), type: blob.type});
   };
 
   // TODO: save data
   const save = async () => {
-    const blob = await codeEditor.toBlob();
+    const filename = `excalidraw-${new Date().getTime()};`;
 
-    const imgFile: StorageFile = await uploadOfflineFile(blobToFile(blob), 'images', 10485760);
+    const blob: Blob = await codeEditor.toBlob();
+    const imgFile: StorageFile = await uploadOfflineFile(
+      blobToFile({blob, filename: `${filename}.webp`}),
+      'images',
+      10485760
+    );
+
+    const data: Blob = await codeEditor.getData();
+    const dataFile: StorageFile = await uploadOfflineFile(
+      blobToFile({blob: data, filename: `${filename}.json`}),
+      'data',
+      10485760
+    );
 
     await closeEditor();
-    emitCode({imgFile});
+    emitCode({imgFile, dataFile});
     dispatch('papyClose');
   };
 
