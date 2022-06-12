@@ -48,7 +48,7 @@ const config = {
           ],
           'manifest-src': ['self'],
           'style-src': ['self', 'unsafe-inline', 'https://cdn.papy.rs'],
-          'font-src': ['self'],
+          'font-src': ['self', 'https://cdn.papy.rs'],
           'script-src': [
             'self',
             'unsafe-eval',
