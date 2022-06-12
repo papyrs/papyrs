@@ -25,10 +25,14 @@
 
   export let detail: PapyModalExcalidrawDetail | undefined = undefined;
 
+  let dataFilename: string | undefined = undefined;
   let scene;
 
   onMount(async () => {
     const dataSrc: string | undefined = detail?.dataSrc;
+
+    dataFilename = dataSrc?.split('/').pop().split('.').shift();
+
     const data: string | undefined = dataSrc !== undefined ? await fetchAsset(dataSrc) : undefined;
     scene = data !== undefined ? JSON.parse(data, reviver) : undefined;
   });
@@ -37,9 +41,8 @@
     return new File([blob], filename, {lastModified: new Date().getTime(), type: blob.type});
   };
 
-  // TODO: save data
   const save = async () => {
-    const filename = `excalidraw-${new Date().getTime()}`;
+    const filename = dataFilename ?? `excalidraw-${new Date().getTime()}`;
 
     const blob: Blob = await codeEditor.toBlob();
     const imgFile: StorageFile = await uploadOfflineFile(
@@ -56,11 +59,11 @@
     );
 
     await closeEditor();
-    emitCode({imgFile, dataFile});
+    emitExcalidraw({imgFile, dataFile});
     dispatch('papyClose');
   };
 
-  const emitCode = (detail: SaveExcalidraw | undefined) =>
+  const emitExcalidraw = (detail: SaveExcalidraw | undefined) =>
     emit<SaveExcalidraw | undefined>({message: 'papySaveExcalidraw', detail});
 
   const closeEditor = async () => {
@@ -73,7 +76,7 @@
 
   const close = async () => {
     await closeEditor();
-    emitCode(undefined);
+    emitExcalidraw(undefined);
     dispatch('papyClose');
   };
 </script>
