@@ -56,13 +56,6 @@ export const importDeckGoMonacoEditor = async () => {
   defineCustomElement();
 };
 
-export const importWhatIsII = async () => {
-  const {defineCustomElement} = await import(
-      /* @vite-ignore */ '@papyrs/what-is-internet-identity/dist/components/what-is-ii'
-      );
-  defineCustomElement();
-};
-
 export const importDeckGoExcalidraw = async () => {
   const {defineCustomElement} = await import(
       /* @vite-ignore */ '@deckdeckgo/excalidraw/dist/components/deckgo-excalidraw'

@@ -60,7 +60,6 @@
     "@deckdeckgo/studio": "^0.0.21",
     "@deckdeckgo/sync": "^0.0.29",
     "@papyrs/stylo": "^0.0.28",
-    "@papyrs/what-is-internet-identity": "^0.0.2",
     "@stencil/core": "^2.15.2",
     "web-social-share": "^8.0.1"
   }

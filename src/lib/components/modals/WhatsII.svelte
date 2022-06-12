@@ -1,10 +1,6 @@
 <script lang="ts">
   import Modal from '../ui/Modal.svelte';
-  import {importWhatIsII} from '../../utils/import.utils';
-
   let open = false;
-
-  const loadWhatsII = async () => await importWhatIsII();
 </script>
 
 <div>
@@ -12,7 +8,7 @@
 </div>
 
 {#if open}
-  <Modal on:papyClose={() => open = false} on:introend={loadWhatsII} >
+  <Modal on:papyClose={() => (open = false)}>
     <what-is-ii />
   </Modal>
 {/if}
