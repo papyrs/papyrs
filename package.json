@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@deckdeckgo/editor": "^7.11.1",
+    "@deckdeckgo/excalidraw": "^1.0.1",
     "@deckdeckgo/highlight-code": "^4.3.0",
     "@deckdeckgo/monaco-editor": "^1.4.0",
     "@deckdeckgo/offline": "^0.0.6",

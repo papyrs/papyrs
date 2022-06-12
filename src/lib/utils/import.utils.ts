@@ -65,7 +65,7 @@ export const importWhatIsII = async () => {
 
 export const importDeckGoExcalidraw = async () => {
   const {defineCustomElement} = await import(
-      /* @vite-ignore */ 'excalidraw-cmp/dist/components/my-component'
+      /* @vite-ignore */ '@deckdeckgo/excalidraw/dist/components/deckgo-excalidraw'
       );
   defineCustomElement();
 };

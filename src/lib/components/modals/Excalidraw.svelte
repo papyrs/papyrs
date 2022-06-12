@@ -5,14 +5,13 @@
   import {importDeckGoExcalidraw} from '$lib/utils/import.utils';
   import {emit} from '$lib/utils/events.utils';
   import Spinner from '../ui/Spinner.svelte';
-  import type {StorageFile} from '@deckdeckgo/editor';
-  import {uploadOfflineFile} from '@deckdeckgo/offline';
   import type {SaveExcalidraw} from '../../types/excalidraw';
   import type {PapyModalExcalidrawDetail} from '../../types/modal';
-  import {fetchAsset} from '@deckdeckgo/sync';
-  import {reviver} from 'excalidraw-cmp';
+  import type {ExcalidrawScene} from '@deckdeckgo/excalidraw';
+  import {toasts} from '../../stores/toasts.store';
+  import {exportExcalidraw, loadExcalidrawScene} from '../../utils/exclidraw.utils';
 
-  let codeEditor: HTMLDeckgoMonacoEditorElement | null;
+  let excalidraw: HTMLDeckgoExcalidrawElement | null;
   let displayEditor = false;
   let loading = true;
 
@@ -26,43 +25,50 @@
   export let detail: PapyModalExcalidrawDetail | undefined = undefined;
 
   let dataFilename: string | undefined = undefined;
-  let scene;
+  let scene: ExcalidrawScene | undefined = undefined;
 
-  // TODO errors
+  const fetchScene = async (dataSrc: string | undefined) => {
+    try {
+      scene = await loadExcalidrawScene(dataSrc);
+    } catch (err) {
+      scene = undefined;
+
+      toasts.error({
+        text: 'Excalidraw scene cannot be loaded.'
+      });
+    }
+  };
 
   onMount(async () => {
     const dataSrc: string | undefined = detail?.dataSrc;
 
     dataFilename = dataSrc?.split('/').pop().split('.').shift();
 
-    const data: string | undefined = dataSrc !== undefined ? await fetchAsset(dataSrc) : undefined;
-    scene = data !== undefined ? JSON.parse(data, reviver) : undefined;
+    await fetchScene(dataSrc);
   });
 
-  const blobToFile = ({blob, filename}: {blob: Blob; filename: string}): File => {
-    return new File([blob], filename, {lastModified: new Date().getTime(), type: blob.type});
-  };
-
   const save = async () => {
+    if (!excalidraw) {
+      toasts.error({
+        text: 'Excalidraw is not loaded.'
+      });
+
+      return;
+    }
+
     const filename = dataFilename ?? `excalidraw-${new Date().getTime()}`;
 
-    const blob: Blob = await codeEditor.toBlob();
-    const imgFile: StorageFile = await uploadOfflineFile(
-      blobToFile({blob, filename: `${filename}.webp`}),
-      'images',
-      10485760
-    );
+    try {
+      const {imgFile, dataFile} = await exportExcalidraw({excalidraw, filename});
 
-    const data: Blob = await codeEditor.exportScene();
-    const dataFile: StorageFile = await uploadOfflineFile(
-      blobToFile({blob: data, filename: `${filename}.json`}),
-      'data',
-      10485760
-    );
-
-    await closeEditor();
-    emitExcalidraw({imgFile, dataFile});
-    dispatch('papyClose');
+      await closeEditor();
+      emitExcalidraw({imgFile, dataFile});
+      dispatch('papyClose');
+    } catch (err) {
+      toasts.error({
+        text: 'Excalidraw scene cannot be exported.'
+      });
+    }
   };
 
   const emitExcalidraw = (detail: SaveExcalidraw | undefined) =>
@@ -87,10 +93,10 @@
   <span slot="title">Excalidraw</span>
 
   {#if displayEditor}
-    <my-component bind:this={codeEditor} {scene} />
+    <deckgo-excalidraw bind:this={excalidraw} {scene} />
   {/if}
 
-  <button slot="footer" type="button" on:click={save} disabled={!displayEditor}>
+  <button slot="footer" type="button" on:click={save} disabled={!displayEditor || !excalidraw}>
     {$i18n.core.save}
   </button>
 
@@ -102,7 +108,7 @@
 <style lang="scss">
   @use '../../themes/mixins/shadow';
 
-  my-component {
+  deckgo-excalidraw {
     display: block;
 
     @include shadow.strong;
@@ -110,19 +116,5 @@
     :global(.excalidraw .Island) {
       @include shadow.strong;
     }
-  }
-
-  .actions {
-    display: flex;
-    justify-content: center;
-
-    @media (min-width: 768px) {
-      grid-column: 1 / 3;
-    }
-  }
-
-  .options {
-    display: flex;
-    flex-direction: column;
   }
 </style>
