@@ -49,7 +49,12 @@ const config = {
           'manifest-src': ['self'],
           'style-src': ['self', 'unsafe-inline', 'https://cdn.papy.rs'],
           'font-src': ['self'],
-          'script-src': ['self', 'unsafe-eval', 'https://cdn.papy.rs/'],
+          'script-src': [
+            'self',
+            'unsafe-eval',
+            'https://cdn.papy.rs/',
+            'https://tuwbw-byaaa-aaaad-qblpq-cai.raw.ic0.app/'
+          ],
           'connect-src': [
             'https://ic0.app',
             'https://*.raw.ic0.app',
