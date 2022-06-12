@@ -1,6 +1,5 @@
-import {openEditCodeModal} from '$lib/utils/code.utils';
 import type {StyloMenu} from '@papyrs/stylo';
-import {deleteMenuAction, editMenuIcon} from '../utils/menu.utils';
+import {deleteMenuAction, editMenuIcon, openEditExcalidrawModal} from '../utils/menu.utils';
 
 export const excalidrawMenu: StyloMenu = {
   match: ({paragraph}: {paragraph: HTMLElement}) =>
@@ -10,7 +9,7 @@ export const excalidrawMenu: StyloMenu = {
       text: 'edit_excalidraw',
       icon: editMenuIcon,
       action: async ({paragraph}: {paragraph: HTMLElement}) =>
-        openEditCodeModal({highlightCodeElement: paragraph})
+        openEditExcalidrawModal({lazyImgElement: paragraph})
     },
     deleteMenuAction({text: 'delete_code'})
   ]

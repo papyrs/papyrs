@@ -1,14 +1,16 @@
 <script lang="ts">
   import Modal from '$lib/components/ui/Modal.svelte';
   import {i18n} from '$lib/stores/i18n.store';
-  import {createEventDispatcher, tick} from 'svelte';
+  import {createEventDispatcher, onMount, tick} from 'svelte';
   import {importDeckGoExcalidraw} from '$lib/utils/import.utils';
   import {emit} from '$lib/utils/events.utils';
-  import type {PapyModalCodeDetail} from '$lib/types/modal';
   import Spinner from '../ui/Spinner.svelte';
   import type {StorageFile} from '@deckdeckgo/editor';
   import {uploadOfflineFile} from '@deckdeckgo/offline';
   import type {SaveExcalidraw} from '../../types/excalidraw';
+  import type {PapyModalExcalidrawDetail} from '../../types/modal';
+  import {fetchAsset} from '@deckdeckgo/sync';
+  import {reviver} from 'excalidraw-cmp';
 
   let codeEditor: HTMLDeckgoMonacoEditorElement | null;
   let displayEditor = false;
@@ -21,7 +23,15 @@
     loading = false;
   };
 
-  export let detail: PapyModalCodeDetail | undefined = undefined;
+  export let detail: PapyModalExcalidrawDetail | undefined = undefined;
+
+  let scene;
+
+  onMount(async () => {
+    const dataSrc: string | undefined = detail?.dataSrc;
+    const data: string | undefined = dataSrc !== undefined ? await fetchAsset(dataSrc) : undefined;
+    scene = data !== undefined ? JSON.parse(data, reviver) : undefined;
+  });
 
   const blobToFile = ({blob, filename}: {blob: Blob; filename: string}): File => {
     return new File([blob], filename, {lastModified: new Date().getTime(), type: blob.type});
@@ -38,7 +48,7 @@
       10485760
     );
 
-    const data: Blob = await codeEditor.getData();
+    const data: Blob = await codeEditor.exportScene();
     const dataFile: StorageFile = await uploadOfflineFile(
       blobToFile({blob: data, filename: `${filename}.json`}),
       'data',
@@ -72,7 +82,7 @@
   <span slot="title">Excalidraw</span>
 
   {#if displayEditor}
-    <my-component bind:this={codeEditor} />
+    <my-component bind:this={codeEditor} {scene} />
   {/if}
 
   <button slot="footer" type="button" on:click={save} disabled={!displayEditor}>

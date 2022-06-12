@@ -1,6 +1,5 @@
-import {openEditCodeModal} from '$lib/utils/code.utils';
 import type {StyloMenu} from '@papyrs/stylo';
-import {deleteMenuAction, editMenuIcon} from '../utils/menu.utils';
+import {deleteMenuAction, editMenuIcon, openEditCodeModal} from '../utils/menu.utils';
 
 export const codeMenu: StyloMenu = {
   match: ({paragraph}: {paragraph: HTMLElement}) =>

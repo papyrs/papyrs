@@ -55,5 +55,5 @@
 {/if}
 
 {#if modal?.type === 'excalidraw'}
-  <Excalidraw on:papyClose={close} />
+  <Excalidraw on:papyClose={close} detail={modal.detail} />
 {/if}

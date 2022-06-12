@@ -5,7 +5,11 @@ export interface PapyModalCodeDetail {
   options: MonacoEditorOptions;
 }
 
+export interface PapyModalExcalidrawDetail {
+  dataSrc: string | null;
+}
+
 export interface PapyModal {
   type: 'publish' | 'code' | 'unsplash' | 'tenor' | 'storage' | 'excalidraw';
-  detail?: PapyModalCodeDetail;
+  detail?: PapyModalCodeDetail | PapyModalExcalidrawDetail;
 }
