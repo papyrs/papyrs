@@ -56,7 +56,7 @@ const config = {
             'https://tuwbw-byaaa-aaaad-qblpq-cai.raw.ic0.app/'
           ],
           'connect-src': [
-            'blob',
+            'blob:',
             'https://ic0.app',
             'https://*.raw.ic0.app',
             'https://us-central1-unsplash-proxy.cloudfunctions.net/',
