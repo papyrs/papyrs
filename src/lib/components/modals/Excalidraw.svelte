@@ -28,6 +28,8 @@
   let dataFilename: string | undefined = undefined;
   let scene;
 
+  // TODO errors
+
   onMount(async () => {
     const dataSrc: string | undefined = detail?.dataSrc;
 
