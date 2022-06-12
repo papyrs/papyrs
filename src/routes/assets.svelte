@@ -19,7 +19,7 @@
     <SignIn text={$i18n.settings.access_assets} />
   {:else}
     <Assets on:papySelectAsset={openAsset}>
-      <h1>{$i18n.menu.assets}</h1>
+      <h1 slot="title">{$i18n.menu.assets}</h1>
     </Assets>
   {/if}
 </main>
