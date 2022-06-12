@@ -30,6 +30,8 @@ declare namespace svelte.JSX {
   }
 }
 
-declare const VITE_APP_VERSION: string;
+declare interface Window {
+  EXCALIDRAW_ASSET_PATH: string;
+}
 
 /* eslint-enable */

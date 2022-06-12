@@ -40,6 +40,8 @@
   };
 
   onMount(async () => {
+    window.EXCALIDRAW_ASSET_PATH = import.meta.env.VITE_EXCALIDRAW_ASSET_PATH as string;
+
     const dataSrc: string | undefined = detail?.dataSrc;
 
     dataFilename = dataSrc?.split('/').pop().split('.').shift();
