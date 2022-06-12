@@ -9,6 +9,7 @@ import type {StyloPluginCreateParagraphsParams} from '@papyrs/stylo';
 import {createEmptyElement, transformParagraph} from '@papyrs/stylo/dist/stylo/index.esm';
 import {get} from 'svelte/store';
 import {i18n} from '../stores/i18n.store';
+import type {SaveExcalidraw} from '../types/excalidraw';
 
 export const createParagraphImage = async ({
   image,
@@ -116,6 +117,39 @@ const addCode = ({
   });
 };
 
+const addExcalidraw = ({
+  detail,
+  pluginParams
+}: {
+  detail: SaveExcalidraw | undefined | null;
+  pluginParams: StyloPluginCreateParagraphsParams;
+}) => {
+  if (!detail) {
+    // We emit an undefined value when we close/cancel the modal because we use a once event listener
+    return;
+  }
+
+  const {container, paragraph} = pluginParams;
+
+  const {imgFile, dataFile} = detail;
+
+  const deckgoImg = document.createElement('deckgo-lazy-img');
+
+  const img = initDeckgoLazyImgAttributes({
+    element: deckgoImg,
+    image: imgFile
+  });
+
+  img.setAttribute('data-src', dataFile.downloadUrl);
+
+  transformParagraph({
+    elements: [img, createEmptyElement({nodeName: 'div'})],
+    paragraph,
+    container,
+    focus: 'last'
+  });
+};
+
 export const openNewCodeModal = async ({
   pluginParams
 }: {
@@ -129,6 +163,21 @@ export const openNewCodeModal = async ({
   );
 
   emit<PapyModal>({message: 'papyModal', detail: {type: 'code'}});
+};
+
+export const openExcalidrawModal = async ({
+  pluginParams
+}: {
+  pluginParams: StyloPluginCreateParagraphsParams;
+}) => {
+  document.addEventListener(
+    'papySaveExcalidraw',
+    async ({detail}: CustomEvent<SaveExcalidraw | undefined | null>) =>
+      await addExcalidraw({pluginParams, detail}),
+    {once: true}
+  );
+
+  emit<PapyModal>({message: 'papyModal', detail: {type: 'excalidraw'}});
 };
 
 const addImage = async ({

@@ -46,7 +46,7 @@
     deleteAsset={false}
     on:papySelectAsset={({detail}) => selectImage(detail)} />
 
-  <button slot="footer" type="button" on:click={() => inputImage?.click()}
+  <button slot="stickyFooter" type="button" on:click={() => inputImage?.click()}
     >{$i18n.editor.upload_image}</button>
 
   <input

@@ -92,6 +92,7 @@ interface I18nEditor {
   unplash_credit: string;
   edit_code: string;
   delete_code: string;
+  edit_excalidraw: string;
 }
 
 interface I18nPublish_done {

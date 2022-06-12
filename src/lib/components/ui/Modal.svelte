@@ -14,7 +14,8 @@
     dispatch('papyClose');
   };
 
-  const footer: boolean = $$slots.footer ?? false;
+  const stickyFooter: boolean = $$slots.stickyFooter ?? false;
+  const footer: boolean = ($$slots.footer ?? false) || stickyFooter;
 </script>
 
 {#if visible}
@@ -26,7 +27,7 @@
     aria-describedby="modalContent"
     on:introend>
     <div class="backdrop" on:click|stopPropagation={close} />
-    <div transition:scale={{delay: 25, duration: 150, easing: quintOut}} class="wrapper">
+    <div transition:scale={{delay: 25, duration: 150, easing: quintOut}} class="wrapper" class:flex={!stickyFooter}>
       <div class="toolbar">
         <h3 id="modalTitle"><slot name="title" /></h3>
         <button on:click|stopPropagation={close} aria-label={$i18n.core.close}
@@ -38,8 +39,9 @@
       </div>
 
       {#if footer}
-        <footer>
+        <footer class:sticky={stickyFooter}>
           <slot name="footer" />
+          <slot name="stickyFooter" />
         </footer>
       {/if}
     </div>
@@ -83,6 +85,11 @@
     overflow: hidden;
   }
 
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
   .toolbar {
     display: grid;
     grid-template-columns: 65px 1fr 65px;
@@ -115,14 +122,16 @@
   }
 
   footer {
-    position: absolute;
-    inset: auto 0 0;
-
     display: flex;
     justify-content: center;
 
     padding: 0.75rem 2.25rem;
 
     background: rgba(var(--color-primary-rgb), 0.8);
+  }
+
+  .sticky {
+    position: absolute;
+    inset: auto 0 0;
   }
 </style>

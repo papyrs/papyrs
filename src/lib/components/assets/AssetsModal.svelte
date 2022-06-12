@@ -101,7 +101,7 @@
     {/each}
   </InfiniteContent>
 
-  <SearchField bind:input bind:searchTerm slot="footer" />
+  <SearchField bind:input bind:searchTerm slot="stickyFooter" />
 </Modal>
 
 <style lang="scss">

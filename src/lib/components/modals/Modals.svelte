@@ -9,6 +9,7 @@
   import {toasts} from '$lib/stores/toasts.store';
   import type {PapyModal} from '$lib/types/modal';
   import Images from './Images.svelte';
+  import Excalidraw from './Excalidraw.svelte';
 
   let modal: PapyModal | undefined = undefined;
 
@@ -51,4 +52,8 @@
 
 {#if modal?.type === 'storage'}
   <Images on:papyClose={close} />
+{/if}
+
+{#if modal?.type === 'excalidraw'}
+  <Excalidraw on:papyClose={close} detail={modal.detail} />
 {/if}

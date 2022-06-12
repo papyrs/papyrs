@@ -82,7 +82,8 @@
     "upload_image": "Subir una nueva imagen",
     "unplash_credit": "Photo by {0} on {1}",
     "edit_code": "Editar código",
-    "delete_code": "Borrar código"
+    "delete_code": "Borrar código",
+    "edit_excalidraw": "Editar Excalidraw"
   },
   "publish_done": {
     "hooray": "Hooray",
