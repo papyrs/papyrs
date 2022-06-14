@@ -2,7 +2,7 @@
 
 ### Features
 
-- Excalidraw
+- sketching hand-draw like diagrams with Excalidraw
 
 # 0.0.3-1 (2022-06-05)
 
