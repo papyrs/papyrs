@@ -1,4 +1,4 @@
-# robotstxt.org/
-
 User-agent: *
-Disallow: /
+Allow: /
+Sitemap: https://app.papy.rs/sitemap/sitemap-index.xml
+Host: https://app.papy.rs
