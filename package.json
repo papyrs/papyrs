@@ -10,7 +10,7 @@
     "i18n": "node --experimental-json-modules scripts/i18n.mjs",
     "postinstall": "node scripts/monaco.mjs",
     "dev": "npm run i18n && svelte-kit dev",
-    "build": "npm run i18n && svelte-kit build",
+    "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
