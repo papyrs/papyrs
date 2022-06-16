@@ -21,7 +21,10 @@ const config = {
   }),
 
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      fallback: 'index.html',
+      precompress: true
+    }),
     serviceWorker: {
       register: false
     },
