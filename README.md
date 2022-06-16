@@ -54,4 +54,4 @@ However, if users are interested in storing their data "in the cloud" automatica
 
 ![Architecture with online canisters](/docs/papyrs-architecture-ic.png) <!-- this is an excalidraw.com image, source is docs/papyrs-architecture -->
 
-[papyrs]: https://papy.rs
+[papyrs]: https://app.papy.rs
