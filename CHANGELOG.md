@@ -1,3 +1,24 @@
+# 0.0.5 (2022-06-23)
+
+### Features
+
+- extend session length to one hour
+- allow indexing (`robots.txt`)
+
+### Fix
+
+- export file extension on firefox and brave
+- mobile detection for Stylo improved in case of devices using stylus
+- text leaves detection reset target in Stylo to prevent browser to create text node at the root
+
+### Style
+
+- fix links overflow
+
+### Build
+
+- skip i18n job on prod build to use the Fleek Svelte docker image that use an outdated npm version
+
 # 0.0.4 (2022-06-12)
 
 ### Features
