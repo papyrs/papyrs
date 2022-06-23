@@ -46,5 +46,6 @@ export const exportDataFile = async () =>
           'application/octet-stream': ['.papyrs']
         }
       }
-    ]
+    ],
+    extension: 'papyrs'
   });
