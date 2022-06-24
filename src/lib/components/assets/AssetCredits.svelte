@@ -14,7 +14,7 @@
   <a
     href={user.links.html + '?utm_source=Papyrs&utm_medium=referral'}
     target="_blank"
-    rel="noopener noreferrer"
+    rel="noopener noreferrer external"
     on:click|stopPropagation>
     {user.name}
   </a>

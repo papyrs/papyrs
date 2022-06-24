@@ -108,7 +108,7 @@
       class="menu"
       role="menuitem"
       aria-haspopup="menu"
-      rel="noopener norefferer">
+      rel="external noopener norefferer">
       <IconTwitter />
       <span>Twitter</span>
     </a>
@@ -119,7 +119,7 @@
       class="menu"
       role="menuitem"
       aria-haspopup="menu"
-      rel="noopener norefferer">
+      rel="external noopener norefferer">
       <IconDiscord />
       <span>Discord</span>
     </a>
@@ -129,7 +129,7 @@
       href="https://github.com/papyrs/papyrs"
       class="menu"
       aria-haspopup="menu"
-      rel="noopener norefferer">
+      rel="external noopener norefferer">
       <IconGitHub />
       <span>GitHub</span>
     </a>

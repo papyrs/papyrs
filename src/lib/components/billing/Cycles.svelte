@@ -77,11 +77,11 @@
     {
       placeholder: '{0}',
       value:
-        '<a href="https://smartcontracts.org/docs/developers-guide/concepts/tokens-cycles.html" rel="noopener norefferer">Cycles</a>'
+        '<a href="https://internetcomputer.org/docs/current/concepts/tokens-cycles/" rel="external noopener norefferer">Cycles</a>'
     },
     {
       placeholder: '{1}',
-      value: '<a href="https://discord.gg/EV76WqDuZW" rel="noopener norefferer">Discord</a>'
+      value: '<a href="https://discord.gg/EV76WqDuZW" rel="external noopener norefferer">Discord</a>'
     }
   ])}
 </p>

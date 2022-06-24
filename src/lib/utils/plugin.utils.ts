@@ -59,13 +59,13 @@ const initFigCaption = ({image}: {image: UnsplashPhoto | TenorGif | StorageFile}
   }
 
   const aUser: HTMLAnchorElement = document.createElement('a');
-  aUser.setAttribute('rel', 'noopener noreferrer');
+  aUser.setAttribute('rel', 'external noopener noreferrer');
   aUser.setAttribute('target', '_blank');
   aUser.setAttribute('href', `${user.links.html}?utm_source=Papyrs&utm_medium=referral`);
   aUser.innerText = user.name;
 
   const aUnsplash: HTMLAnchorElement = document.createElement('a');
-  aUnsplash.setAttribute('rel', 'noopener noreferrer');
+  aUnsplash.setAttribute('rel', 'external noopener noreferrer');
   aUnsplash.setAttribute('target', '_blank');
   aUnsplash.setAttribute(
     'href',
