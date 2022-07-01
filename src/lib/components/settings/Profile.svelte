@@ -21,8 +21,6 @@
         summary,
         twitter: twitter?.value,
         linkedin: linkedin?.value,
-        dev: dev?.value,
-        medium: medium?.value,
         github: github?.value,
         custom: custom?.value,
         file: inputProfilePicture?.files[0]
@@ -48,8 +46,6 @@
 
   let twitter: HTMLInputElement | undefined;
   let linkedin: HTMLInputElement | undefined;
-  let dev: HTMLInputElement | undefined;
-  let medium: HTMLInputElement | undefined;
   let github: HTMLInputElement | undefined;
   let custom: HTMLInputElement | undefined;
 </script>
@@ -98,20 +94,6 @@
     bind:input={linkedin}
     prefix="https://www.linkedin.com/in/"
     arialLabel="LinkedIn"
-    {saving} />
-
-  <SocialInput
-    value={$user.social?.dev}
-    bind:input={dev}
-    prefix="https://dev.to/"
-    arialLabel="Dev.to"
-    {saving} />
-
-  <SocialInput
-    value={$user.social?.medium}
-    bind:input={medium}
-    prefix="https://medium.com/@"
-    arialLabel="Medium"
     {saving} />
 
   <SocialInput
