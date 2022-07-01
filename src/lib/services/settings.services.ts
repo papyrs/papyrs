@@ -9,8 +9,6 @@ export const updateProfile = async ({
   summary,
   twitter,
   linkedin,
-  dev,
-  medium,
   github,
   custom,
   file
@@ -19,8 +17,6 @@ export const updateProfile = async ({
   summary: string | undefined;
   twitter: string | undefined;
   linkedin: string | undefined;
-  dev: string | undefined;
-  medium: string | undefined;
   github: string | undefined;
   custom: string | undefined;
   file: File | undefined;
@@ -36,8 +32,6 @@ export const updateProfile = async ({
   const social: UserSocial = {
     ...(twitter && {twitter}),
     ...(linkedin && {linkedin}),
-    ...(dev && {dev}),
-    ...(medium && {medium}),
     ...(github && {github}),
     ...(custom && {custom})
   };
