@@ -51,7 +51,7 @@
     "url": "https://github.com/papyrs/papyrs/issues"
   },
   "dependencies": {
-    "@deckdeckgo/editor": "^7.11.1",
+    "@deckdeckgo/editor": "file:../../deckdeckgo/deckdeckgo/utils/editor",
     "@deckdeckgo/excalidraw": "^1.0.2",
     "@deckdeckgo/highlight-code": "^4.3.0",
     "@deckdeckgo/monaco-editor": "^1.4.0",
