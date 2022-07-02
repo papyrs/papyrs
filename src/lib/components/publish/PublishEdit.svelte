@@ -9,8 +9,8 @@
   import {doc} from '$lib/stores/doc.store';
   import {toasts} from '$lib/stores/toasts.store';
   import {busy} from '$lib/stores/busy.store';
-  import {theme} from '$lib/stores/theme.store';
   import {primaryColor} from '../../utils/theme.utils';
+  import {publishConfig} from '../../utils/publish.utils';
 
   const dispatch = createEventDispatcher();
 
@@ -34,9 +34,7 @@
           github: false,
           canonical
         },
-        config: {
-          theme: $theme as string
-        }
+        config: publishConfig()
       });
 
       dispatch('papyPublished');
