@@ -11,6 +11,11 @@
 
 - update `index.html` of blog with current list of published article if an article is deleted by the user
 
+### Build
+
+- bump all dependencies
+- fetch excalidraw at runtime from cdn
+
 # 0.0.5 (2022-06-23)
 
 ### Features
