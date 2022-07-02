@@ -42,7 +42,7 @@ export const updateProfile = async ({
       ...user.data,
       ...(name && {name}),
       ...(summary && {bio: summary}),
-      ...(Object.keys(social).length > 0 && {social}),
+      ...((Object.keys(social).length > 0 || user.data.social !== undefined) && {social}),
       ...(photo_url && {photo_url})
     }
   };
