@@ -1,3 +1,16 @@
+# 0.0.6 (2022-07-02)
+
+### Features
+
+- session duration bump to one hour (instead of 10 minutes)
+- publish social links (Twitter etc.) to blog landing page
+- generate a social card only if no image is used in first or second paragraph
+- deprecate dev and medium url options
+
+### Fix
+
+- update `index.html` of blog with current list of published article if an article is deleted by the user
+
 # 0.0.5 (2022-06-23)
 
 ### Features
