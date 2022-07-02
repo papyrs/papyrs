@@ -19,6 +19,7 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
+    "@deckdeckgo/excalidraw": "^1.0.2",
     "@sveltejs/adapter-static": "^1.0.0-next.34",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
@@ -52,7 +53,6 @@
   },
   "dependencies": {
     "@deckdeckgo/editor": "^7.11.1",
-    "@deckdeckgo/excalidraw": "^1.0.2",
     "@deckdeckgo/highlight-code": "^4.3.0",
     "@deckdeckgo/monaco-editor": "^1.4.0",
     "@deckdeckgo/offline": "^0.0.6",

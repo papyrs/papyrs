@@ -57,8 +57,6 @@ export const importDeckGoMonacoEditor = async () => {
 };
 
 export const importDeckGoExcalidraw = async () => {
-  const {defineCustomElement} = await import(
-      /* @vite-ignore */ '@deckdeckgo/excalidraw/dist/components/deckgo-excalidraw'
-      );
-  defineCustomElement();
+  const cdn: string = import.meta.env.VITE_EXCALIDRAW_CDN as string | undefined;
+  return import(cdn);
 };
