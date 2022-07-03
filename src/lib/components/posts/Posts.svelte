@@ -7,6 +7,7 @@
   import Post from '$lib/components/posts/Post.svelte';
   import {toasts} from '$lib/stores/toasts.store';
   import {i18n} from '$lib/stores/i18n.store';
+  import {toDate} from '@deckdeckgo/editor';
 
   let docs: Doc[] = [];
   let loading = true;
@@ -17,7 +18,13 @@
     }
 
     try {
-      docs = await syncDocs($auth.authUser.uid);
+      const entries: Doc[] = await syncDocs($auth.authUser.uid);
+      docs = [
+        ...entries.sort(
+          ({data: {created_at: created_at_a}}: Doc, {data: {created_at: created_at_b}}: Doc) =>
+            (toDate(created_at_b)?.getTime() ?? 0) - (toDate(created_at_a)?.getTime() ?? 0)
+        )
+      ];
     } catch (err) {
       toasts.error({
         text: 'Something went wrong while fetching the posts.',
