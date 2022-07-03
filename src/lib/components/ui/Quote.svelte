@@ -21,12 +21,12 @@
   let timer;
   let visible = false;
 
-  onMount(() => (timer = setTimeout(() => (visible = true), 100)));
+  onMount(() => (timer = setTimeout(() => (visible = true), 50)));
   onDestroy(() => clearTimeout(timer));
 </script>
 
 {#if visible}
-  <p transition:fade={{delay: 250}}>{quotes[index]}</p>
+  <p transition:fade={{delay: 350}}>{quotes[index]}</p>
 {/if}
 
 <style lang="scss">
