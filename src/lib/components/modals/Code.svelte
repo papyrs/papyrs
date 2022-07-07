@@ -20,26 +20,26 @@
     getWorkerUrl: function (_moduleId, label) {
       if (label === 'json') {
         return workerImportScript(
-          'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.0/workers/json.worker.js'
+          'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.1/workers/json.worker.js'
         );
       }
       if (label === 'css' || label === 'scss' || label === 'less') {
         return workerImportScript(
-          'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.0/workers/css.worker.js'
+          'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.1/workers/css.worker.js'
         );
       }
       if (label === 'html' || label === 'handlebars' || label === 'razor') {
         return workerImportScript(
-          'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.0/workers/html.worker.js'
+          'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.1/workers/html.worker.js'
         );
       }
       if (label === 'typescript' || label === 'javascript') {
         return workerImportScript(
-          'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.0/workers/ts.worker.js'
+          'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.1/workers/ts.worker.js'
         );
       }
       return workerImportScript(
-        'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.0/workers/editor.worker.js'
+        'https://cdn.papy.rs/libs/@deckdeckgo/monaco-editor/1.4.1/workers/editor.worker.js'
       );
     }
   };
