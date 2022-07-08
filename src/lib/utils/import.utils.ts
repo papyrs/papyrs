@@ -50,13 +50,11 @@ export const importWebSocialShare = async () => {
 };
 
 export const importDeckGoMonacoEditor = async () => {
-  const {defineCustomElement} = await import(
-    /* @vite-ignore */ '@deckdeckgo/monaco-editor/dist/components/deckgo-monaco-editor'
-  );
-  defineCustomElement();
+  const cdn: string = import.meta.env.VITE_MONACO_EDITOR_CDN as string;
+  return import(cdn);
 };
 
 export const importDeckGoExcalidraw = async () => {
-  const cdn: string = import.meta.env.VITE_EXCALIDRAW_CDN as string | undefined;
+  const cdn: string = import.meta.env.VITE_EXCALIDRAW_CDN as string;
   return import(cdn);
 };

@@ -11,7 +11,8 @@
 
 ### Build
 
-- bump stylo minor improvements
+- bump Stylo minor improvements
+- fetch monaco-editor at runtime from cdn
 
 # 0.0.6 (2022-07-02)
 
