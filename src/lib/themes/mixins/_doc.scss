@@ -11,6 +11,8 @@
   @media (min-width: 576px) {
     aspect-ratio: 210 / 297;
     min-height: auto;
+
+    --deckgo-highlight-code-font-size: inherit;
   }
 
   padding: 1.75rem;
@@ -25,7 +27,8 @@
 
   white-space: pre-wrap;
 
-  font-size: 125%;
+  font-size: 1.25rem;
+  --deckgo-highlight-code-font-size: 0.85rem;
 }
 
 @mixin spacing {
