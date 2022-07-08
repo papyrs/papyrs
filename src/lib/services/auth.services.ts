@@ -23,10 +23,17 @@ export const loadSignIn = async () => {
   });
 };
 
-export const signUserOut = async () => {
+/**
+ * If user explicitly sign out, we assume the user want to stop editing and therefore the data can be cleaned.
+ * If the delegation expires, user might be still editing the post therefore we do not clean the data but only sign out and display a warning
+ * @param clearLocalEdit clear local edited data
+ */
+export const signUserOut = async ({clearLocalEdit}: {clearLocalEdit: boolean}) => {
   await signOut();
 
-  await clearEdit(true);
+  if (clearLocalEdit) {
+    await clearEdit(true);
+  }
 
   // reset log history
   logs.set([]);
@@ -35,7 +42,7 @@ export const signUserOut = async () => {
 };
 
 export const idleSignOut = async () => {
-  await signUserOut();
+  await signUserOut({clearLocalEdit: false});
 
   toasts.show({
     text: 'You have been logged out because your session has expired. Sign-in to renew your identity.',
