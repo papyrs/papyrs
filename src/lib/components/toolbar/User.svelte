@@ -19,7 +19,7 @@
   let button: HTMLButtonElement | undefined;
 
   const signOut = async () => {
-    await signUserOut();
+    await signUserOut({clearLocalEdit: true});
 
     visible = false;
   };
