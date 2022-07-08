@@ -94,7 +94,7 @@
     "share": "{0} con el mundo!"
   },
   "publish_edit": {
-    "title_max_chars": "El título debe estar provisto de caracteres latinos, números arábigos, espacios y guiones. No debe tener más de {0} caracteres.",
+    "title_max_chars": "El título debe estar provisto de caracteres latinos, números arábigos y espacios. No debe tener más de {0} caracteres.",
     "description": "Descripción (opcional)",
     "tags": "Etiquetas (opcional)",
     "title": "Título",

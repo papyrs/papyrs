@@ -5,7 +5,11 @@
 - extend session duration to 4 hours
 - do not clear local edited data on automatic sign out if delegation (session) expires
 
-# Build
+### Fix
+
+- update info for publish: dash are not supported in titles when publishing
+
+### Build
 
 - bump stylo minor improvements
 

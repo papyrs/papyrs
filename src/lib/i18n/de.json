@@ -94,7 +94,7 @@
     "share": "{0} es mit der Welt!"
   },
   "publish_edit": {
-    "title_max_chars": "Der Titel darf Buchstaben, Zahlen, Leerzeichen und Bindestriche beinhalten und darf nicht länger als {0} Zeichen sein.",
+    "title_max_chars": "Der Titel darf Buchstaben, Zahlen und Leerzeichen beinhalten und darf nicht länger als {0} Zeichen sein.",
     "description": "Beschreibung (Optional)",
     "tags": "Tags (Optional)",
     "title": "Titel",

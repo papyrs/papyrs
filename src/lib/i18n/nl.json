@@ -94,7 +94,7 @@
     "share": "{0} met de wereld!"
   },
   "publish_edit": {
-    "title_max_chars": "De titel kan bestaan uit Latijnse karakters, Arabische cijfers, spaties en streepjes. Het mag niet langer zijn dan {0} tekens.",
+    "title_max_chars": "De titel kan bestaan uit Latijnse karakters, Arabische cijfers en spaties. Het mag niet langer zijn dan {0} tekens.",
     "description": "Omschrijving (optioneel)",
     "tags": "Tags (optioneel)",
     "title": "Titel",
