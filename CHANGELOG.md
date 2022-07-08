@@ -4,6 +4,7 @@
 
 - extend session duration to 4 hours
 - do not clear local edited data on automatic sign out if delegation (session) expires
+- add plugin for ordered list
 
 ### Style
 
