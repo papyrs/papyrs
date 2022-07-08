@@ -1,3 +1,9 @@
+# 0.0.7 (2022-07-08)
+
+### Features
+
+- do not clear local edited data on automatic sign out if delegation (session) expires
+
 # 0.0.6 (2022-07-02)
 
 ### Features
