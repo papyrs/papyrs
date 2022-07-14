@@ -1,14 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
 import autoprefixer from 'autoprefixer';
-import {readFileSync} from 'fs';
 import preprocess from 'svelte-preprocess';
-import {fileURLToPath} from 'url';
 
 const prod = process.env.NODE_ENV === 'production';
-
-const file = fileURLToPath(new URL('package.json', import.meta.url));
-const json = readFileSync(file, 'utf8');
-const {version} = JSON.parse(json);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -29,11 +23,6 @@ const config = {
     },
     prerender: {
       default: true
-    },
-    vite: {
-      define: {
-        VITE_APP_VERSION: JSON.stringify(version)
-      }
     },
     ...(prod && {
       csp: {
