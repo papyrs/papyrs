@@ -69,10 +69,9 @@
 
   onMount(() => {
     code = detail?.code ?? '';
-    options = detail?.options;
+    options = detail?.options ?? {language: 'javascript', lineNumbers: 'off'};
     language = detail?.options?.language ?? 'javascript';
-    lineNumbers =
-      detail?.options?.lineNumbers === undefined || detail?.options?.lineNumbers === 'on';
+    lineNumbers = detail?.options?.lineNumbers === 'on';
   });
 
   const save = async () => {
