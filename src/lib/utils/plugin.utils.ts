@@ -94,9 +94,9 @@ const addCode = ({
 
   const {container, paragraph} = pluginParams;
 
-  const innerHTML = detail.code || '\u200B';
-  const language = detail.language || 'javascript';
-  const lineNumbers = detail.lineNumbers || true;
+  const innerHTML = detail.code ?? '\u200B';
+  const language = detail.language ?? 'javascript';
+  const lineNumbers = detail.lineNumbers ?? true;
 
   const code: HTMLElement = document.createElement('deckgo-highlight-code');
   code.setAttribute('terminal', 'papyrs');
