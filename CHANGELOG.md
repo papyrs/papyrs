@@ -1,3 +1,19 @@
+# 0.0.8 (2022-07-15)
+
+### Features
+
+- filter and select plugin to apply with keyboard
+- default code option line numbers set to off
+- ordered list
+
+### Fix
+
+- backtick support not only compatible with Swiss-french keyboards
+
+### Build
+
+- bump SvelteKit
+
 # 0.0.7 (2022-07-08)
 
 ### Features
