@@ -1,10 +1,10 @@
+import {browser} from '$app/env';
 import type {
   TenorAnonymousResponse,
   TenorCategory,
   TenorCategoryResponse,
   TenorSearchResponse
 } from '@deckdeckgo/editor';
-import {get, set} from 'idb-keyval';
 
 export const searchCategories = async (): Promise<TenorCategory[]> => {
   const {url, key} = getTenorConfig();
@@ -113,10 +113,12 @@ export const registerGif = async (gifId: string): Promise<void> => {
 };
 
 const getAnonymousId = async (): Promise<string | undefined> => {
-  const localAnonymousId: string | undefined = await get<string>('tenor_anonid');
+  const {tenor_anonid: tenorAnonymousId}: Storage = browser
+    ? localStorage
+    : ({tenorAnonymousId: undefined} as unknown as Storage);
 
-  if (localAnonymousId) {
-    return localAnonymousId;
+  if (tenorAnonymousId !== undefined) {
+    return tenorAnonymousId;
   }
 
   const {url, key} = getTenorConfig();
@@ -131,7 +133,7 @@ const getAnonymousId = async (): Promise<string | undefined> => {
 
   const {anon_id} = response;
 
-  await set('tenor_anonid', anon_id);
+  localStorage.setItem('tenor_anonid', anon_id);
 
   return anon_id;
 };
