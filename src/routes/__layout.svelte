@@ -21,6 +21,7 @@
   import Toasts from '$lib/components/core/Toasts.svelte';
   import Share from '$lib/components/share/Share.svelte';
   import Busy from '$lib/components/core/Busy.svelte';
+  import {i18n} from '../lib/stores/i18n.store';
 
   let destroyListener: (() => void)[] | undefined = undefined;
 
@@ -42,8 +43,10 @@
 
 <svelte:window on:ddgLog={onDdgLog} on:ddgSignOut={idleSignOut} />
 
-<slot />
+{#await i18n.init() then}
+  <slot />
 
-<Share />
-<Busy />
-<Toasts />
+  <Share />
+  <Busy />
+  <Toasts />
+{/await}
