@@ -10,6 +10,7 @@
   import type {SaveCode} from '$lib/types/code';
   import CodeLineNumbers from '$lib/components/code/CodeLineNumbers.svelte';
   import Spinner from '../ui/Spinner.svelte';
+  import {codeOptions, saveCodeOptions} from '../../utils/code.utils';
 
   // Load workers from unpkg because there is an unresolved issue with Fleek while fetching ts.worker.js
   // Fleek return an error 502 - Internal server error trying to get the file
@@ -69,9 +70,9 @@
 
   onMount(() => {
     code = detail?.code ?? '';
-    options = detail?.options ?? {language: 'javascript', lineNumbers: 'off'};
-    language = detail?.options?.language ?? 'javascript';
-    lineNumbers = detail?.options?.lineNumbers === 'on';
+    options = detail?.options ?? codeOptions();
+    language = detail?.options?.language ?? options.language;
+    lineNumbers = detail?.options?.lineNumbers === 'on' || options.lineNumbers === 'on';
   });
 
   const save = async () => {
@@ -99,12 +100,23 @@
     dispatch('papyClose');
   };
 
-  const updateLanguage = async () => await codeEditor?.updateLanguage(language);
-  const updateLineNumbers = () =>
-    (options = {
+  const updateLanguage = async () => {
+    await codeEditor?.updateLanguage(language);
+
+    saveCodeOptions({
+      ...(options ?? {}),
+      language
+    });
+  };
+
+  const updateLineNumbers = () => {
+    options = {
       ...(options ?? {}),
       lineNumbers: lineNumbers ? 'on' : 'off'
-    });
+    };
+
+    saveCodeOptions(options);
+  };
 </script>
 
 <Modal on:papyClose={async () => await close()} on:introend={loadEditor}>
