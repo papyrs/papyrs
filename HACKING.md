@@ -54,7 +54,8 @@ Our backend canisters need to be deployed locally and the related providers need
 git clone https://github.com/papyrs/ic
 cd ic
 npm ci
-dfx deploy
+dfx deploy manager
+dfx deploy --argument 'secret' feed
 npm run start --workspace=providers/ic
 ```
 
@@ -67,7 +68,7 @@ npm ci
 dfx deploy --no-wallet --argument '(null)'
 ```
 
-You might get different canister ids for the "manager" and the Internet Identity canisters than the default ones configured in the app. Find the actual IDs in related `.dfx/local/canister_ids.json` of each project and adjust it accordingly in the `.env.development` configuration file of the app (keys `VITE_IC_MANAGER_CANISTER_ID` and `VITE_IC_LOCAL_IDENTITY_CANISTER_ID`).
+You might get different canister ids for the "manager", "feed" and the Internet Identity canisters than the default ones configured in the app. Find the actual IDs in related `.dfx/local/canister_ids.json` of each project and adjust it accordingly in the `.env.development` configuration file of the app (keys `VITE_IC_MANAGER_CANISTER_ID`, `VITE_IC_FEED_CANISTER_ID` and `VITE_IC_LOCAL_IDENTITY_CANISTER_ID`).
 
 ### Run application
 
