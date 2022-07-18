@@ -9,7 +9,7 @@
   "scripts": {
     "i18n": "node --experimental-json-modules scripts/i18n.mjs",
     "postinstall": "node scripts/monaco.mjs",
-    "dev": "npm run i18n && vite dev",
+    "dev": "export FEED_SECRET=secret && npm run i18n && vite dev",
     "build": "vite build",
     "package": "svelte-kit package",
     "preview": "vite preview",
