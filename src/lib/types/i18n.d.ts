@@ -114,6 +114,8 @@ interface I18nPublish_edit {
   submit_feed: string;
   submit_feed_info: string;
   submit_feed_done: string;
+  update_published: string;
+  update_now: string;
 }
 
 interface I18nTools {

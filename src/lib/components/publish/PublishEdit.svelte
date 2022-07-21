@@ -68,7 +68,13 @@
   const color: string = primaryColor();
 </script>
 
-<h1>{$i18n.nav.ready_to_share}</h1>
+<h1>
+  {#if alreadyPublished}
+    {$i18n.publish_edit.update_published}
+  {:else}
+    {$i18n.nav.ready_to_share}
+  {/if}
+</h1>
 
 <form
   on:submit={async ($event) => await handleSubmit($event)}
@@ -120,7 +126,11 @@
   <button
     type="submit"
     disabled={!validTitleInput || !validCanonicalInput || !validDescriptionInput}>
-    {$i18n.publish_edit.publish_now}
+    {#if alreadyPublished}
+      {$i18n.publish_edit.update_now}
+    {:else}
+      {$i18n.publish_edit.publish_now}
+    {/if}
   </button>
 </form>
 
