@@ -8,7 +8,7 @@
   import type {MonacoEditorOptions} from '@deckdeckgo/monaco-editor';
   import CodeLanguage from '$lib/components/code/CodeLanguage.svelte';
   import type {SaveCode} from '$lib/types/code';
-  import CodeLineNumbers from '$lib/components/code/CodeLineNumbers.svelte';
+  import Checkbox from '$lib/components/ui/Checkbox.svelte';
   import Spinner from '../ui/Spinner.svelte';
   import {codeOptions, saveCodeOptions} from '../../utils/code.utils';
 
@@ -134,7 +134,12 @@
       <div class="options">
         <CodeLanguage bind:language on:papyCodeLanguage={updateLanguage} />
 
-        <CodeLineNumbers bind:lineNumbers on:papyLineNumbers={updateLineNumbers} />
+        <Checkbox
+          bind:checked={lineNumbers}
+          on:papyChecked={updateLineNumbers}
+          checkboxId="lineNumbers">
+          {$i18n.editor.display_line_number}
+        </Checkbox>
       </div>
     {/if}
   </section>

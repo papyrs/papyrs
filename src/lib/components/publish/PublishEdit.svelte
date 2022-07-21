@@ -4,13 +4,13 @@
   import I18n from '$lib/components/ui/I18n.svelte';
   import {TITLE_MAX_LENGTH, DESCRIPTION_MAX_LENGTH} from '$lib/constants/constants';
   import {validateCanonical, validateDescription, validTitle} from '$lib/utils/input.utils';
-  import {publish} from '@deckdeckgo/sync';
   import {importDeckGoSocialImg} from '$lib/utils/import.utils';
   import {doc} from '$lib/stores/doc.store';
   import {toasts} from '$lib/stores/toasts.store';
   import {busy} from '$lib/stores/busy.store';
   import {primaryColor} from '../../utils/theme.utils';
-  import {publishConfig} from '../../utils/publish.utils';
+  import PublishSubmitFeed from './PublishSubmitFeed.svelte';
+  import {publish} from '../../services/publish.services';
 
   const dispatch = createEventDispatcher();
 
@@ -34,7 +34,7 @@
           github: false,
           canonical
         },
-        config: publishConfig()
+        submitFeed
       });
 
       dispatch('papyPublished');
@@ -52,6 +52,7 @@
   let description: string | undefined = $doc.doc?.data?.meta?.description;
   let canonical: string | undefined = $doc.doc?.data?.meta?.canonical;
   let tags: string | undefined = $doc.doc?.data?.meta?.tags?.join(',');
+  let submitFeed = false;
 
   let validTitleInput = false;
   let validCanonicalInput = false;
@@ -110,6 +111,8 @@
     placeholder={$i18n.publish_edit.tags}
     type="text"
     class="tags" />
+
+  <PublishSubmitFeed bind:submitFeed />
 
   <button
     type="submit"

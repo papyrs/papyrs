@@ -99,7 +99,9 @@
     "tags": "Tags (optioneel)",
     "title": "Titel",
     "publish_now": "Publiceer",
-    "canonical_url": "Canonical URL (optioneel)"
+    "canonical_url": "Canonical URL (optioneel)",
+    "submit_feed": "Deel de blogpost met de community (optioneel)",
+    "submit_feed_info": "Als u zich aanmeldt, is dit optioneel, de blogpost wordt verzonden naar Papyrs om deze te promoten op zijn verschillende sociale kanalen (Twitter, Discord, enz.) . In de toekomst zal het ook gedeeld worden op een platform waar gebruikers posts van verschillende makers kunnen lezen."
   },
   "tools": {
     "new": "Nieuw",

@@ -18,6 +18,10 @@ textarea {
   }
 }
 
+input[type="checkbox"] {
+  accent-color: var(--color-secondary-contrast);
+}
+
 textarea {
   resize: none;
 }
