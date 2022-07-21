@@ -55,7 +55,9 @@
   let description: string | undefined = $doc.doc?.data?.meta?.description;
   let canonical: string | undefined = $doc.doc?.data?.meta?.canonical;
   let tags: string | undefined = $doc.doc?.data?.meta?.tags?.join(',');
-  let submitFeed = $doc.doc?.data?.meta?.feed ?? false;
+
+  let submitFeed =
+    $doc.doc?.data?.meta?.feed ?? JSON.parse(localStorage.getItem('submit_feed') ?? 'false');
 
   let validTitleInput = false;
   let validCanonicalInput = false;

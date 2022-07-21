@@ -7,10 +7,12 @@
   export let disabled = false;
 
   let visible = false;
+
+  const onPapyChecked = () => localStorage.setItem('submit_feed', JSON.stringify(submitFeed))
 </script>
 
 <div class:closed={!visible}>
-  <Checkbox bind:checked={submitFeed} checkboxId="submitFeed" {disabled}>
+  <Checkbox bind:checked={submitFeed} on:papyChecked={onPapyChecked} checkboxId="submitFeed" {disabled}>
     {#if disabled}
       {$i18n.publish_edit.submit_feed_done}
     {:else}
