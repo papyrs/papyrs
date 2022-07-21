@@ -76,5 +76,5 @@ const submitToFeed = async () => {
     return;
   }
 
-  return submitFeed({meta, docId: id});
+  return submitFeed({meta, id});
 };
