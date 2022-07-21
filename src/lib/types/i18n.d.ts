@@ -113,6 +113,7 @@ interface I18nPublish_edit {
   canonical_url: string;
   submit_feed: string;
   submit_feed_info: string;
+  submit_feed_done: string;
 }
 
 interface I18nTools {

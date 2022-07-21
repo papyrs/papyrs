@@ -3,18 +3,25 @@
   import {i18n} from '../../stores/i18n.store';
   import {fade} from 'svelte/transition';
 
-  export let submitFeed = false;
+  export let submitFeed: boolean;
+  export let disabled = false;
 
   let visible = false;
 </script>
 
 <div class:closed={!visible}>
-  <Checkbox bind:checked={submitFeed} checkboxId="submitFeed">
-    {$i18n.publish_edit.submit_feed}
+  <Checkbox bind:checked={submitFeed} checkboxId="submitFeed" {disabled}>
+    {#if disabled}
+      {$i18n.publish_edit.submit_feed_done}
+    {:else}
+      {$i18n.publish_edit.submit_feed}
+    {/if}
   </Checkbox>
 
-  <button class="text" role="button" on:click|preventDefault={() => (visible = !visible)}
-    >[i]</button>
+  {#if !disabled}
+    <button class="text" role="button" on:click|preventDefault={() => (visible = !visible)}
+      >[i]</button>
+  {/if}
 </div>
 
 {#if visible}

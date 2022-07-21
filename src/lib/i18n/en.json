@@ -101,7 +101,8 @@
     "publish_now": "Publish",
     "canonical_url": "Canonical URL (optional)",
     "submit_feed": "Share the blog post with the community",
-    "submit_feed_info": "If you opt-in (this is optional) the blog post will be submitted to Papyrs to promote it on its various social channels (Twitter, Discord, etc.) and to make it available to any developers through the \"Feed\" canister smart contract. In the future it will as well be shared on a platform where users can read posts from different creators."
+    "submit_feed_info": "If you opt-in (this is optional) the blog post will be submitted to Papyrs to promote it on its various social channels (Twitter, Discord, etc.) and to make it available to any developers through its \"Feed\" canister smart contract. In the future it will as well be shared on a platform where users can read posts from different creators.",
+    "submit_feed_done": "Blog post has been submitted to Papyrs"
   },
   "tools": {
     "new": "New",

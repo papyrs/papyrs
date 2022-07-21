@@ -2,13 +2,11 @@ import type {Doc} from '@deckdeckgo/editor';
 import {
   publish as publishDoc,
   publishUrl as publishUrlProvider,
+  submitFeed as submitToFeed,
   type PublishInputs
 } from '@deckdeckgo/sync';
-import {get} from 'svelte/store';
-import {doc} from '../stores/doc.store';
-import {cloudProvider} from '../utils/providers.utils';
-import {publishConfig} from '../utils/publish.utils';
 import {toasts} from '../stores/toasts.store';
+import {publishConfig} from '../utils/publish.utils';
 
 export const publishUrl = async (doc: Doc): Promise<string> => {
   const url: string = await publishUrlProvider(doc?.data.meta);
@@ -46,35 +44,4 @@ export const publish = async ({
       level: 'warn'
     });
   }
-};
-
-const submitToFeed = async () => {
-  const {submitFeed} = await cloudProvider();
-
-  const {doc: publishedDoc} = get(doc);
-
-  // Should not happen
-  if (!publishedDoc) {
-    toasts.show({
-      text: 'The post was published but could not be submitted to the feed.',
-      level: 'warn'
-    });
-    return;
-  }
-
-  const {
-    data: {meta},
-    id
-  } = publishedDoc;
-
-  // Should not happen
-  if (!meta) {
-    toasts.show({
-      text: 'The post was published but could not be submitted to the feed because there was no meta data to share.',
-      level: 'warn'
-    });
-    return;
-  }
-
-  return submitFeed({meta, id});
 };

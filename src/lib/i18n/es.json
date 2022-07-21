@@ -101,7 +101,8 @@
     "publish_now": "Publicar",
     "canonical_url": "Canonical URL (opcional)",
     "submit_feed": "Compartir la entrada del blog con la comunidad (opcional)",
-    "submit_feed_info": "Si se opta por ello, lo cual es opcional, la entrada del blog será enviada a Papyrs para promocionarla en sus diferentes canales sociales (Twitter, Discord, etc.) y para ponerla a disposición de cualquier desarrollador a través de nuestro contrato inteligente \"Feed\". En el futuro también se compartirá en una plataforma donde los usuarios puedan leer los posts de los diferentes creadores."
+    "submit_feed_info": "Si se opta por ello, lo cual es opcional, la entrada del blog será enviada a Papyrs para promocionarla en sus diferentes canales sociales (Twitter, Discord, etc.) y para ponerla a disposición de cualquier desarrollador a través de nuestro contrato inteligente \"Feed\". En el futuro también se compartirá en una plataforma donde los usuarios puedan leer los posts de los diferentes creadores.",
+    "submit_feed_done": "La entrada del blog ha sido enviada a Papyrs"
   },
   "tools": {
     "new": "Nueva",

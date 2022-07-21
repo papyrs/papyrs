@@ -48,11 +48,14 @@
     busy.stop();
   };
 
+  let alreadyPublished = $doc.doc?.data?.meta?.published ?? false;
+  let alreadySubmitFeed = $doc.doc?.data?.meta?.feed ?? false;
+
   let title: string | undefined = $doc.doc?.data?.meta?.title ?? $doc.doc?.data?.name;
   let description: string | undefined = $doc.doc?.data?.meta?.description;
   let canonical: string | undefined = $doc.doc?.data?.meta?.canonical;
   let tags: string | undefined = $doc.doc?.data?.meta?.tags?.join(',');
-  let submitFeed = false;
+  let submitFeed = $doc.doc?.data?.meta?.feed ?? false;
 
   let validTitleInput = false;
   let validCanonicalInput = false;
@@ -112,7 +115,7 @@
     type="text"
     class="tags" />
 
-  <PublishSubmitFeed bind:submitFeed />
+  <PublishSubmitFeed bind:submitFeed disabled={alreadyPublished && alreadySubmitFeed} />
 
   <button
     type="submit"
