@@ -1,3 +1,10 @@
+# 0.0.9 (2022-07-15)
+
+### Features
+
+- optionally submit blog posts to Papyrs to promote these on our various social channels (Twitter, Discord, etc.) and to make these available to any developers through our "Feed" canister smart contract
+- add information on "Settings - Profile" page to make more obvious that the information, if provided, are displayed publicly on the users' blogs
+
 # 0.0.8 (2022-07-15)
 
 ### Features

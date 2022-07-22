@@ -57,7 +57,8 @@
     "custom": "Aangepast",
     "custom_url": "Uw website of elke url (bijvoorbeeld: {0})",
     "switch_theme": "Themakleuren overschakelen naar {0}",
-    "no_delete": "Het document dat wordt bewerkt, kan niet worden verwijderd."
+    "no_delete": "Het document dat wordt bewerkt, kan niet worden verwijderd.",
+    "profile_publish_info": "Uw profielinformatie wordt weergegeven op uw blog. Deze zijn openbaar zodra je een artikel publiceert."
   },
   "dashboard": {
     "published": "Gepubliceerd",
@@ -99,7 +100,12 @@
     "tags": "Tags (optioneel)",
     "title": "Titel",
     "publish_now": "Publiceer",
-    "canonical_url": "Canonical URL (optioneel)"
+    "canonical_url": "Canonical URL (optioneel)",
+    "submit_feed": "Deel de blogpost met de community (optioneel)",
+    "submit_feed_info": "Als u zich aanmeldt, is dit optioneel, de blogpost wordt verzonden naar Papyrs om deze te promoten op zijn verschillende sociale kanalen (Twitter, Discord, enz.) . In de toekomst zal het ook gedeeld worden op een platform waar gebruikers posts van verschillende makers kunnen lezen.",
+    "submit_feed_done": "Blogpost is verzonden naar Papyrs",
+    "update_published": "Update het gepubliceerde bericht",
+    "update_now": "Update"
   },
   "tools": {
     "new": "Nieuw",

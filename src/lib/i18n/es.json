@@ -57,7 +57,8 @@
     "custom": "Personalizado",
     "custom_url": "Su sitio web o cualquier url (por ejemplo: {0})",
     "switch_theme": "Cambia los colores del tema a {0}",
-    "no_delete": "El documento que se está editando no se puede borrar."
+    "no_delete": "El documento que se está editando no se puede borrar.",
+    "profile_publish_info": "La información de tu perfil se muestra en tu blog. Estos son públicos tan pronto como usted publica un artículo."
   },
   "dashboard": {
     "published": "Publicado",
@@ -99,7 +100,12 @@
     "tags": "Etiquetas (opcional)",
     "title": "Título",
     "publish_now": "Publicar",
-    "canonical_url": "Canonical URL (opcional)"
+    "canonical_url": "Canonical URL (opcional)",
+    "submit_feed": "Compartir la entrada del blog con la comunidad (opcional)",
+    "submit_feed_info": "Si se opta por ello, lo cual es opcional, la entrada del blog será enviada a Papyrs para promocionarla en sus diferentes canales sociales (Twitter, Discord, etc.) y para ponerla a disposición de cualquier desarrollador a través de nuestro contrato inteligente \"Feed\". En el futuro también se compartirá en una plataforma donde los usuarios puedan leer los posts de los diferentes creadores.",
+    "submit_feed_done": "La entrada del blog ha sido enviada a Papyrs",
+    "update_published": "Actualizar el artículo publicado",
+    "update_now": "Actualizar"
   },
   "tools": {
     "new": "Nueva",

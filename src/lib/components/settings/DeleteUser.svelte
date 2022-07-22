@@ -87,4 +87,8 @@
   .please {
     margin-bottom: 0.45rem;
   }
+
+  h1 {
+    padding-top: 1rem;
+  }
 </style>

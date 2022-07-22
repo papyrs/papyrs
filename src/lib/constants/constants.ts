@@ -1,3 +1,6 @@
 export const TITLE_MAX_LENGTH = 100;
 export const DESCRIPTION_MAX_LENGTH = 500;
+
+// process.env
 export const APP_VERSION = VITE_APP_VERSION;
+export const FEED_CANISTER_SECRET = VITE_IC_FEED_CANISTER_SECRET;

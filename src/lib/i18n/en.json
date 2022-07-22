@@ -57,7 +57,8 @@
     "custom": "Custom",
     "custom_url": "Your website or any url (for example: {0})",
     "switch_theme": "Switch theme colors to {0}",
-    "no_delete": "The document that is being edited cannot be deleted."
+    "no_delete": "The document that is being edited cannot be deleted.",
+    "profile_publish_info": "Your profile information are displayed on your blog. These are public as soon as you publish an article."
   },
   "dashboard": {
     "published": "Published",
@@ -99,7 +100,12 @@
     "tags": "Tags (optional)",
     "title": "Title",
     "publish_now": "Publish",
-    "canonical_url": "Canonical URL (optional)"
+    "canonical_url": "Canonical URL (optional)",
+    "submit_feed": "Share the blog post with the community",
+    "submit_feed_info": "If you opt-in (this is optional) the blog post will be submitted to Papyrs to promote it on our various social channels (Twitter, Discord, etc.) and to make it available to any developers through our \"Feed\" canister smart contract. In the future it will as well be shared on a platform where users can read posts from different creators.",
+    "submit_feed_done": "Blog post has been submitted to Papyrs",
+    "update_published": "Update the published post",
+    "update_now": "Update"
   },
   "tools": {
     "new": "New",

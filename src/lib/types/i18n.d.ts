@@ -65,6 +65,7 @@ interface I18nSettings {
   custom_url: string;
   switch_theme: string;
   no_delete: string;
+  profile_publish_info: string;
 }
 
 interface I18nDashboard {
@@ -111,6 +112,11 @@ interface I18nPublish_edit {
   title: string;
   publish_now: string;
   canonical_url: string;
+  submit_feed: string;
+  submit_feed_info: string;
+  submit_feed_done: string;
+  update_published: string;
+  update_now: string;
 }
 
 interface I18nTools {

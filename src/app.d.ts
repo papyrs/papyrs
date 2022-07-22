@@ -34,4 +34,7 @@ declare interface Window {
   EXCALIDRAW_ASSET_PATH: string;
 }
 
+declare const VITE_APP_VERSION: string;
+declare const VITE_IC_FEED_CANISTER_SECRET: string;
+
 /* eslint-enable */

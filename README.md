@@ -21,7 +21,7 @@
 
 Here are some useful links:
 
-- See the [HACKING](HACKING.md) document to run locally the app.
+- See the [HACKING](HACKING.md) document to run locally the app or fetch published blog posts.
 - Reach out to us on [Discord](https://discord.gg/EV76WqDuZW).
 - Wanna help? Check out the [CONTRIBUTING](CONTRIBUTING.md) guidelines.
 - Have a look at the [LICENSE](LICENSE.md) for information about licensing and limitation.

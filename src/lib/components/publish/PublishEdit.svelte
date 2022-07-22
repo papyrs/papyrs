@@ -4,13 +4,13 @@
   import I18n from '$lib/components/ui/I18n.svelte';
   import {TITLE_MAX_LENGTH, DESCRIPTION_MAX_LENGTH} from '$lib/constants/constants';
   import {validateCanonical, validateDescription, validTitle} from '$lib/utils/input.utils';
-  import {publish} from '@deckdeckgo/sync';
   import {importDeckGoSocialImg} from '$lib/utils/import.utils';
   import {doc} from '$lib/stores/doc.store';
   import {toasts} from '$lib/stores/toasts.store';
   import {busy} from '$lib/stores/busy.store';
   import {primaryColor} from '../../utils/theme.utils';
-  import {publishConfig} from '../../utils/publish.utils';
+  import PublishSubmitFeed from './PublishSubmitFeed.svelte';
+  import {publish} from '../../services/publish.services';
 
   const dispatch = createEventDispatcher();
 
@@ -34,7 +34,7 @@
           github: false,
           canonical
         },
-        config: publishConfig()
+        submitFeed
       });
 
       dispatch('papyPublished');
@@ -48,10 +48,16 @@
     busy.stop();
   };
 
+  let alreadyPublished = $doc.doc?.data?.meta?.published ?? false;
+  let alreadySubmitFeed = $doc.doc?.data?.meta?.feed ?? false;
+
   let title: string | undefined = $doc.doc?.data?.meta?.title ?? $doc.doc?.data?.name;
   let description: string | undefined = $doc.doc?.data?.meta?.description;
   let canonical: string | undefined = $doc.doc?.data?.meta?.canonical;
   let tags: string | undefined = $doc.doc?.data?.meta?.tags?.join(',');
+
+  let submitFeed =
+    $doc.doc?.data?.meta?.feed ?? JSON.parse(localStorage.getItem('submit_feed') ?? 'false');
 
   let validTitleInput = false;
   let validCanonicalInput = false;
@@ -64,7 +70,13 @@
   const color: string = primaryColor();
 </script>
 
-<h1>{$i18n.nav.ready_to_share}</h1>
+<h1>
+  {#if alreadyPublished}
+    {$i18n.publish_edit.update_published}
+  {:else}
+    {$i18n.nav.ready_to_share}
+  {/if}
+</h1>
 
 <form
   on:submit={async ($event) => await handleSubmit($event)}
@@ -111,10 +123,16 @@
     type="text"
     class="tags" />
 
+  <PublishSubmitFeed bind:submitFeed disabled={alreadyPublished && alreadySubmitFeed} />
+
   <button
     type="submit"
     disabled={!validTitleInput || !validCanonicalInput || !validDescriptionInput}>
-    {$i18n.publish_edit.publish_now}
+    {#if alreadyPublished}
+      {$i18n.publish_edit.update_now}
+    {:else}
+      {$i18n.publish_edit.publish_now}
+    {/if}
   </button>
 </form>
 
