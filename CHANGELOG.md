@@ -1,9 +1,18 @@
-# 0.0.9 (2022-07-15)
+# 0.0.9 (2022-07-22)
 
 ### Features
 
 - optionally submit blog posts to Papyrs to promote these on our various social channels (Twitter, Discord, etc.) and to make these available to any developers through our "Feed" canister smart contract
 - add information on "Settings - Profile" page to make more obvious that the information, if provided, are displayed publicly on the users' blogs
+- keep track of code options - e.g. if you select "TypeScript", then next block of code you create is automatically set up with "TypeScript"
+
+### Refactor
+
+- save tenor anonymized id in local storage instead of idb (idb = user edited data, local storage = editor options)
+
+### Fix
+
+- apply selected language at startup
 
 # 0.0.8 (2022-07-15)
 
