@@ -57,7 +57,8 @@
     "custom": "Benutzerdefiniert",
     "custom_url": "Deine Website oder URL (zum Beispiel: {0})",
     "switch_theme": "Schalte die Themenfarben um {0}",
-    "no_delete": "Das zu bearbeitende Dokument kann nicht gelöscht werden."
+    "no_delete": "Das zu bearbeitende Dokument kann nicht gelöscht werden.",
+    "profile_publish_info": "Ihre Profilinformationen werden in Ihrem Blog angezeigt. Diese sind öffentlich, sobald Sie einen Artikel veröffentlichen."
   },
   "dashboard": {
     "published": "Veröffentlicht am",

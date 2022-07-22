@@ -57,7 +57,8 @@
     "custom": "Aangepast",
     "custom_url": "Uw website of elke url (bijvoorbeeld: {0})",
     "switch_theme": "Themakleuren overschakelen naar {0}",
-    "no_delete": "Het document dat wordt bewerkt, kan niet worden verwijderd."
+    "no_delete": "Het document dat wordt bewerkt, kan niet worden verwijderd.",
+    "profile_publish_info": "Uw profielinformatie wordt weergegeven op uw blog. Deze zijn openbaar zodra je een artikel publiceert."
   },
   "dashboard": {
     "published": "Gepubliceerd",

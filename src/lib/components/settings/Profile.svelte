@@ -51,6 +51,7 @@
 </script>
 
 <h1>{$i18n.settings.profile}</h1>
+<p>{$i18n.settings.profile_publish_info}</p>
 
 <form
   on:submit={async ($event) => await handleSubmit($event)}
@@ -125,5 +126,9 @@
 
   button {
     margin: 0.75rem 0 0.45rem;
+  }
+
+  h1 {
+    padding-top: 1rem;
   }
 </style>

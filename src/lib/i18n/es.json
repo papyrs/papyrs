@@ -57,7 +57,8 @@
     "custom": "Personalizado",
     "custom_url": "Su sitio web o cualquier url (por ejemplo: {0})",
     "switch_theme": "Cambia los colores del tema a {0}",
-    "no_delete": "El documento que se está editando no se puede borrar."
+    "no_delete": "El documento que se está editando no se puede borrar.",
+    "profile_publish_info": "La información de tu perfil se muestra en tu blog. Estos son públicos tan pronto como usted publica un artículo."
   },
   "dashboard": {
     "published": "Publicado",

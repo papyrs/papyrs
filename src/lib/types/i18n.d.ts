@@ -65,6 +65,7 @@ interface I18nSettings {
   custom_url: string;
   switch_theme: string;
   no_delete: string;
+  profile_publish_info: string;
 }
 
 interface I18nDashboard {
