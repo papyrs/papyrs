@@ -34,7 +34,7 @@
           github: false,
           canonical
         },
-        submitFeed
+        submitFeed: submitFeed && !alreadySubmitFeed
       });
 
       dispatch('papyPublished');
