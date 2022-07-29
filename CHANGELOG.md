@@ -1,3 +1,9 @@
+# 0.0.10 (in progress)
+
+### Features
+
+- support for sublist ("Tab" and "Shitkey+Tab")
+
 # 0.0.9 (2022-07-22)
 
 ### Features
