@@ -95,6 +95,10 @@
       font-size: calc(2 * var(--font-size-h1));
     }
   }
+
+  > ul, > ol, > dl {
+    overflow-x: auto;
+  }
 }
 
 @mixin placeholder {
