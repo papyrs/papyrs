@@ -1,11 +1,12 @@
-# 0.0.10 (in progress)
+# 0.0.10 (2022-07-29)
 
 ### Features
 
 - support for sublist ("Tab" and "Shitkey+Tab")
-- native share only on mobile devices
-- remove social share to Whatsapp
+- keyboard shortcuts to style text (control or command-{b, i, u, k} for bold, italic, underline & insert hyperlink)
 - add social share to OpenChat
+- remove social share to Whatsapp
+- native share only on mobile devices
 
 ### Fix
 
