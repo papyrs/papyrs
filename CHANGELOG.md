@@ -3,6 +3,11 @@
 ### Features
 
 - support for sublist ("Tab" and "Shitkey+Tab")
+- native share only on mobile devices
+
+### Fix
+
+- social images generated for published articles with Safari
 
 # 0.0.9 (2022-07-22)
 
