@@ -9,6 +9,7 @@
   import IconHackernews from '$lib/components/icons/IconHackernews.svelte';
   import IconTelegram from '$lib/components/icons/IconTelegram.svelte';
   import {importWebSocialShare} from '$lib/utils/import.utils';
+  import {isMobile} from '../../utils/devices.utils';
 
   // For simplicity reason we do not add the lib to the project but only fetch it through a script
   /*eslint-disable*/
@@ -97,7 +98,7 @@
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    if (navigator && navigator.share) {
+    if (navigator && navigator.share && isMobile()) {
       await shareMobile(detail);
       return;
     }
