@@ -4,12 +4,12 @@
   import IconTwitter from '$lib/components/icons/IconTwitter.svelte';
   import IconLinkedin from '$lib/components/icons/IconLinkedin.svelte';
   import IconMail from '$lib/components/icons/IconMail.svelte';
-  import IconWhatsapp from '$lib/components/icons/IconWhatsapp.svelte';
   import IconCopy from '$lib/components/icons/IconCopy.svelte';
   import IconHackernews from '$lib/components/icons/IconHackernews.svelte';
   import IconTelegram from '$lib/components/icons/IconTelegram.svelte';
   import {importWebSocialShare} from '$lib/utils/import.utils';
   import {isMobile} from '../../utils/devices.utils';
+  import IconOpenChat from "../icons/IconOpenChat.svelte";
 
   // For simplicity reason we do not add the lib to the project but only fetch it through a script
   /*eslint-disable*/
@@ -44,6 +44,21 @@
           }
         },
         {
+          telegram: {
+            socialShareUrl: publishedUrl
+          }
+        },
+        {
+          openchat: {
+            socialShareUrl: publishedUrl
+          }
+        },
+        {
+          hackernews: {
+            socialShareUrl: publishedUrl
+          }
+        },
+        {
           linkedin: {
             socialShareUrl: publishedUrl
           }
@@ -54,22 +69,7 @@
           }
         },
         {
-          whatsapp: {
-            socialShareUrl: publishedUrl
-          }
-        },
-        {
           copy: {
-            socialShareUrl: publishedUrl
-          }
-        },
-        {
-          hackernews: {
-            socialShareUrl: publishedUrl
-          }
-        },
-        {
-          telegram: {
             socialShareUrl: publishedUrl
           }
         }
@@ -119,10 +119,10 @@
   <div slot="twitter" style="color: #00aced"><IconTwitter /></div>
   <div slot="linkedin" style="color: #0077b5"><IconLinkedin /></div>
   <div slot="email"><IconMail /></div>
-  <div slot="whatsapp" style="color: #25D366"><IconWhatsapp /></div>
   <div slot="copy"><IconCopy /></div>
   <div slot="hackernews" style="color: #ff6000"><IconHackernews /></div>
   <div slot="telegram" style="color: #0088cc"><IconTelegram /></div>
+  <div slot="openchat"><IconOpenChat /></div>
 </web-social-share>
 
 <style lang="scss">

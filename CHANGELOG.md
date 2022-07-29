@@ -4,6 +4,8 @@
 
 - support for sublist ("Tab" and "Shitkey+Tab")
 - native share only on mobile devices
+- remove social share to Whatsapp
+- add social share to OpenChat
 
 ### Fix
 
