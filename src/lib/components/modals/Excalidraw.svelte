@@ -9,7 +9,7 @@
   import type {PapyModalExcalidrawDetail} from '../../types/modal';
   import type {ExcalidrawScene} from '@deckdeckgo/excalidraw';
   import {toasts} from '../../stores/toasts.store';
-  import {exportExcalidraw, loadExcalidrawScene} from '../../utils/exclidraw.utils';
+  import {exportExcalidraw, loadExcalidrawScene} from '../../utils/excalidraw.utils';
 
   let excalidraw: HTMLDeckgoExcalidrawElement | null;
   let displayEditor = false;
