@@ -1,3 +1,9 @@
+# 0.0.11 (in progress)
+
+### Features
+
+- add social share to DSCVR
+
 # 0.0.10 (2022-07-29)
 
 ### Features
