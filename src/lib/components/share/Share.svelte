@@ -10,6 +10,7 @@
   import {importWebSocialShare} from '$lib/utils/import.utils';
   import {isMobile} from '../../utils/devices.utils';
   import IconOpenChat from "../icons/IconOpenChat.svelte";
+  import IconDscvr from "../icons/IconDscvr.svelte";
 
   // For simplicity reason we do not add the lib to the project but only fetch it through a script
   /*eslint-disable*/
@@ -31,6 +32,8 @@
     const text: string = getShareText(data);
     const twitterText: string = getShareTwitterText(data);
     const {publishedUrl} = data;
+
+    console.log(text)
 
     webSocialShareRef.share = {
       displayNames: true,
@@ -54,12 +57,18 @@
           }
         },
         {
-          hackernews: {
+          linkedin: {
             socialShareUrl: publishedUrl
           }
         },
         {
-          linkedin: {
+          dscvr: {
+            socialShareUrl: publishedUrl,
+            socialShareText: text
+          }
+        },
+        {
+          hackernews: {
             socialShareUrl: publishedUrl
           }
         },
@@ -123,6 +132,7 @@
   <div slot="hackernews" style="color: #ff6000"><IconHackernews /></div>
   <div slot="telegram" style="color: #0088cc"><IconTelegram /></div>
   <div slot="openchat"><IconOpenChat /></div>
+  <div slot="dscvr"><IconDscvr /></div>
 </web-social-share>
 
 <style lang="scss">
