@@ -99,6 +99,10 @@
   > ul, > ol, > dl {
     overflow-x: auto;
   }
+
+  span {
+    word-break: break-word;
+  }
 }
 
 @mixin placeholder {
