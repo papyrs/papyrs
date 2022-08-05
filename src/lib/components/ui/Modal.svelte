@@ -78,7 +78,10 @@
 
     @include section.large;
     height: calc(min(100vh, 796px) - 2.75rem);
-    max-height: -webkit-fill-available;
+
+    @supports (-webkit-touch-callout: none) {
+      max-height: -webkit-fill-available;
+    }
 
     @include shadow.strong;
 
