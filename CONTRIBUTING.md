@@ -8,7 +8,8 @@ Are you interested to contribute to our open source project? That would be aweso
 
 - [Getting started](#getting-started)
 - [Issues](#issues)
-- [Translations (i18n)](#translation)
+- [App translation (i18n)](#app-translation-i18n)
+- [Rich text editor translation (i18n)](#rich-text-editor-translation-i18n)
 
 ## Getting started
 
@@ -24,7 +25,7 @@ If you spot a problem, [search if an issue already exists](https://github.com/pa
 
 Scan through our [existing issues](https://github.com/papyrs/papyrs/issues) to find one that interests you. You can narrow down the search using `labels` as filters. We flags our [issues](https://github.com/papyrs/papyrs/issues) with the labels `good first issue` when we think that the issue is accessible without too much experience and know-how of our project. If you find an issue to work on, you are welcome to open a PR with a fix.
 
-## Translations (i18n)
+## App translation (i18n)
 
 We would be grateful to get your help to translate our app.
 
@@ -39,5 +40,15 @@ If you would like to test your translations, either test these by overwriting te
 
 Translations are handled in JSON files but, as we are consuming these through a store, their representation have to exist as interfaces.
 To ease the process we have developed a script which extract the declarations automatically. In case you would add new keys, run `npm run i18n` to generate the interfaces.
+
+## Rich text editor translation (i18n)
+
+In addition to the editor itself, we would also be grateful if you would help translate our rich text editor we are developing for - and using in - Papyrs.
+
+In a clone of [Stylo](https://github.com/papyrs/stylo) project:
+
+1. Copy [en.ts](https://github.com/papyrs/stylo/blob/main/src/assets/i18n/en.ts) to a new filename reflecting the language (such as for example `fr.ts` for French)
+2. Translate each keys of the newly created file
+3. Provide a PR
 
 [papyrs]: https://papy.rs
