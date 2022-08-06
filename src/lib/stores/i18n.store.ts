@@ -23,6 +23,13 @@ const nlI18n = async (): Promise<I18n> => {
   };
 };
 
+const jaI18n = async (): Promise<I18n> => {
+  return {
+    lang: 'ja',
+    ...(await import(`../i18n/ja.json`))
+  };
+};
+
 const enI18n = (): I18n => {
   return {
     lang: 'en',
@@ -38,6 +45,8 @@ const loadLanguage = (lang: Languages): Promise<I18n> => {
       return deI18n();
     case 'nl':
       return nlI18n();
+    case 'ja':
+      return jaI18n();
     default:
       return Promise.resolve(enI18n());
   }

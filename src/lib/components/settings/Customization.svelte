@@ -13,6 +13,7 @@
   <option value="en"> English </option>
   <option value="es"> Español </option>
   <option value="nl"> Nederlands </option>
+  <option value="ja"> 日本語 </option>
 </select>
 
 <style lang="scss">
