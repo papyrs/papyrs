@@ -1,0 +1,142 @@
+{
+  "core": {
+    "close": "閉じる",
+    "loading": "読込中...",
+    "in_progress": "処理中...",
+    "yes": "はい",
+    "no": "いいえ",
+    "reset": "リセット",
+    "ok": "OK",
+    "save": "保存",
+    "delete": "削除",
+    "sure": "本当によろしいですか？",
+    "add": "追加",
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "got_it": "分かりました",
+    "back": "戻る"
+  },
+  "nav": {
+    "menu": "メニュー",
+    "sign_out": "サインアウト",
+    "sign_in": "サインイン",
+    "ready_to_share": "シェアする準備はできましたか？",
+    "settings": "設定",
+    "billing": "お支払い",
+    "more": "さらに表示"
+  },
+  "menu": {
+    "assets": "アセット一覧",
+    "posts": "投稿一覧"
+  },
+  "sign_in": {
+    "title": "Papyrsをフル活用する",
+    "overview": "サインインすることで、投稿をオンラインで保存したり、公開したりできるようになります。",
+    "internet_identity": "Internet Identity でサインイン"
+  },
+  "settings": {
+    "cannot_undone": "この操作は元に戻すことができません。これによりあなたのユーザー情報は永久に削除されます。",
+    "type_ddg_to_confirm": "{0} を入力して確定してください。",
+    "i_understand": "理解しました、ユーザー情報を削除します。",
+    "customization": "カスタマイズ",
+    "profile": "プロフィール",
+    "access_settings": "{0} からプロフィールや設定にアクセスできます。",
+    "access_posts": "{0} からブログ記事をオンラインで共有することができます。",
+    "access_assets": "{0} からオンラインアセット（画像やデータ）にアクセスできます。",
+    "name": "名前",
+    "email": "Eメールアドレス",
+    "newsletter": "ニュースレターを受け取る",
+    "username": "ユーザー名",
+    "danger_zone": "デンジャーゾーン",
+    "no_way_back": "一度ユーザー情報を削除すると、元に戻すことはできません。慎重にお願いします。",
+    "delete_user": "ユーザー情報を削除",
+    "profile_picture": "プロフィール画像",
+    "profile_picture_tips": "補足: 正方形の画像が最適です",
+    "summary": "サマリー",
+    "bio": "簡単な自己紹介を記入してください",
+    "custom": "カスタム",
+    "custom_url": "あなたのウェブサイトまたは任意のURL（例: {0}）",
+    "switch_theme": "テーマカラーを {0} に変更する",
+    "no_delete": "編集中のドキュメントは削除できません。",
+    "profile_publish_info": "あなたのプロフィール情報はブログ上に表示されます。これらは記事投稿と同時に公開されます。"
+  },
+  "dashboard": {
+    "published": "投稿済み",
+    "edited": "編集済み"
+  },
+  "editor": {
+    "your_collection_empty": "コレクションは空っぽです。",
+    "languages": "言語",
+    "language": "言語",
+    "display_line_number": "行番号を表示する",
+    "action_cannot_undone": "この操作は元に戻すことはできません",
+    "delete_question": "削除しますか？",
+    "code": "Code",
+    "gifs": "GIFs",
+    "stock_photo": "Unsplash",
+    "photos_by_unsplash": "Photos by Unsplash",
+    "searching": "検索中",
+    "help": "ヘルプ",
+    "share": "シェア",
+    "export": "エクスポート",
+    "search_term": "検索キーワード",
+    "upload_image": "新しい画像をアップロードする",
+    "unplash_credit": "Photo by {0} on {1}",
+    "edit_code": "Code を編集する",
+    "delete_code": "Code を削除する",
+    "edit_excalidraw": "Excalidraw を編集する"
+  },
+  "publish_done": {
+    "hooray": "わーい",
+    "did_it": "やったね",
+    "applause": "拍手",
+    "thumbs_up": "サムズアップ",
+    "post_published": "記事が公開されました。",
+    "share": "{0} 世界に公開されました！"
+  },
+  "publish_edit": {
+    "title_max_chars": "タイトルは、ラテン文字、アラビア数字、スペースで指定してください。{0} 文字以下でなければなりません。",
+    "description": "備考（任意）",
+    "tags": "タグ（任意）",
+    "title": "タイトル",
+    "publish_now": "投稿",
+    "canonical_url": "Canonical URL（任意）",
+    "submit_feed": "ブログ記事をコミュニティで共有する",
+    "submit_feed_info": "オプトインすると（これは任意です）、ブログ記事は Papyrs に提出され、私たちの様々なソーシャルチャンネル（Twitter、Discord など）で宣伝され、私たちの「フィード」キャニスマートコントラクトを通じてあらゆる開発者が利用できるようになります。将来的には、様々なクリエイターの投稿を読むことができるプラットフォームで共有される予定です。",
+    "submit_feed_done": "ブログ記事が Papyrs に投稿されました",
+    "update_published": "公開記事を更新する",
+    "update_now": "更新"
+  },
+  "tools": {
+    "new": "新規投稿",
+    "open": "開く",
+    "user": "ユーザー",
+    "profile_image": "プロフィール画像"
+  },
+  "sync": {
+    "cloud": "クラウド",
+    "cloud_error": "クラウド同期でエラーが発生しました",
+    "cloud_in_progress": "保存中...",
+    "cloud_idle": "すべての変更が保存されました。",
+    "cloud_pending": "保存中...",
+    "cloud_init": "初期化中...",
+    "info": "すべての変更は自動的にクラウドに保存されます。",
+    "status": "クラウド状況",
+    "wait": "クラウドが同期されるまでお待ちください。"
+  },
+  "links": {
+    "terms_of_use": "利用規約",
+    "privacy_policy": "プライバシーポリシー"
+  },
+  "share": {
+    "content_by": "{1} による {0} は {2} で作成されました",
+    "content_no_author": "{0} は {1} で作成されました",
+    "a_blog_post": "ブログ記事"
+  },
+  "billing": {
+    "beta": "ベータ版の間、Papyrs は無料で使用できます。最終的にはサブスクリプションモデルや、コンテンツを収益化できるようなオプションを導入する予定です。",
+    "smart_contracts": "スマートコントラクト",
+    "principal_id": "あなたのプリンシパルID",
+    "cycles": "{0} は、あなたのデータを保持し、ウェブ上でブログ投稿を提供するキャニスタースマートコントラクトの実行料金を支払うために使用されます。もし計算能力が不足している場合は、{1} に連絡してください。"
+  }
+}
