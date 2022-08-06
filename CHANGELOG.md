@@ -1,8 +1,14 @@
-# 0.0.11 (in progress)
+# 0.0.11 (2022-08-06)
 
 ### Features
 
+- japanese translation
 - add social share to DSCVR
+
+### Styles
+
+- fix modal height on Chrome v104
+- prevent overflow - can happen e.g. if a link is copied as text
 
 # 0.0.10 (2022-07-29)
 
