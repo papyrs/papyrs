@@ -6,9 +6,10 @@
   import Nav from '$lib/components/core/Nav.svelte';
   import Spinner from '$lib/components/ui/Spinner.svelte';
   import {toasts} from '$lib/stores/toasts.store';
-  import WhatsII from "../lib/components/modals/WhatsII.svelte";
+  import WhatsII from '$lib/components/modals/WhatsII.svelte';
 
   let loaded = false;
+  let inProgress = false;
 
   let config: Record<string, string> = {};
 
@@ -49,15 +50,18 @@
     {#if loaded}
       <ic-signin
         i18n={$i18n}
+        on:inProgress={() => (inProgress = true)}
         on:ddgSignInSuccess={onSignInSuccess}
         on:ddgSignInError={onSignInError}
         {config}>
-        <div slot="spinner">
+        <div slot="spinner" class="progress">
           <Spinner />
         </div>
       </ic-signin>
 
-      <WhatsII />
+      {#if !inProgress}
+        <WhatsII />
+      {/if}
     {:else}
       <Spinner />
     {/if}
@@ -139,5 +143,9 @@
 
   p {
     font-size: var(--font-size-h3);
+  }
+
+  .progress {
+    margin: 2.75rem;
   }
 </style>
