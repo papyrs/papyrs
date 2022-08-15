@@ -9,8 +9,8 @@
 </script>
 
 <div bind:this={div}>
-  {#each $logs as { msg, duration }}
-    <span>$ {msg} {duration ? `${round(duration / 1000)}s` : ''}</span>
+  {#each $logs as { msg, duration, level }}
+    <span class={level}>$ {msg} {duration ? `${round(duration / 1000)}s` : ''}</span>
   {/each}
 </div>
 
@@ -42,5 +42,9 @@
     &::-webkit-scrollbar-thumb {
       background-color: black;
     }
+  }
+
+  .error {
+    color: var(--color-error);
   }
 </style>

@@ -55,7 +55,7 @@
   <div class="info">
     <h2>{$i18n.sync.status}</h2>
     <p>{$i18n.sync.info}</p>
-    <p>{label}</p>
+    <p>{@html label}</p>
 
     <button type="button" on:click|stopPropagation={showLog}> Log </button>
   </div>
