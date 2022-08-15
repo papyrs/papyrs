@@ -54,12 +54,12 @@
     "url": "https://github.com/papyrs/papyrs/issues"
   },
   "dependencies": {
-    "@deckdeckgo/editor": "^7.14.0",
+    "@deckdeckgo/editor": "^8.1.1",
     "@deckdeckgo/highlight-code": "^4.3.0",
     "@deckdeckgo/offline": "file:../../deckdeckgo/deckdeckgo/providers/offline",
     "@deckdeckgo/social-img": "^1.3.1",
-    "@deckdeckgo/studio": "^0.0.21",
-    "@deckdeckgo/sync": "file:../../deckdeckgo/deckdeckgo/providers/sync",
+    "@deckdeckgo/studio": "^0.0.22",
+    "@deckdeckgo/sync": "^0.0.36",
     "@papyrs/stylo": "^0.0.37",
     "@stencil/core": "^2.17.1",
     "web-social-share": "^9.0.0"
