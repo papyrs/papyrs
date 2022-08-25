@@ -115,7 +115,7 @@
   },
   "sync": {
     "cloud": "Cloud",
-    "cloud_error": "Cloud sync encountered an error",
+    "cloud_error": "Cloud sync encountered an error.<br/><br/>If the problem persists, try to reload your <a href=\"/posts\">post</a> or reach out.",
     "cloud_in_progress": "Saving...",
     "cloud_idle": "All changes saved.",
     "cloud_pending": "Saving...",
