@@ -4,6 +4,7 @@
 
 - prevent data overwrite and timestamps (proposal [#47](https://github.com/papyrs/papyrs/discussions/47))
 - upgrade agent-js `v0.13.2` to save the delegation in IndexedDB instead of localstorage
+- introduces log levels to better display errors
 
 ### Styles
 
