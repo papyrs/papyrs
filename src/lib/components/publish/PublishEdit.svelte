@@ -31,7 +31,7 @@
         inputs: {
           title,
           description,
-          tags: tags?.split(',') || [],
+          tags: tags?.split(',') ?? [],
           canonical,
           lang
         },
