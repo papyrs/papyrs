@@ -28,10 +28,9 @@
     try {
       await publish({
         inputs: {
-          name: title,
+          title,
           description,
           tags: tags?.split(',') || [],
-          github: false,
           canonical
         },
         submitFeed: submitFeed && !alreadySubmitFeed
