@@ -1,23 +1,10 @@
 <script lang="ts">
   import {i18n} from '$lib/stores/i18n.store';
+  import AppLang from "../core/AppLang.svelte";
 
   let selected = $i18n.lang;
 </script>
 
 <h1>{$i18n.settings.customization}</h1>
 
-<p>{$i18n.editor.language}</p>
-
-<select bind:value={selected} on:change={async () => i18n.switchLang(selected)}>
-  <option value="de"> Deutsch </option>
-  <option value="en"> English </option>
-  <option value="es"> Español </option>
-  <option value="nl"> Nederlands </option>
-  <option value="ja"> 日本語 </option>
-</select>
-
-<style lang="scss">
-  select {
-    margin: 0 0 1.45rem;
-  }
-</style>
+<AppLang bind:selected on:change={async () => await i18n.switchLang(selected)} />

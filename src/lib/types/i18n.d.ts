@@ -112,6 +112,7 @@ interface I18nPublish_edit {
   title: string;
   publish_now: string;
   canonical_url: string;
+  language: string;
   submit_feed: string;
   submit_feed_info: string;
   submit_feed_done: string;

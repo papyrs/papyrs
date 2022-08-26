@@ -11,6 +11,7 @@
   import {primaryColor} from '../../utils/theme.utils';
   import PublishSubmitFeed from './PublishSubmitFeed.svelte';
   import {publish} from '../../services/publish.services';
+  import IsoLang from "$lib/components/core/IsoLang.svelte";
 
   const dispatch = createEventDispatcher();
 
@@ -28,11 +29,11 @@
     try {
       await publish({
         inputs: {
-          name: title,
+          title,
           description,
           tags: tags?.split(',') || [],
-          github: false,
-          canonical
+          canonical,
+          lang
         },
         submitFeed: submitFeed && !alreadySubmitFeed
       });
@@ -55,6 +56,7 @@
   let description: string | undefined = $doc.doc?.data?.meta?.description;
   let canonical: string | undefined = $doc.doc?.data?.meta?.canonical;
   let tags: string | undefined = $doc.doc?.data?.meta?.tags?.join(',');
+  let lang: string | undefined = $doc.doc?.data?.meta?.lang ?? 'en';
 
   let submitFeed =
     $doc.doc?.data?.meta?.feed ?? JSON.parse(localStorage.getItem('submit_feed') ?? 'false');
@@ -93,6 +95,7 @@
     type="text"
     maxlength={TITLE_MAX_LENGTH}
     class="title"
+    aria-invalid={!validTitleInput}
     required />
 
   <p class="title-info" class:invalid={!validTitleInput && title?.length > 0}>
@@ -104,6 +107,7 @@
     name="description"
     placeholder={$i18n.publish_edit.description}
     rows={5}
+    aria-invalid={!validDescriptionInput}
     bind:value={description}
     maxlength={DESCRIPTION_MAX_LENGTH} />
 
@@ -113,7 +117,8 @@
     name="canonical"
     placeholder={$i18n.publish_edit.canonical_url}
     type="text"
-    class="canonical" />
+    class="canonical"
+    aria-invalid={!validCanonicalInput} />
 
   <input
     bind:value={tags}
@@ -123,11 +128,15 @@
     type="text"
     class="tags" />
 
+  <IsoLang bind:selected={lang} />
+
   <PublishSubmitFeed bind:submitFeed disabled={alreadyPublished && alreadySubmitFeed} />
 
   <button
     type="submit"
-    disabled={!validTitleInput || !validCanonicalInput || !validDescriptionInput}>
+    disabled={!validTitleInput ||
+      !validCanonicalInput ||
+      !validDescriptionInput}>
     {#if alreadyPublished}
       {$i18n.publish_edit.update_now}
     {:else}
