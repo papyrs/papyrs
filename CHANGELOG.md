@@ -1,3 +1,17 @@
+# 0.0.13 (2022-08-25)
+
+### Hot fix 🔥
+
+- new user sign-in blocked because dapp tries incorrectly to save (empty) user data in indexeddb (workaround: hit browser refresh)
+
+### Features
+
+- prepare support for languages in publish
+
+### Fix
+
+- publish timestamps that is sometimes not updated leading to backend rejecting updates
+
 # 0.0.12 (2022-08-25)
 
 ### Features

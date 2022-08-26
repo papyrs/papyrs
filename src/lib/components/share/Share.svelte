@@ -33,8 +33,6 @@
     const twitterText: string = getShareTwitterText(data);
     const {publishedUrl} = data;
 
-    console.log(text)
-
     webSocialShareRef.share = {
       displayNames: true,
       config: [
