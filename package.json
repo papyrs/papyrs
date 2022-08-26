@@ -2,7 +2,7 @@
   "name": "papyrs",
   "private": true,
   "description": "Blog on web3",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "David Dal Busco <david@fluster.io>",
   "license": "AGPL-3.0-or-later",
   "type": "module",
