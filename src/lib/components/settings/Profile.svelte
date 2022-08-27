@@ -73,7 +73,7 @@
     bind:this={inputProfilePicture}
     type="file"
     multiple={false}
-    accept="image/x-png,image/jpeg,image/gif,image/svg+xml,image/webp"
+    accept="image/png,image/jpeg,image/gif,image/svg+xml,image/webp"
     disabled={saving} />
 
   <textarea
