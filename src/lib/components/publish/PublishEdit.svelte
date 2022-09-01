@@ -11,7 +11,9 @@
   import {primaryColor} from '../../utils/theme.utils';
   import PublishSubmitFeed from './PublishSubmitFeed.svelte';
   import {publish} from '../../services/publish.services';
-  import IsoLang from "$lib/components/core/IsoLang.svelte";
+  import IsoLang from '$lib/components/core/IsoLang.svelte';
+  import {publishOptions, savePublishOptions} from '../../utils/publish.utils';
+  import type {PublishOptions} from '../../types/publish';
 
   const dispatch = createEventDispatcher();
 
@@ -52,11 +54,13 @@
   let alreadyPublished = $doc.doc?.data?.meta?.published ?? false;
   let alreadySubmitFeed = $doc.doc?.data?.meta?.feed ?? false;
 
+  const options: PublishOptions = publishOptions();
+
   let title: string | undefined = $doc.doc?.data?.meta?.title ?? $doc.doc?.data?.name;
   let description: string | undefined = $doc.doc?.data?.meta?.description;
   let canonical: string | undefined = $doc.doc?.data?.meta?.canonical;
   let tags: string | undefined = $doc.doc?.data?.meta?.tags?.join(',');
-  let lang: string | undefined = $doc.doc?.data?.meta?.lang ?? 'en';
+  let lang: string = $doc.doc?.data?.meta?.lang ?? options.lang;
 
   let submitFeed =
     $doc.doc?.data?.meta?.feed ?? JSON.parse(localStorage.getItem('submit_feed') ?? 'false');
@@ -70,6 +74,8 @@
   $: validDescriptionInput = validateDescription(description);
 
   const color: string = primaryColor();
+
+  const saveOptions = () => savePublishOptions({...options, lang});
 </script>
 
 <h1>
@@ -128,15 +134,13 @@
     type="text"
     class="tags" />
 
-  <IsoLang bind:selected={lang} />
+  <IsoLang bind:selected={lang} on:change={saveOptions} />
 
   <PublishSubmitFeed bind:submitFeed disabled={alreadyPublished && alreadySubmitFeed} />
 
   <button
     type="submit"
-    disabled={!validTitleInput ||
-      !validCanonicalInput ||
-      !validDescriptionInput}>
+    disabled={!validTitleInput || !validCanonicalInput || !validDescriptionInput}>
     {#if alreadyPublished}
       {$i18n.publish_edit.update_now}
     {:else}
