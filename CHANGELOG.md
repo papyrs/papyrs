@@ -1,3 +1,20 @@
+# 0.0.14 (2022-09-01)
+
+### Features
+
+- support to publish blog posts in different languages
+
+# Style
+
+- break-word for any elements in the post
+
+### Fix
+
+- publish regex allow dash
+- agent-js Safari desktop blocked login
+- generate social image card if user used an uploaded images as first paragraphs
+- mime type for `png` in input of the profile
+
 # 0.0.13 (2022-08-25)
 
 ### Hot fix 🔥
