@@ -6,7 +6,7 @@ export const validTitle = (title: string | undefined): boolean => {
   }
 
   const match: RegExpMatchArray | null = title.match(
-    /[A-Za-z0-9\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]+/g
+    /[A-Za-z0-9-\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\s]+/g
   );
 
   if (!match || match.length <= 0 || match.length > 1) {
