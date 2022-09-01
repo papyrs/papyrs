@@ -101,6 +101,7 @@
     "title": "Titel",
     "publish_now": "Veröffentlichen",
     "canonical_url": "Canonical URL (Optional)",
+    "language": "Sprache (Optional, Standard „en“)",
     "submit_feed": "Der Blogbeitrag mit der Community teilen (optional)",
     "submit_feed_info": "Wenn du dich dafür entscheidest (dies ist optional), wird der Blogbeitrag an Papyrs weitergeleitet, um ihn auf unseren verschiedenen sozialen Kanälen (Twitter, Discord, etc.) zu weiterleiten und ihn allen Entwicklern über unseren \"Feed\"-Canister-Smart-Contract zur Verfügung zu stellen. In Zukunft wird er auch auf einer Plattform geteilt werden, auf der Benutzer Beiträge von verschiedenen Autoren lesen können.",
     "submit_feed_done": "Blogbeitrag wurde bei Papyrs eingereicht",

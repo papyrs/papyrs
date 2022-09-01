@@ -101,6 +101,7 @@
     "title": "タイトル",
     "publish_now": "投稿",
     "canonical_url": "Canonical URL（任意）",
+    "language": "Language (optional, default \"en\")",
     "submit_feed": "ブログ記事をコミュニティで共有する",
     "submit_feed_info": "オプトインすると（これは任意です）、ブログ記事は Papyrs に提出され、私たちの様々なソーシャルチャンネル（Twitter、Discord など）で宣伝され、私たちの「フィード」キャニスマートコントラクトを通じてあらゆる開発者が利用できるようになります。将来的には、様々なクリエイターの投稿を読むことができるプラットフォームで共有される予定です。",
     "submit_feed_done": "ブログ記事が Papyrs に投稿されました",

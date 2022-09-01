@@ -11,6 +11,9 @@
   import {primaryColor} from '../../utils/theme.utils';
   import PublishSubmitFeed from './PublishSubmitFeed.svelte';
   import {publish} from '../../services/publish.services';
+  import IsoLang from '$lib/components/core/IsoLang.svelte';
+  import {publishOptions, savePublishOptions} from '../../utils/publish.utils';
+  import type {PublishOptions} from '../../types/publish';
 
   const dispatch = createEventDispatcher();
 
@@ -30,8 +33,9 @@
         inputs: {
           title,
           description,
-          tags: tags?.split(',') || [],
-          canonical
+          tags: tags?.split(',') ?? [],
+          canonical,
+          lang
         },
         submitFeed: submitFeed && !alreadySubmitFeed
       });
@@ -50,10 +54,13 @@
   let alreadyPublished = $doc.doc?.data?.meta?.published ?? false;
   let alreadySubmitFeed = $doc.doc?.data?.meta?.feed ?? false;
 
+  const options: PublishOptions = publishOptions();
+
   let title: string | undefined = $doc.doc?.data?.meta?.title ?? $doc.doc?.data?.name;
   let description: string | undefined = $doc.doc?.data?.meta?.description;
   let canonical: string | undefined = $doc.doc?.data?.meta?.canonical;
   let tags: string | undefined = $doc.doc?.data?.meta?.tags?.join(',');
+  let lang: string = $doc.doc?.data?.meta?.lang ?? options.lang;
 
   let submitFeed =
     $doc.doc?.data?.meta?.feed ?? JSON.parse(localStorage.getItem('submit_feed') ?? 'false');
@@ -67,6 +74,8 @@
   $: validDescriptionInput = validateDescription(description);
 
   const color: string = primaryColor();
+
+  const saveOptions = () => savePublishOptions({...options, lang});
 </script>
 
 <h1>
@@ -92,6 +101,7 @@
     type="text"
     maxlength={TITLE_MAX_LENGTH}
     class="title"
+    aria-invalid={!validTitleInput}
     required />
 
   <p class="title-info" class:invalid={!validTitleInput && title?.length > 0}>
@@ -103,6 +113,7 @@
     name="description"
     placeholder={$i18n.publish_edit.description}
     rows={5}
+    aria-invalid={!validDescriptionInput}
     bind:value={description}
     maxlength={DESCRIPTION_MAX_LENGTH} />
 
@@ -112,7 +123,8 @@
     name="canonical"
     placeholder={$i18n.publish_edit.canonical_url}
     type="text"
-    class="canonical" />
+    class="canonical"
+    aria-invalid={!validCanonicalInput} />
 
   <input
     bind:value={tags}
@@ -121,6 +133,8 @@
     placeholder={$i18n.publish_edit.tags}
     type="text"
     class="tags" />
+
+  <IsoLang bind:selected={lang} on:change={saveOptions} />
 
   <PublishSubmitFeed bind:submitFeed disabled={alreadyPublished && alreadySubmitFeed} />
 
