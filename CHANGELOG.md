@@ -4,7 +4,7 @@
 
 - support to publish blog posts in different languages
 
-# Style
+### Style
 
 - break-word for any elements in the post
 
