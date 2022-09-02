@@ -1,4 +1,5 @@
 import {browser} from '$app/env';
+import {switchLang as switchUILang} from '@papyrs/ui';
 import {writable} from 'svelte/store';
 import en from '../i18n/en.json';
 
@@ -65,12 +66,16 @@ export const initI18n = () => {
       const {lang}: Storage = browser ? localStorage : ({lang: 'en'} as unknown as Storage);
 
       if (lang === 'en') {
+        await switchUILang(lang);
+
         // No need to reload the store
         return;
       }
 
       const bundle: I18n = await loadLanguage(lang);
       set(bundle);
+
+      await switchUILang(lang);
     },
 
     switchLang: async (lang: Languages) => {
@@ -78,6 +83,8 @@ export const initI18n = () => {
       set(bundle);
 
       localStorage.setItem('lang', lang);
+
+      await switchUILang(lang);
     }
   };
 };
