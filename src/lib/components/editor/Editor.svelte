@@ -6,7 +6,7 @@
   import type {Unsubscriber} from 'svelte/store';
   import {i18n} from '$lib/stores/i18n.store';
   import {importStudio} from '$lib/utils/import.utils';
-  import Spinner from '$lib/components/ui/Spinner.svelte';
+  import {Spinner} from '@papyrs/ui';
   import {DocEvents, loadDoc, resetDoc} from '@deckdeckgo/sync';
   import {cleanCopy} from '../../events/copy.events';
   import Quote from '../ui/Quote.svelte';

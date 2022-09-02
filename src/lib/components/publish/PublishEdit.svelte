@@ -1,7 +1,7 @@
 <script lang="ts">
   import {i18n} from '$lib/stores/i18n.store';
   import {createEventDispatcher, onMount} from 'svelte';
-  import I18n from '$lib/components/ui/I18n.svelte';
+  import {I18n} from '@papyrs/ui';
   import {TITLE_MAX_LENGTH, DESCRIPTION_MAX_LENGTH} from '$lib/constants/constants';
   import {validateCanonical, validateDescription, validTitle} from '$lib/utils/input.utils';
   import {importDeckGoSocialImg} from '$lib/utils/import.utils';

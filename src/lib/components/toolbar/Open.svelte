@@ -1,6 +1,6 @@
 <script lang="ts">
   import {i18n} from '$lib/stores/i18n.store';
-  import IconOpen from '$lib/components/icons/IconOpen.svelte';
+  import {IconOpen} from '@papyrs/ui';
   import {createEventDispatcher} from 'svelte';
 
   const dispatch = createEventDispatcher();

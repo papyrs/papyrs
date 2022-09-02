@@ -1,6 +1,6 @@
 <script lang="ts">
   import {i18n} from '$lib/stores/i18n.store';
-  import AppLang from "../core/AppLang.svelte";
+  import AppLang from '../core/AppLang.svelte';
 
   let selected = $i18n.lang;
 </script>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Modal from '../ui/Modal.svelte';
+  import {Modal} from '@papyrs/ui';
   let open = false;
 </script>
 
@@ -14,7 +14,7 @@
 {/if}
 
 <style lang="scss">
-  @use '../../themes/mixins/shadow';
+  @use '@papyrs/ui/styles/mixins/shadow';
 
   div {
     display: flex;

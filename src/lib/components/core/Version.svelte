@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {APP_VERSION} from "../../constants/constants";
+  import {APP_VERSION} from '../../constants/constants';
 </script>
 
 <span class="version">Papyrs v{APP_VERSION}</span>

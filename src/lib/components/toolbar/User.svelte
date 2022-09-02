@@ -1,19 +1,14 @@
 <script lang="ts">
   import Avatar from '$lib/components/core/Avatar.svelte';
-  import Popover from '$lib/components/ui/Popover.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
+  import {Popover, Button} from '@papyrs/ui';
   import {user} from '$lib/stores/user.store';
   import {i18n} from '$lib/stores/i18n.store';
   import {signUserOut} from '$lib/services/auth.services';
-  import IconSignOut from '$lib/components/icons/IconSignOut.svelte';
+  import {IconSignOut, IconSettings, IconCreditCard, IconSignIn, IconMore} from '@papyrs/ui';
   import {goto} from '$app/navigation';
-  import IconSettings from '$lib/components/icons/IconSettings.svelte';
   import {sync} from '$lib/stores/sync.store';
   import Dirty from '$lib/components/toolbar/Dirty.svelte';
-  import IconCreditCard from '$lib/components/icons/IconCreditCard.svelte';
-  import IconSignIn from '$lib/components/icons/IconSignIn.svelte';
   import {auth} from '$lib/stores/auth.store';
-  import IconMore from '../icons/IconMore.svelte';
 
   let visible: boolean | undefined;
   let button: HTMLButtonElement | undefined;

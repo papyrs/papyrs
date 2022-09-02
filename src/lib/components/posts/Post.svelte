@@ -68,7 +68,7 @@
 </article>
 
 <style lang="scss">
-  @use '../../themes/mixins/card';
+  @use '@papyrs/ui/styles/mixins/card';
 
   article {
     @include card.card(true);

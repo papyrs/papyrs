@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Modal from '../ui/Modal.svelte';
+  import {Modal} from '@papyrs/ui';
   import type {Image} from '../../types/image';
   import {emit} from '../../utils/events.utils';
   import {createEventDispatcher} from 'svelte';

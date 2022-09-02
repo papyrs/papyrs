@@ -21,7 +21,7 @@
 {/if}
 
 <style lang="scss">
-  @use '../../themes/mixins/text';
+  @use '@papyrs/ui/styles/mixins/text';
 
   a {
     display: inline-flex;

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Modal from '$lib/components/ui/Modal.svelte';
+  import {Modal} from '@papyrs/ui';
   import {onDestroy, onMount} from 'svelte';
   import PublishEdit from '$lib/components/publish/PublishEdit.svelte';
   import PublishDone from '$lib/components/publish/PublishDone.svelte';

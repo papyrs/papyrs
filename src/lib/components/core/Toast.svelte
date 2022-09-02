@@ -2,7 +2,7 @@
   import {toasts} from '$lib/stores/toasts.store';
   import {fade, fly} from 'svelte/transition';
   import type {ToastLevel, ToastMsg} from '$lib/types/toast';
-  import IconClose from '$lib/components/icons/IconClose.svelte';
+  import {IconClose} from '@papyrs/ui';
   import {i18n} from '$lib/stores/i18n.store';
 
   export let msg: ToastMsg;
@@ -31,8 +31,8 @@
 </div>
 
 <style lang="scss">
-  @use '../../themes/mixins/text';
-  @use '../../themes/mixins/shadow';
+  @use '@papyrs/ui/styles/mixins/text';
+  @use '@papyrs/ui/styles/mixins/shadow';
 
   .toast {
     display: flex;

@@ -4,7 +4,7 @@
   import {createEventDispatcher, onDestroy, onMount} from 'svelte';
   import {auth} from '$lib/stores/auth.store';
   import type {AuthStore} from '$lib/stores/auth.store';
-  import Spinner from '$lib/components/ui/Spinner.svelte';
+  import {Spinner} from '@papyrs/ui';
   import Asset from '$lib/components/assets/Asset.svelte';
   import type {Unsubscriber} from 'svelte/store';
   import {toasts} from '$lib/stores/toasts.store';
@@ -90,7 +90,7 @@
 {/if}
 
 <style lang="scss">
-  @use '../../themes/mixins/grid';
+  @use '@papyrs/ui/styles/mixins/grid';
 
   .grid {
     @include grid.images;

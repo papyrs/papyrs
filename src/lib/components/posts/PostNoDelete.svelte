@@ -1,7 +1,6 @@
 <script lang="ts">
   import {i18n} from '../../stores/i18n.store';
-  import IconDelete from '../icons/IconDelete.svelte';
-  import Popover from '../ui/Popover.svelte';
+  import {IconDelete, Popover} from '@papyrs/ui';
 
   let visible = false;
 </script>
@@ -25,7 +24,7 @@
 </Popover>
 
 <style lang="scss">
-  @use '../../themes/mixins/overlay';
+  @use '@papyrs/ui/styles/mixins/overlay';
 
   .content {
     @include overlay.content;

@@ -1,10 +1,10 @@
 import type {SaveCode} from '$lib/types/code';
 import type {PapyModal} from '$lib/types/modal';
 import {emit} from '$lib/utils/events.utils';
+import type {StorageFile} from '@deckdeckgo/editor';
 import type {MonacoEditorOptions} from '@deckdeckgo/monaco-editor';
 import type {StyloMenuAction} from '@papyrs/stylo/dist/types/types/menu';
 import type {SaveExcalidraw} from '../types/excalidraw';
-import type {StorageFile} from '@deckdeckgo/editor';
 
 // Svg: https://fonts.google.com/icons?selected=Material%20Icons%20Sharp%3Adelete%3A
 export const deleteMenuAction = ({text}: {text: string}): StyloMenuAction => ({
@@ -57,7 +57,11 @@ export const openEditCodeModal = async ({
   });
 };
 
-export const openEditExcalidrawModal = async ({lazyImgElement}: {lazyImgElement: HTMLDeckgoLazyImgElement}) => {
+export const openEditExcalidrawModal = async ({
+  lazyImgElement
+}: {
+  lazyImgElement: HTMLDeckgoLazyImgElement;
+}) => {
   document.addEventListener(
     'papySaveExcalidraw',
     async ({detail}: CustomEvent<SaveExcalidraw | undefined | null>) =>

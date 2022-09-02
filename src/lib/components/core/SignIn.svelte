@@ -1,5 +1,5 @@
 <script lang="ts">
-  import I18n from '$lib/components/ui/I18n.svelte';
+  import {I18n} from '@papyrs/ui';
   import {i18n} from '$lib/stores/i18n.store';
 
   export let text: string;
