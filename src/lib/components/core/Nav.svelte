@@ -1,6 +1,5 @@
 <script lang="ts">
-  import Button from '$lib/components/ui/Button.svelte';
-  import IconBack from '$lib/components/icons/IconBack.svelte';
+  import {IconBack, Button} from '@papyrs/ui';
   import {i18n} from '$lib/stores/i18n.store';
   import {back} from '$lib/utils/nav.utils';
 </script>

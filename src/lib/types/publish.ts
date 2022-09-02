@@ -1,3 +1,3 @@
 export interface PublishOptions {
-    lang: string;
+  lang: string;
 }

@@ -30,8 +30,8 @@
 </article>
 
 <style lang="scss">
-  @use '../../themes/mixins/text';
-  @use '../../themes/mixins/interaction';
+  @use '@papyrs/ui/styles/mixins/text';
+  @use '@papyrs/ui/styles/mixins/interaction';
 
   article {
     @include interaction.tappable;

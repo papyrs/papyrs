@@ -1,23 +1,25 @@
 <script lang="ts">
   import Open from '$lib/components/toolbar/Open.svelte';
   import {exportDataFile, initNewDoc} from '$lib/utils/toolbar.utils';
-  import IconExport from '$lib/components/icons/IconExport.svelte';
+  import {
+    IconExport,
+    IconNew,
+    IconMenu,
+    IconList,
+    IconTwitter,
+    IconAssets,
+    IconGitHub,
+    IconPublish,
+    IconDiscord,
+    Popover,
+    Button
+  } from '@papyrs/ui';
   import {i18n} from '$lib/stores/i18n.store';
-  import Popover from '$lib/components/ui/Popover.svelte';
-  import IconNew from '$lib/components/icons/IconNew.svelte';
   import {importDataFile} from '$lib/utils/toolbar.utils';
-  import Button from '$lib/components/ui/Button.svelte';
-  import IconMenu from '$lib/components/icons/IconMenu.svelte';
   import {emit} from '$lib/utils/events.utils';
-  import IconList from '$lib/components/icons/IconList.svelte';
-  import IconTwitter from '$lib/components/icons/IconTwitter.svelte';
-  import IconAssets from '$lib/components/icons/IconAssets.svelte';
-  import IconGitHub from '$lib/components/icons/IconGitHub.svelte';
   import {goto} from '$app/navigation';
-  import IconPublish from '$lib/components/icons/IconPublish.svelte';
   import {sync} from '$lib/stores/sync.store';
   import Dirty from '$lib/components/toolbar/Dirty.svelte';
-  import IconDiscord from '$lib/components/icons/IconDiscord.svelte';
 
   let visible: boolean | undefined;
   let button: HTMLButtonElement | undefined;

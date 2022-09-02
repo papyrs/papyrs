@@ -15,8 +15,8 @@
 </div>
 
 <style lang="scss">
-  @use '../../themes/mixins/text';
-  @use '../../themes/mixins/shadow';
+  @use '@papyrs/ui/styles/mixins/text';
+  @use '@papyrs/ui/styles/mixins/shadow';
 
   div {
     display: flex;

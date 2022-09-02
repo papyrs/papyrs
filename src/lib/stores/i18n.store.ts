@@ -1,6 +1,6 @@
+import {browser} from '$app/env';
 import {writable} from 'svelte/store';
 import en from '../i18n/en.json';
-import {browser} from '$app/env';
 
 const esI18n = async (): Promise<I18n> => {
   return {
@@ -50,7 +50,7 @@ const loadLanguage = (lang: Languages): Promise<I18n> => {
     default:
       return Promise.resolve(enI18n());
   }
-}
+};
 
 export const initI18n = () => {
   const {subscribe, set} = writable<I18n>({
@@ -62,9 +62,7 @@ export const initI18n = () => {
     subscribe,
 
     init: async () => {
-      const {lang}: Storage = browser
-          ? localStorage
-          : ({lang: 'en'} as unknown as Storage);
+      const {lang}: Storage = browser ? localStorage : ({lang: 'en'} as unknown as Storage);
 
       if (lang === 'en') {
         // No need to reload the store

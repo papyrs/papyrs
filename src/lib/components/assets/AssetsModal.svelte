@@ -1,9 +1,8 @@
 <script lang="ts">
-  import Modal from '$lib/components/ui/Modal.svelte';
+  import {Modal, InfiniteContent} from '@papyrs/ui';
   import {createEventDispatcher, onDestroy, onMount} from 'svelte';
   import {emit} from '$lib/utils/events.utils';
   import {debounce} from '$lib/utils/input.utils';
-  import InfiniteContent from '$lib/components/ui/InfiniteContent.svelte';
   import AssetImg from '$lib/components/assets/AssetImg.svelte';
   import AssetCredits from '$lib/components/assets/AssetCredits.svelte';
   import SearchField from '$lib/components/ui/SearchField.svelte';
@@ -105,7 +104,7 @@
 </Modal>
 
 <style lang="scss">
-  @use '../../themes/mixins/interaction';
+  @use '@papyrs/ui/styles/mixins/interaction';
 
   article {
     position: relative;

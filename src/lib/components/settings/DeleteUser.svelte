@@ -1,8 +1,7 @@
 <script lang="ts">
   import {i18n} from '$lib/stores/i18n.store';
   import {auth} from '$lib/stores/auth.store';
-  import Popover from '$lib/components/ui/Popover.svelte';
-  import I18n from '$lib/components/ui/I18n.svelte';
+  import {Popover, I18n} from '@papyrs/ui';
   import {i18nFormat} from '$lib/utils/i18n.utils';
   import {deleteProfile} from '$lib/services/settings.services';
   import {reloadApp} from '$lib/utils/nav.utils';
@@ -78,7 +77,7 @@
 </Popover>
 
 <style lang="scss">
-  @use '../../themes/mixins/overlay';
+  @use '@papyrs/ui/styles/mixins/overlay';
 
   .content {
     @include overlay.content;

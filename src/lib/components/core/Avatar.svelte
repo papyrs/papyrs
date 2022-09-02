@@ -1,6 +1,6 @@
 <script lang="ts">
   import {user} from '$lib/stores/user.store';
-  import IconUser from '$lib/components/icons/IconUser.svelte';
+  import {IconUser} from '@papyrs/ui';
   import {i18n} from '$lib/stores/i18n.store';
 </script>
 

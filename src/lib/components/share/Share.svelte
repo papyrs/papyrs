@@ -1,16 +1,18 @@
 <script lang="ts">
   import {getShareText, getShareTwitterText} from '$lib/services/share.services';
   import type {ShareData} from '$lib/types/share';
-  import IconTwitter from '$lib/components/icons/IconTwitter.svelte';
-  import IconLinkedin from '$lib/components/icons/IconLinkedin.svelte';
-  import IconMail from '$lib/components/icons/IconMail.svelte';
-  import IconCopy from '$lib/components/icons/IconCopy.svelte';
-  import IconHackernews from '$lib/components/icons/IconHackernews.svelte';
-  import IconTelegram from '$lib/components/icons/IconTelegram.svelte';
+  import {
+    IconTwitter,
+    IconLinkedin,
+    IconMail,
+    IconCopy,
+    IconHackernews,
+    IconTelegram,
+    IconOpenChat,
+    IconDscvr
+  } from '@papyrs/ui';
   import {importWebSocialShare} from '$lib/utils/import.utils';
   import {isMobile} from '../../utils/devices.utils';
-  import IconOpenChat from "../icons/IconOpenChat.svelte";
-  import IconDscvr from "../icons/IconDscvr.svelte";
 
   // For simplicity reason we do not add the lib to the project but only fetch it through a script
   /*eslint-disable*/

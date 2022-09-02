@@ -4,7 +4,7 @@
   import {i18n} from '$lib/stores/i18n.store';
   import {goto} from '$app/navigation';
   import Nav from '$lib/components/core/Nav.svelte';
-  import Spinner from '$lib/components/ui/Spinner.svelte';
+  import {Spinner} from '@papyrs/ui';
   import {toasts} from '$lib/stores/toasts.store';
   import WhatsII from '$lib/components/modals/WhatsII.svelte';
 

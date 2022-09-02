@@ -7,7 +7,7 @@
 </div>
 
 <style lang="scss">
-  @use '../../themes/mixins/overlay';
+  @use '@papyrs/ui/styles/mixins/overlay';
 
   .info {
     @include overlay.content;

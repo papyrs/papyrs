@@ -2,7 +2,7 @@
   import type {Doc} from '@deckdeckgo/editor';
   import {share} from '$lib/services/share.services';
   import {i18n} from '$lib/stores/i18n.store';
-  import IconShare from '$lib/components/icons/IconShare.svelte';
+  import {IconShare} from '@papyrs/ui';
 
   export let doc: Doc;
 </script>

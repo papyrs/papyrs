@@ -9,7 +9,7 @@ This document explains how to run locally the application - i.e. this web editor
 
 ## Run locally
 
-Following steps are those needed to run locally the dapp and infrastructure of Papyrs. 
+Following steps are those needed to run locally the dapp and infrastructure of Papyrs.
 
 ### Prerequisite
 
@@ -98,7 +98,7 @@ Please restrain to SPAM and query to often the canisters as it is shared among t
 - The feed canister ID is `undmj-fiaaa-aaaan-qaocq-cai` on mainnet
 - Its code is open source - published in our [IC repo](https://github.com/papyrs/ic) - and the `did` files are available in this [folder](https://github.com/papyrs/ic/tree/main/providers/ic/src/canisters/feed)
 
-The smart contract exposes one public function `list`. e.g. using [dfx] is can be queried as following. 
+The smart contract exposes one public function `list`. e.g. using [dfx] is can be queried as following.
 
 ```bash
 dfx canister --network ic call "undmj-fiaaa-aaaan-qaocq-cai" list --query
@@ -106,4 +106,4 @@ dfx canister --network ic call "undmj-fiaaa-aaaan-qaocq-cai" list --query
 
 The function has an optional filter parameter that can be used to select a subset of entries. Notably a `storageId` (of type `Principal`).
 
-e.g. David's blog URL is `https://6zvwc-sqaaa-aaaal-aalma-cai.raw.ic0.app/` so `6zvwc-sqaaa-aaaal-aalma-cai` can be used to select only David's blog posts. 
+e.g. David's blog URL is `https://6zvwc-sqaaa-aaaal-aalma-cai.raw.ic0.app/` so `6zvwc-sqaaa-aaaal-aalma-cai` can be used to select only David's blog posts.

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Modal from '$lib/components/ui/Modal.svelte';
+  import {Modal, Checkbox, Spinner} from '@papyrs/ui';
   import {i18n} from '$lib/stores/i18n.store';
   import {createEventDispatcher, onMount, tick} from 'svelte';
   import {importDeckGoMonacoEditor} from '$lib/utils/import.utils';
@@ -8,8 +8,6 @@
   import type {MonacoEditorOptions} from '@deckdeckgo/monaco-editor';
   import CodeLanguage from '$lib/components/code/CodeLanguage.svelte';
   import type {SaveCode} from '$lib/types/code';
-  import Checkbox from '$lib/components/ui/Checkbox.svelte';
-  import Spinner from '../ui/Spinner.svelte';
   import {codeOptions, saveCodeOptions} from '../../utils/code.utils';
 
   // Load workers from unpkg because there is an unresolved issue with Fleek while fetching ts.worker.js
@@ -154,7 +152,7 @@
 </Modal>
 
 <style lang="scss">
-  @use '../../themes/mixins/shadow';
+  @use '@papyrs/ui/styles/mixins/shadow';
 
   section {
     display: grid;

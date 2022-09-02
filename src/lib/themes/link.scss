@@ -1,6 +1,0 @@
-@use "./mixins/button";
-
-a.menu {
-  @include button.primary;
-  @include button.menu;
-}

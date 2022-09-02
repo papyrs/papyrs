@@ -55,7 +55,7 @@
 {/if}
 
 <style lang="scss">
-  @use '../../themes/mixins/shadow';
+  @use '@papyrs/ui/styles/mixins/shadow';
 
   deckgo-lazy-img,
   .placeholder {

@@ -81,14 +81,15 @@
     },
     {
       placeholder: '{1}',
-      value: '<a href="https://discord.gg/EV76WqDuZW" rel="external noopener norefferer">Discord</a>'
+      value:
+        '<a href="https://discord.gg/EV76WqDuZW" rel="external noopener norefferer">Discord</a>'
     }
   ])}
 </p>
 
 <style lang="scss">
-  @use '../../themes/mixins/grid';
-  @use '../../themes/mixins/card';
+  @use '@papyrs/ui/styles/mixins/grid';
+  @use '@papyrs/ui/styles/mixins/card';
 
   .grid {
     @include grid.posts;

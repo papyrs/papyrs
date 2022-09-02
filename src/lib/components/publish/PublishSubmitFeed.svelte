@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Checkbox from '../ui/Checkbox.svelte';
+  import {Checkbox} from '@papyrs/ui';
   import {i18n} from '../../stores/i18n.store';
   import {fade} from 'svelte/transition';
 
@@ -8,11 +8,15 @@
 
   let visible = false;
 
-  const onPapyChecked = () => localStorage.setItem('submit_feed', JSON.stringify(submitFeed))
+  const onPapyChecked = () => localStorage.setItem('submit_feed', JSON.stringify(submitFeed));
 </script>
 
 <div class:closed={!visible}>
-  <Checkbox bind:checked={submitFeed} on:papyChecked={onPapyChecked} checkboxId="submitFeed" {disabled}>
+  <Checkbox
+    bind:checked={submitFeed}
+    on:papyChecked={onPapyChecked}
+    checkboxId="submitFeed"
+    {disabled}>
     {#if disabled}
       {$i18n.publish_edit.submit_feed_done}
     {:else}
@@ -33,7 +37,7 @@
 {/if}
 
 <style lang="scss">
-  @use '../../themes/mixins/overlay';
+  @use '@papyrs/ui/styles/mixins/overlay';
 
   div,
   p {

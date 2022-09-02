@@ -2,10 +2,7 @@
   import {sync} from '$lib/stores/sync.store';
   import {i18n} from '$lib/stores/i18n.store';
   import type {SvelteComponent} from 'svelte';
-  import IconCloud from '$lib/components/icons/IconCloud.svelte';
-  import IconSync from '$lib/components/icons/IconSync.svelte';
-  import Button from '$lib/components/ui/Button.svelte';
-  import Popover from '$lib/components/ui/Popover.svelte';
+  import {IconCloud, IconSync, Button, Popover} from '@papyrs/ui';
   import {busy} from '$lib/stores/busy.store';
 
   let visible: boolean | undefined;
@@ -62,7 +59,7 @@
 </Popover>
 
 <style lang="scss">
-  @use '../../themes/mixins/overlay';
+  @use '@papyrs/ui/styles/mixins/overlay';
 
   .icon {
     display: contents;

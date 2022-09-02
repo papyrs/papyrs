@@ -1,11 +1,11 @@
 <script lang="ts">
   import {fade} from 'svelte/transition';
   import {busy} from '$lib/stores/busy.store';
-  import Spinner from '$lib/components/ui/Spinner.svelte';
+  import {Spinner} from '@papyrs/ui';
   import Log from '$lib/components/core/Log.svelte';
   import {i18n} from '$lib/stores/i18n.store';
-  import IconClose from '$lib/components/icons/IconClose.svelte';
-  import Version from "./Version.svelte";
+  import {IconClose} from '@papyrs/ui';
+  import Version from './Version.svelte';
 
   let visible: boolean;
   $: visible = $busy !== undefined;
@@ -43,8 +43,8 @@
 {/if}
 
 <style lang="scss">
-  @use '../../themes/mixins/interaction';
-  @use '../../themes/mixins/overlay';
+  @use '@papyrs/ui/styles/mixins/interaction';
+  @use '@papyrs/ui/styles/mixins/overlay';
 
   div {
     z-index: calc(var(--z-index) + 1000);

@@ -1,10 +1,9 @@
 <script lang="ts">
-  import Modal from '$lib/components/ui/Modal.svelte';
+  import {Modal, Spinner} from '@papyrs/ui';
   import {i18n} from '$lib/stores/i18n.store';
   import {createEventDispatcher, onMount, tick} from 'svelte';
   import {importDeckGoExcalidraw} from '$lib/utils/import.utils';
   import {emit} from '$lib/utils/events.utils';
-  import Spinner from '../ui/Spinner.svelte';
   import type {SaveExcalidraw} from '../../types/excalidraw';
   import type {PapyModalExcalidrawDetail} from '../../types/modal';
   import type {ExcalidrawScene} from '@deckdeckgo/excalidraw';
@@ -108,7 +107,7 @@
 </Modal>
 
 <style lang="scss">
-  @use '../../themes/mixins/shadow';
+  @use '@papyrs/ui/styles/mixins/shadow';
 
   deckgo-excalidraw {
     display: block;

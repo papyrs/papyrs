@@ -1,5 +1,5 @@
-@use "./shadow";
-@use "./section";
+@use "@papyrs/ui/styles/mixins/shadow";
+@use "@papyrs/ui/styles/mixins/section";
 
 @mixin article {
   @include shadow.strong;
@@ -96,7 +96,9 @@
     }
   }
 
-  > ul, > ol, > dl {
+  > ul,
+  > ol,
+  > dl {
     overflow-x: auto;
   }
 
