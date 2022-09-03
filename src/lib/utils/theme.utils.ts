@@ -16,7 +16,7 @@ export const applyTheme = (theme: Theme) => {
   localStorage.setItem('theme', theme);
 };
 
-export const primaryColor = (): string => {
+export const themeColor = (): string => {
   const {documentElement} = document;
-  return getComputedStyle(documentElement).getPropertyValue('--color-primary');
+  return getComputedStyle(documentElement).getPropertyValue('--color-theme');
 };

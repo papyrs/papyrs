@@ -8,7 +8,7 @@
   import {doc} from '$lib/stores/doc.store';
   import {toasts} from '$lib/stores/toasts.store';
   import {busy} from '$lib/stores/busy.store';
-  import {primaryColor} from '../../utils/theme.utils';
+  import {themeColor} from '../../utils/theme.utils';
   import PublishSubmitFeed from './PublishSubmitFeed.svelte';
   import {publish} from '../../services/publish.services';
   import IsoLang from '$lib/components/core/IsoLang.svelte';
@@ -73,7 +73,7 @@
   $: validCanonicalInput = !canonical || canonical.length === 0 || validateCanonical(canonical);
   $: validDescriptionInput = validateDescription(description);
 
-  const color: string = primaryColor();
+  const color: string = themeColor();
 
   const saveOptions = () => savePublishOptions({...options, lang});
 </script>
@@ -91,7 +91,7 @@
   on:keypress={($event) => {
     $event.key === 'Enter' && $event.preventDefault();
   }}>
-  <deckgo-social-img text={title || ''} rect-color={color} />
+  <deckgo-social-img text={title || ''} rect-color="#000000" background={color} />
 
   <input
     bind:value={title}
