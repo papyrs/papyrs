@@ -1,4 +1,4 @@
-import {browser} from '$app/env';
+import {browser} from '$app/environment';
 import type {SyncState} from '@deckdeckgo/editor';
 import {syncBeforeUnload, syncSubscribe} from '@deckdeckgo/sync';
 import {readable} from 'svelte/store';

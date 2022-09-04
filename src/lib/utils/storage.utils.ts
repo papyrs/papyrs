@@ -1,4 +1,4 @@
-import {browser} from '$app/env';
+import {browser} from '$app/environment';
 
 export const storageOptions = <T>({key, defaultValue}: {key: string; defaultValue: T}): T => {
   const {[key]: options}: Storage = browser
