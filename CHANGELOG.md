@@ -1,3 +1,15 @@
+# 0.0.15 (2022-09-04)
+
+### Features
+
+- invert rectangle and background color for the social image
+
+### Build
+
+- bump to last version of `SvelteKit` and adapt for breaking changes
+- bump all web components to fix `vite` import
+- extract styles and ui components to `@papyrs/ui`
+
 # 0.0.14 (2022-09-01)
 
 ### Features
