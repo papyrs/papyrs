@@ -6,7 +6,7 @@ import {emit} from '$lib/utils/events.utils';
 import type {StorageFile, TenorGif, UnsplashPhoto} from '@deckdeckgo/editor';
 import {initDeckgoLazyImgAttributes} from '@deckdeckgo/editor';
 import type {StyloPluginCreateParagraphsParams} from '@papyrs/stylo';
-import {createEmptyElement, transformParagraph} from '@papyrs/stylo/dist/stylo/index.esm';
+import {createEmptyElement, transformParagraph} from '@papyrs/stylo';
 import {get} from 'svelte/store';
 import {i18n} from '../stores/i18n.store';
 import type {SaveExcalidraw} from '../types/excalidraw';

@@ -1,4 +1,4 @@
-import {browser} from '$app/env';
+import {browser} from '$app/environment';
 import {Theme} from '$lib/types/theme';
 import {applyTheme} from '$lib/utils/theme.utils';
 import {writable} from 'svelte/store';

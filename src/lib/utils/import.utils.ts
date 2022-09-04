@@ -1,37 +1,31 @@
-import {browser} from '$app/env';
+import {browser} from '$app/environment';
 
-export const importStudio = async () =>
-  await Promise.all([importStylo(), importDeckGoStudio(), importDeckGoIndicator(), setPrismCDN()]);
-
-const importStylo = async () => {
-  const {defineCustomElement} = await import(
-    /* @vite-ignore */ '@papyrs/stylo/dist/components/stylo-editor'
-  );
-  defineCustomElement();
-};
-
-const importDeckGoStudio = async () => {
-  const {defineCustomElement} = await import(
-    /* @vite-ignore */ '@deckdeckgo/studio/dist/components/deckgo-studio-doc'
-  );
-  defineCustomElement();
-};
-
-const importDeckGoIndicator = async () => {
-  const {defineCustomElement} = await import(
-    /* @vite-ignore */ '@deckdeckgo/studio/dist/components/deckgo-doc-indicator'
-  );
-  defineCustomElement();
-};
-
-export const setPrismCDN = async () => {
+export const importStudio = async () => {
   if (!browser) {
     return;
   }
 
-  (window as unknown as {prismjs_cdn: string | undefined}).prismjs_cdn = import.meta.env
-    .VITE_PRISMJS_CDN as string;
+  await Promise.all([importStylo(), importDeckGoStudio(), importDeckGoIndicator(), setPrismCDN()]);
 };
+
+const importStylo = async () => {
+  const {defineCustomElements} = await import(/* @vite-ignore */ '@papyrs/stylo/dist/loader');
+  await defineCustomElements();
+};
+
+const importDeckGoStudio = async () => {
+  const {defineCustomElements} = await import(/* @vite-ignore */ '@deckdeckgo/studio/dist/loader');
+  await defineCustomElements();
+};
+
+const importDeckGoIndicator = async () => {
+  const {defineCustomElements} = await import(/* @vite-ignore */ '@deckdeckgo/studio/dist/loader');
+  await defineCustomElements();
+};
+
+const setPrismCDN = async () =>
+  ((window as unknown as {prismjs_cdn: string | undefined}).prismjs_cdn = import.meta.env
+    .VITE_PRISMJS_CDN as string);
 
 export const importDeckGoSocialImg = async () => {
   const {DeckgoSocialImg} = await import(

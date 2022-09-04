@@ -1,6 +1,6 @@
 import type {LanguageCode} from '$lib/types/code';
 import type {DeckdeckgoHighlightCodeLanguage} from '@deckdeckgo/highlight-code';
-import {deckdeckgoHighlightCodeLanguages} from '@deckdeckgo/highlight-code/dist/deckdeckgo-highlight-code/index.esm';
+import {deckdeckgoHighlightCodeLanguages} from '@deckdeckgo/highlight-code';
 import type {MonacoEditorOptions} from '@deckdeckgo/monaco-editor';
 import {saveStorageOptions, storageOptions} from './storage.utils';
 

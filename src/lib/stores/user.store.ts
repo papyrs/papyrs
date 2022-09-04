@@ -1,4 +1,4 @@
-import {browser} from '$app/env';
+import {browser} from '$app/environment';
 import type {User, UserSocial} from '@deckdeckgo/editor';
 import {userSubscribe} from '@deckdeckgo/sync';
 import {readable} from 'svelte/store';

@@ -1,4 +1,4 @@
-import {browser} from '$app/env';
+import {browser} from '$app/environment';
 import type {Theme} from '$lib/types/theme';
 
 export const applyTheme = (theme: Theme) => {

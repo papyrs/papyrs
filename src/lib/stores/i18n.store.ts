@@ -1,4 +1,4 @@
-import {browser} from '$app/env';
+import {browser} from '$app/environment';
 import {switchLang as switchUILang} from '@papyrs/ui';
 import {writable} from 'svelte/store';
 import en from '../i18n/en.json';

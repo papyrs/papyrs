@@ -1,4 +1,4 @@
-import {browser} from '$app/env';
+import {browser} from '$app/environment';
 import type {Doc} from '@deckdeckgo/editor';
 import {docSubscribe} from '@deckdeckgo/sync';
 import {readable} from 'svelte/store';

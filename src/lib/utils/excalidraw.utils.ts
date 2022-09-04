@@ -1,6 +1,6 @@
 import type {StorageFile} from '@deckdeckgo/editor';
 import type {ExcalidrawScene} from '@deckdeckgo/excalidraw';
-import {jsonMapReviver} from '@deckdeckgo/excalidraw/dist/excalidraw/index.esm';
+import {jsonMapReviver} from '@deckdeckgo/excalidraw';
 import {uploadOfflineFile} from '@deckdeckgo/offline';
 import {fetchAsset} from '@deckdeckgo/sync';
 
