@@ -9,10 +9,11 @@
   let loaded = false;
   let inProgress = false;
 
-  let config: Record<string, string> = {};
+  let config: Record<string, string | boolean> = {};
 
   onMount(async () => {
     config = {
+      ...icConfig(),
       terms: 'https://app.papy.rs/terms.html',
       privacy: 'https://app.papy.rs/privacy.html'
     };
@@ -21,8 +22,6 @@
 
     loaded = true;
   });
-
-  const {localIdentityCanisterId} = icConfig();
 </script>
 
 <main>
@@ -34,11 +33,7 @@
 
   <section class="sign-in">
     {#if loaded}
-      <ic-signin-proxy
-        i18n={$i18n}
-        on:inProgress={() => (inProgress = true)}
-        {config}
-        local-identity-canister-id={localIdentityCanisterId}>
+      <ic-signin-proxy i18n={$i18n} on:inProgress={() => (inProgress = true)} {config}>
         <div slot="spinner" class="progress">
           <Spinner />
         </div>
