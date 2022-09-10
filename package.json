@@ -18,7 +18,7 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@deckdeckgo/excalidraw": "^1.1.0",
+    "@deckdeckgo/excalidraw": "^1.2.0",
     "@deckdeckgo/monaco-editor": "^1.5.0",
     "@sveltejs/adapter-static": "^1.0.0-next.41",
     "@sveltejs/kit": "^1.0.0-next.468",

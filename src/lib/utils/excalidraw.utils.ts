@@ -1,6 +1,5 @@
 import type {StorageFile} from '@deckdeckgo/editor';
 import type {ExcalidrawScene} from '@deckdeckgo/excalidraw';
-import {jsonMapReviver} from '@deckdeckgo/excalidraw';
 import {uploadOfflineFile} from '@deckdeckgo/offline';
 import {fetchAsset} from '@deckdeckgo/sync';
 
@@ -10,6 +9,16 @@ export const loadExcalidrawScene = async (
   if (!dataSrc) {
     return undefined;
   }
+
+  const jsonMapReviver = (_key, value: any): any => {
+    if (typeof value === 'object' && value !== null) {
+      if (value.dataType === 'Map') {
+        return new Map(value.value);
+      }
+    }
+
+    return value;
+  };
 
   const data: string | undefined = await fetchAsset(dataSrc);
   return data !== undefined ? JSON.parse(data, jsonMapReviver) : undefined;
