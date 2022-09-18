@@ -3,6 +3,7 @@
 ### Features
 
 - speed up publish by uploading only the assets (js, css, etc.) that needs to be uploaded to the "storage" canisters
+- blogspace kit build with Astro
 
 ### Fix
 
