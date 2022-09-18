@@ -1,3 +1,13 @@
+# 0.0.16 (2022-09-18)
+
+### Features
+
+- speed up publish by uploading only the assets (js, css, etc.) that needs to be uploaded to the "storage" canisters
+
+### Fix
+
+- auth client has to be reset after signout otherwise next signin without reload does not work
+
 # 0.0.15 (2022-09-04)
 
 ### Features
