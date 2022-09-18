@@ -1,3 +1,13 @@
+# 0.0.17 (2022-09-18)
+
+### Fix
+
+- stringify `bigint` for open and export to file system
+
+### Build
+
+- generate `sha256` for the CSP representation of the script tags 
+
 # 0.0.16 (2022-09-18)
 
 ### Features
