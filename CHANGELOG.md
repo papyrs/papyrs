@@ -1,3 +1,9 @@
+# 0.0.18 (2022-09-18)
+
+### Fix
+
+- fix publish by uploading only the assets (js, css, etc.) with `sha256` based comparison
+
 # 0.0.17 (2022-09-18)
 
 ### Fix
