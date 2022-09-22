@@ -11,6 +11,7 @@
   import {cleanCopy} from '../../events/copy.events';
   import Quote from '../ui/Quote.svelte';
   import {cleanPaste} from '../../events/paste.events';
+  import {docReadyOnce, studioLoaded} from '../../stores/load.store';
 
   let studioEditorRef: Components.DeckgoStudioDoc | undefined;
 
@@ -27,13 +28,12 @@
 
   $: studioEditorRef, initStylo();
 
-  let loaded = false;
   let busy = false;
 
   onMount(async () => {
     await importStudio();
 
-    loaded = true;
+    studioLoaded.set(true);
   });
 
   let config: Partial<StyloConfig> = editorConfig;
@@ -64,7 +64,10 @@
     docEvent.initDataEvents();
   };
 
-  const onDocReady = ({detail}: CustomEvent<boolean>) => (docReady = detail);
+  const onDocReady = ({detail}: CustomEvent<boolean>) => {
+    docReady = detail;
+    docReadyOnce.set($docReadyOnce || detail);
+  };
 
   const onDocDataEvents = ({detail}: CustomEvent<'destroy' | 'init'>) => {
     if (detail === 'destroy') {
@@ -85,7 +88,7 @@
 <svelte:window on:papyReloadEditor={initNewDoc} on:ddgBusy={onBusy} on:papySignOut={initNewDoc} />
 
 <main on:copy={cleanCopy} on:paste={cleanPaste}>
-  {#if loaded}
+  {#if $studioLoaded}
     <deckgo-studio-doc
       bind:this={studioEditorRef}
       on:docDidLoad={onDocDidLoad}
@@ -95,9 +98,12 @@
     <deckgo-doc-indicator {busy} />
   {/if}
 
-  {#if !loaded || !docReady}
+  {#if !$studioLoaded || !docReady}
     <Spinner />
-    <Quote />
+
+    {#if !$docReadyOnce}
+      <Quote />
+    {/if}
   {/if}
 </main>
 
