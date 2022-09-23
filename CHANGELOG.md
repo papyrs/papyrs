@@ -1,3 +1,30 @@
+# 0.0.18 (2022-09-18)
+
+### Fix
+
+- fix publish by uploading only the assets (js, css, etc.) with `sha256` based comparison
+
+# 0.0.17 (2022-09-18)
+
+### Fix
+
+- stringify `bigint` for open and export to file system
+
+### Build
+
+- generate `sha256` for the CSP representation of the script tags 
+
+# 0.0.16 (2022-09-18)
+
+### Features
+
+- speed up publish by uploading only the assets (js, css, etc.) that needs to be uploaded to the "storage" canisters
+- blogspace kit build with Astro
+
+### Fix
+
+- auth client has to be reset after signout otherwise next signin without reload does not work
+
 # 0.0.15 (2022-09-04)
 
 ### Features

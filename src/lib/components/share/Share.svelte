@@ -136,7 +136,7 @@
 </web-social-share>
 
 <style lang="scss">
-  @use '../../themes/mixins/share';
+  @use "../../../../node_modules/@papyrs/ui/styles/mixins/share";
 
   web-social-share {
     @include share.websocialshare;

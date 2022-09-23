@@ -41,7 +41,8 @@ const config = {
             'self',
             'unsafe-eval',
             'https://cdn.papy.rs/',
-            'https://tuwbw-byaaa-aaaad-qblpq-cai.raw.ic0.app/'
+            'https://tuwbw-byaaa-aaaad-qblpq-cai.raw.ic0.app/',
+            '{{EXTRA_SHAS}}'
           ],
           'connect-src': [
             'blob:',
