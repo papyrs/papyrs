@@ -5,7 +5,7 @@
   import {auth} from '$lib/stores/auth.store';
   import {Spinner} from '@papyrs/ui';
   import Post from '$lib/components/posts/Post.svelte';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
   import {i18n} from '$lib/stores/i18n.store';
   import {toDate} from '@deckdeckgo/editor';
 
@@ -26,7 +26,7 @@
         )
       ];
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while fetching the posts.',
         detail: err
       });

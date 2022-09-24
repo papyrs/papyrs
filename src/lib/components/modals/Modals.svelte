@@ -6,7 +6,7 @@
   import Code from '$lib/components/modals/Code.svelte';
   import Unsplash from '$lib/components/modals/Unsplash.svelte';
   import Tenor from '$lib/components/modals/Tenor.svelte';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
   import type {PapyModal} from '$lib/types/modal';
   import Images from './Images.svelte';
   import Excalidraw from './Excalidraw.svelte';
@@ -15,7 +15,7 @@
 
   const publishAction = async () => {
     if (!cloud()) {
-      toasts.error({
+      toastsError({
         text: 'No cloud configured. Cannot publish.'
       });
       return;

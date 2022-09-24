@@ -1,4 +1,4 @@
-import {toasts} from '../stores/toasts.store';
+import {toastsShow} from '../stores/toasts.store';
 
 export const cleanPaste = ($event: ClipboardEvent) => {
   const paste: string = $event.clipboardData.getData('text/html');
@@ -10,7 +10,7 @@ export const cleanPaste = ($event: ClipboardEvent) => {
   if (images.length > 0) {
     $event.preventDefault();
 
-    toasts.show({
+    toastsShow({
       text: 'Pasting images from external source is currently not supported. You can upload images with the help of the "+" action.',
       level: 'warn'
     });
@@ -22,7 +22,7 @@ export const cleanPaste = ($event: ClipboardEvent) => {
   if (iframes.length > 0) {
     $event.preventDefault();
 
-    toasts.show({
+    toastsShow({
       text: 'Pasting iframes from external source is not allowed.',
       level: 'warn'
     });

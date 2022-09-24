@@ -6,7 +6,7 @@
   import {i18nFormat} from '$lib/utils/i18n.utils';
   import {updateProfile} from '$lib/services/settings.services';
   import {busy} from '$lib/stores/busy.store';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
 
   const handleSubmit = async ($event: MouseEvent | TouchEvent) => {
     $event.preventDefault();
@@ -26,7 +26,7 @@
         file: inputProfilePicture?.files[0]
       });
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while updating the profile.',
         detail: err
       });

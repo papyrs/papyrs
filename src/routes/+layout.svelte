@@ -8,7 +8,7 @@
   import type {Log} from '@deckdeckgo/editor';
   import {logs} from '$lib/stores/logs.store';
   import {idleSignOut, initAuth} from '$lib/services/auth.services';
-  import Toasts from '$lib/components/core/Toasts.svelte';
+  import {Toasts} from '@papyrs/ui';
   import Share from '$lib/components/share/Share.svelte';
   import Busy from '$lib/components/core/Busy.svelte';
   import {i18n} from '$lib/stores/i18n.store';
@@ -42,7 +42,7 @@
 {/await}
 
 <style lang="scss" global>
-  @use "../../node_modules/@papyrs/ui/styles/mixins/main";
+  @use '../../node_modules/@papyrs/ui/styles/mixins/main';
 
   @import '@papyrs/ui/styles/global.scss';
 

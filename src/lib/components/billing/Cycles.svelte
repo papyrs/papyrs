@@ -1,7 +1,7 @@
 <script lang="ts">
   import {i18n} from '$lib/stores/i18n.store';
   import {onMount} from 'svelte';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
   import {canistersBalance} from '$lib/services/admin.services';
   import {formatCycles} from '$lib/utils/number.utils';
   import {getPrincipal} from '../../services/auth.services';
@@ -32,7 +32,7 @@
         }
       ];
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while fetching the canisters status.',
         detail: err
       });
@@ -43,7 +43,7 @@
     try {
       principal = (await getPrincipal())?.toText();
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while fetching the principal information.',
         detail: err
       });

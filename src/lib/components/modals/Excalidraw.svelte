@@ -7,7 +7,7 @@
   import type {SaveExcalidraw} from '../../types/excalidraw';
   import type {PapyModalExcalidrawDetail} from '../../types/modal';
   import type {ExcalidrawScene} from '@deckdeckgo/excalidraw';
-  import {toasts} from '../../stores/toasts.store';
+  import {toastsError} from '../../stores/toasts.store';
   import {exportExcalidraw, loadExcalidrawScene} from '../../utils/excalidraw.utils';
 
   let excalidraw: HTMLDeckgoExcalidrawElement | null;
@@ -32,7 +32,7 @@
     } catch (err) {
       scene = undefined;
 
-      toasts.error({
+      toastsError({
         text: 'Excalidraw scene cannot be loaded.'
       });
     }
@@ -50,7 +50,7 @@
 
   const save = async () => {
     if (!excalidraw) {
-      toasts.error({
+      toastsError({
         text: 'Excalidraw is not loaded.'
       });
 
@@ -66,7 +66,7 @@
       emitExcalidraw({imgFile, dataFile});
       dispatch('papyClose');
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Excalidraw scene cannot be exported.'
       });
     }

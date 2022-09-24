@@ -5,7 +5,7 @@ import {
   submitFeed as submitToFeed,
   type PublishInputs
 } from '@deckdeckgo/sync';
-import {toasts} from '../stores/toasts.store';
+import {toastsShow} from '../stores/toasts.store';
 import {publishConfig} from '../utils/publish.utils';
 
 export const publishUrl = async (doc: Doc): Promise<string> => {
@@ -39,7 +39,7 @@ export const publish = async ({
   } catch (err) {
     console.error(err);
 
-    toasts.show({
+    toastsShow({
       text: 'The post was published but there was an unexpected error while submitting the feed.',
       level: 'warn'
     });
