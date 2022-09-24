@@ -58,7 +58,7 @@
     "custom_url": "Your website or any url (for example: {0})",
     "switch_theme": "Switch theme colors to {0}",
     "no_delete": "The document that is being edited cannot be deleted.",
-    "profile_publish_info": "Your profile information are displayed on your blog. These are public as soon as you publish an article."
+    "profile_publish_info": "Your profile information are displayed on your blog. These are public as soon as you publish an article and a name."
   },
   "dashboard": {
     "published": "Published",
