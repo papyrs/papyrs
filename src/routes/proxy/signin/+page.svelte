@@ -3,11 +3,9 @@
   import {loadSignIn} from '$lib/services/auth.services';
   import {i18n} from '$lib/stores/i18n.store';
   import {Spinner} from '@papyrs/ui';
-  import WhatsII from '$lib/components/modals/WhatsII.svelte';
   import {icConfig} from '../../../lib/utils/env.utils';
 
   let loaded = false;
-  let inProgress = false;
 
   let config: Record<string, string | boolean> = {};
 
@@ -33,15 +31,11 @@
 
   <section class="sign-in">
     {#if loaded}
-      <ic-signin-proxy i18n={$i18n} on:inProgress={() => (inProgress = true)} {config}>
+      <ic-signin-proxy i18n={$i18n} {config}>
         <div slot="spinner" class="progress">
           <Spinner />
         </div>
       </ic-signin-proxy>
-
-      {#if !inProgress}
-        <WhatsII />
-      {/if}
     {:else}
       <Spinner />
     {/if}
@@ -49,7 +43,15 @@
 </main>
 
 <style lang="scss">
-  ic-signin {
+  :global(:root[theme]) {
+    background: transparent;
+
+    main {
+      overflow: hidden;
+    }
+  }
+
+  ic-signin-proxy {
     --padding: 3rem;
     --font-size-very-small: var(--font-size-ultra-small);
 
