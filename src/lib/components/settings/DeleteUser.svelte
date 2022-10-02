@@ -5,7 +5,7 @@
   import {i18nFormat} from '$lib/utils/i18n.utils';
   import {deleteProfile} from '$lib/services/settings.services';
   import {reloadApp} from '$lib/utils/nav.utils';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
   import {busy} from '$lib/stores/busy.store';
 
   let saving = false;
@@ -30,7 +30,7 @@
 
       reloadApp();
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while deleting the user.',
         detail: err
       });

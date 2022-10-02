@@ -8,7 +8,7 @@
   import SearchField from '$lib/components/ui/SearchField.svelte';
   import type {Image} from '$lib/types/image';
   import type {AssetsSearchParams, AssetsSearchResults} from '$lib/types/assets';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
   import {ImageLoadEvents} from '@deckdeckgo/sync';
 
   export let search: (params: AssetsSearchParams) => Promise<AssetsSearchResults>;
@@ -38,7 +38,7 @@
       searchDisabled = end;
       next = nextStep;
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while searching.',
         detail: err
       });

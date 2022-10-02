@@ -1,4 +1,4 @@
-import {toasts} from '$lib/stores/toasts.store';
+import {toastsError, toastsShow} from '$lib/stores/toasts.store';
 import {cloud, cloudConfig, icConfig} from '$lib/utils/env.utils';
 import {injectJS} from '@deckdeckgo/editor';
 import {clearEdit} from '@deckdeckgo/offline';
@@ -44,7 +44,7 @@ export const signUserOut = async ({clearLocalEdit}: {clearLocalEdit: boolean}) =
 export const idleSignOut = async () => {
   await signUserOut({clearLocalEdit: false});
 
-  toasts.show({
+  toastsShow({
     text: 'You have been logged out because your session has expired. Sign-in to renew your identity.',
     level: 'warn'
   });
@@ -54,7 +54,7 @@ export const initAuth = async () => {
   try {
     await initAuthSync(icConfig());
   } catch (err: unknown) {
-    toasts.error({
+    toastsError({
       text: 'Something went wrong while initializing the authentication.',
       detail: err
     });
@@ -62,7 +62,9 @@ export const initAuth = async () => {
 };
 
 export const getPrincipal = async (): Promise<Principal | undefined> => {
-  const {getIdentity} = await cloudProvider();
+  const {getIdentity} = await cloudProvider<{
+    getIdentity: () => Promise<{getPrincipal: () => Principal | undefined}>;
+  }>();
 
   const identity = await getIdentity();
   return identity?.getPrincipal();

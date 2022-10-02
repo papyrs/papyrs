@@ -9,7 +9,7 @@
   import {onMount} from 'svelte';
   import SharePost from '$lib/components/posts/SharePost.svelte';
   import {busy} from '$lib/stores/busy.store';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
   import {i18n} from '$lib/stores/i18n.store';
   import PostNoDelete from './PostNoDelete.svelte';
 
@@ -31,7 +31,7 @@
 
       await goto('/', {replaceState: true});
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while loading the post.',
         detail: err
       });

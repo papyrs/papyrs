@@ -4,7 +4,7 @@
   import {createEventDispatcher} from 'svelte';
   import {deleteFile} from '@deckdeckgo/sync';
   import {busy} from '$lib/stores/busy.store';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
 
   export let item: StorageFile;
 
@@ -25,7 +25,7 @@
 
       dispatch('papyAssetDeleted', item);
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while deleting the asset.',
         detail: err
       });

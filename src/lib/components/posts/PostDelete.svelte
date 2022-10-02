@@ -4,7 +4,7 @@
   import {createEventDispatcher} from 'svelte';
   import Delete from '$lib/components/core/Delete.svelte';
   import {busy} from '$lib/stores/busy.store';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
 
   export let doc: Doc;
 
@@ -26,7 +26,7 @@
 
       dispatch('papyDocDeleted', doc);
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while deleting the asset.',
         detail: err
       });

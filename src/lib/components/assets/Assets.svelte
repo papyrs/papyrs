@@ -7,7 +7,7 @@
   import {Spinner} from '@papyrs/ui';
   import Asset from '$lib/components/assets/Asset.svelte';
   import type {Unsubscriber} from 'svelte/store';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
   import {i18n} from '$lib/stores/i18n.store';
 
   export let listOfflineFiles = false;
@@ -28,7 +28,7 @@
       const list: StorageFilesList | null = await getFiles({next: null, folder});
       items = list?.items || [];
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while fetching the assets.',
         detail: err
       });
