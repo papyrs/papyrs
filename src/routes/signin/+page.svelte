@@ -5,7 +5,7 @@
   import {goto} from '$app/navigation';
   import Nav from '$lib/components/core/Nav.svelte';
   import {Spinner} from '@papyrs/ui';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
   import WhatsII from '$lib/components/modals/WhatsII.svelte';
 
   let loaded = false;
@@ -31,7 +31,7 @@
   };
 
   const onSignInError = (err?: string) =>
-    toasts.error({
+    toastsError({
       text: 'Something went wrong while sign-in.',
       detail: err
     });

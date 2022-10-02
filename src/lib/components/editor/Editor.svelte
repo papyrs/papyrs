@@ -108,8 +108,8 @@
 </main>
 
 <style lang="scss">
-  @use "../../../../node_modules/@papyrs/ui/styles/mixins/stylo";
-  @use "../../../../node_modules/@papyrs/ui/styles/mixins/doc";
+  @use '../../../../node_modules/@papyrs/ui/styles/mixins/stylo';
+  @use '../../../../node_modules/@papyrs/ui/styles/mixins/doc';
 
   main {
     --spinner-position: fixed;

@@ -6,7 +6,7 @@
   import {validateCanonical, validateDescription, validTitle} from '$lib/utils/input.utils';
   import {importDeckGoSocialImg} from '$lib/utils/import.utils';
   import {doc} from '$lib/stores/doc.store';
-  import {toasts} from '$lib/stores/toasts.store';
+  import {toastsError} from '$lib/stores/toasts.store';
   import {busy} from '$lib/stores/busy.store';
   import {themeColor} from '../../utils/theme.utils';
   import PublishSubmitFeed from './PublishSubmitFeed.svelte';
@@ -42,7 +42,7 @@
 
       dispatch('papyPublished');
     } catch (err) {
-      toasts.error({
+      toastsError({
         text: 'Something went wrong while publishing.',
         detail: err
       });

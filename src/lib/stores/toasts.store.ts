@@ -1,29 +1,7 @@
-import {writable} from 'svelte/store';
-import type {ToastMsg} from '../types/toast';
-import {errorDetailToString} from '../utils/error.utils';
+import {toasts, type ToastMsg} from '@papyrs/ui';
 
-const initToastsStore = () => {
-  const {subscribe, update} = writable<ToastMsg[]>([]);
+export const toastsError = (msg: {text: string; detail?: unknown}) => toasts.error(msg);
 
-  return {
-    subscribe,
+export const toastsShow = (msg: ToastMsg) => toasts.show(msg);
 
-    error({text, detail}: {text: string; detail?: unknown}) {
-      console.error(text, detail);
-      update((messages: ToastMsg[]) => [
-        ...messages,
-        {text, level: 'error', detail: errorDetailToString(detail)}
-      ]);
-    },
-
-    show(msg: ToastMsg) {
-      update((messages: ToastMsg[]) => [...messages, msg]);
-    },
-
-    hide() {
-      update((messages: ToastMsg[]) => messages.slice(1));
-    }
-  };
-};
-
-export const toasts = initToastsStore();
+export const toastsHide = (msg: ToastMsg) => toasts.hide();
