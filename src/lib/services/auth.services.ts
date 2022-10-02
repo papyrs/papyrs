@@ -62,7 +62,9 @@ export const initAuth = async () => {
 };
 
 export const getPrincipal = async (): Promise<Principal | undefined> => {
-  const {getIdentity} = await cloudProvider();
+  const {getIdentity} = await cloudProvider<{
+    getIdentity: () => Promise<{getPrincipal: () => Principal | undefined}>;
+  }>();
 
   const identity = await getIdentity();
   return identity?.getPrincipal();
