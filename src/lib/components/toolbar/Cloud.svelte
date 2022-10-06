@@ -42,7 +42,7 @@
 </script>
 
 <Button on:click={() => (visible = true)} bind:button>
-  <div slot="icon" class={`${$sync.sync} icon`}>
+  <div slot="icon" class="icon">
     <svelte:component this={icon} />
   </div>
   {$i18n.sync.cloud}
@@ -69,22 +69,7 @@
     color: var(--color-error);
   }
 
-  .in_progress,
-  .pending,
-  .init {
-    :global(svg) {
-      animation: rotate 4s linear infinite;
-    }
-  }
-
   .info {
     @include overlay.content;
-  }
-
-  /* -global- */
-  @keyframes -global-rotate {
-    100% {
-      transform: rotate(360deg);
-    }
   }
 </style>
