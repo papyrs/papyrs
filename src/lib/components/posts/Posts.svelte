@@ -8,7 +8,10 @@
   import {toastsError} from '$lib/stores/toasts.store';
   import {i18n} from '$lib/stores/i18n.store';
   import {toDate} from '@deckdeckgo/editor';
+  import {countInteractions} from '../../services/like.services';
+  import type {CountInteractions} from '../../types/interaction';
 
+  let interactions: CountInteractions | undefined;
   let docs: Doc[] = [];
   let loading = true;
 
@@ -25,6 +28,8 @@
             (toDate(created_at_b)?.getTime() ?? 0) - (toDate(created_at_a)?.getTime() ?? 0)
         )
       ];
+
+      interactions = await countInteractions(entries);
     } catch (err) {
       toastsError({
         text: 'Something went wrong while fetching the posts.',
@@ -33,6 +38,15 @@
     }
 
     loading = false;
+
+    try {
+      interactions = await countInteractions(docs);
+    } catch (err) {
+      toastsError({
+        text: 'Something went wrong while fetching the likes.',
+        detail: err
+      });
+    }
   });
 
   const filterDoc = ({detail}: CustomEvent<Doc>) =>
@@ -52,7 +66,7 @@
 {:else}
   <section class="grid">
     {#each docs as doc (doc.id)}
-      <Post {doc} on:papyDocDeleted={filterDoc} />
+      <Post {doc} on:papyDocDeleted={filterDoc} interaction={interactions[doc.id]} />
     {/each}
   </section>
 {/if}

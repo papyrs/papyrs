@@ -12,8 +12,13 @@
   import {toastsError} from '$lib/stores/toasts.store';
   import {i18n} from '$lib/stores/i18n.store';
   import PostNoDelete from './PostNoDelete.svelte';
+  import type {CountInteraction} from '../../types/interaction';
+  import {IconThumbUp} from '@papyrs/ui';
 
   export let doc: Doc;
+  export let interaction: CountInteraction | undefined;
+
+  $: (() => console.log(interaction))();
 
   let deleteDoc = false;
   let shareDoc: boolean;
@@ -55,6 +60,13 @@
   </div>
 
   <div class="toolbar">
+    {#if interaction !== undefined}
+      <div class="likes">
+        <IconThumbUp />
+        <span>{interaction.likes}</span>
+      </div>
+    {/if}
+
     {#if shareDoc}
       <SharePost {doc} />
     {/if}
@@ -77,5 +89,24 @@
   .active {
     box-shadow: 3px 3px var(--color-secondary);
     border: 2px solid var(--color-secondary);
+  }
+
+  .toolbar {
+    position: relative;
+  }
+
+  .likes {
+    position: absolute;
+    left: 0;
+
+    display: flex;
+
+    gap: 0.35rem;
+    padding: 0.45rem;
+
+    span {
+      line-height: 1.95rem;
+      font-size: var(--font-size-small);
+    }
   }
 </style>

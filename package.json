@@ -55,7 +55,7 @@
     "url": "https://github.com/papyrs/papyrs/issues"
   },
   "dependencies": {
-    "@deckdeckgo/editor": "^8.2.0",
+    "@deckdeckgo/editor": "file:../../deckgo/deckdeckgo/utils/editor",
     "@deckdeckgo/highlight-code": "^4.4.0",
     "@deckdeckgo/offline": "^0.0.7",
     "@deckdeckgo/social-img": "^1.4.0",
