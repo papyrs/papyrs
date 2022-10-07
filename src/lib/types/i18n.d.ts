@@ -157,6 +157,11 @@ interface I18nBilling {
   cycles: string;
 }
 
+interface I18nInteraction {
+  like: string;
+  dislike: string;
+}
+
 interface I18n {
   lang: Languages;
   core: I18nCore;
@@ -173,4 +178,5 @@ interface I18n {
   links: I18nLinks;
   share: I18nShare;
   billing: I18nBilling;
+  interaction: I18nInteraction;
 }

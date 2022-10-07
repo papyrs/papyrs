@@ -13,7 +13,7 @@
   import {i18n} from '$lib/stores/i18n.store';
   import PostNoDelete from './PostNoDelete.svelte';
   import type {CountInteraction} from '../../types/interaction';
-  import {IconThumbUp} from '@papyrs/ui';
+  import PostLikes from '$lib/components/posts/PostLikes.svelte';
 
   export let doc: Doc;
   export let interaction: CountInteraction | undefined;
@@ -60,12 +60,7 @@
   </div>
 
   <div class="toolbar">
-    {#if interaction !== undefined}
-      <div class="likes">
-        <IconThumbUp />
-        <span>{interaction.likes}</span>
-      </div>
-    {/if}
+    <PostLikes {interaction} {doc} />
 
     {#if shareDoc}
       <SharePost {doc} />
@@ -93,20 +88,5 @@
 
   .toolbar {
     position: relative;
-  }
-
-  .likes {
-    position: absolute;
-    left: 0;
-
-    display: flex;
-
-    gap: 0.35rem;
-    padding: 0.45rem;
-
-    span {
-      line-height: 1.95rem;
-      font-size: var(--font-size-small);
-    }
   }
 </style>

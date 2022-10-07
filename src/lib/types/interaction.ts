@@ -1,6 +1,9 @@
+import type {Interaction} from "@deckdeckgo/editor";
+
 export interface CountInteraction {
-  likes: bigint;
-  comments: bigint;
+  countLikes: bigint;
+  like: Interaction | undefined;
+  countComments: bigint;
 }
 
 // Record<docId, {likesCount, commentsCount}>

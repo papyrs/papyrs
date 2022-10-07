@@ -139,5 +139,9 @@
     "smart_contracts": "Smart contracts",
     "principal_id": "Your principal id",
     "cycles": "{0} are used to pay for running your canister smart contracts which hold your data and provide your blog posts on the web. If you ever get too few computing power, reach out on {1}."
+  },
+  "interaction": {
+    "like": "Like",
+    "dislike": "Remove given like"
   }
 }
