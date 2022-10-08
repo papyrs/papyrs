@@ -53,6 +53,11 @@ const loadLanguage = (lang: Languages): Promise<I18n> => {
   }
 };
 
+const switchLanguage = async (lang: Languages) => {
+  await switchUILang(lang);
+  localStorage.setItem('lang', lang);
+}
+
 export const initI18n = () => {
   const {subscribe, set} = writable<I18n>({
     lang: 'en',
@@ -66,7 +71,7 @@ export const initI18n = () => {
       const {lang}: Storage = browser ? localStorage : ({lang: 'en'} as unknown as Storage);
 
       if (lang === 'en') {
-        await switchUILang(lang);
+        await switchLanguage(lang);
 
         // No need to reload the store
         return;
@@ -75,7 +80,7 @@ export const initI18n = () => {
       const bundle: I18n = await loadLanguage(lang);
       set(bundle);
 
-      await switchUILang(lang);
+      await switchLanguage(lang);
     },
 
     switchLang: async (lang: Languages) => {
@@ -84,7 +89,7 @@ export const initI18n = () => {
 
       localStorage.setItem('lang', lang);
 
-      await switchUILang(lang);
+      await switchLanguage(lang);
     }
   };
 };
