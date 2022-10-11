@@ -3,7 +3,7 @@
   import {loadSignIn} from '$lib/services/auth.services';
   import {i18n} from '$lib/stores/i18n.store';
   import {Spinner} from '@papyrs/ui';
-  import {icConfig} from '../../../lib/utils/env.utils';
+  import {icConfig} from '$lib/utils/env.utils';
 
   let loaded = false;
 
@@ -43,7 +43,7 @@
 </main>
 
 <style lang="scss">
-  :global(:root[theme]) {
+  :global(:root[theme]), :global(:root) {
     background: transparent;
 
     main {

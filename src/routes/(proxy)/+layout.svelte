@@ -10,7 +10,7 @@
 {/await}
 
 <style lang="scss" global>
-  @use '../../../../node_modules/@papyrs/ui/styles/mixins/main';
+  @use '../../../node_modules/@papyrs/ui/styles/mixins/main';
 
   @import '@papyrs/ui/styles/global.scss';
 

@@ -1,13 +1,9 @@
-import {browser} from '$app/environment';
-import {Theme} from '$lib/types/theme';
+import type {Theme} from '$lib/types/theme';
 import {applyTheme} from '$lib/utils/theme.utils';
 import {writable} from 'svelte/store';
+import {getLocalStorageTheme} from '$lib/utils/local-storage.utils';
 
-const {theme: storageTheme}: Storage = browser
-  ? localStorage
-  : ({theme: undefined} as unknown as Storage);
-
-const initialTheme: Theme = storageTheme ?? Theme.PAPAYA_WHIP;
+const initialTheme: Theme = getLocalStorageTheme();
 applyTheme(initialTheme);
 
 export const initTheme = () => {

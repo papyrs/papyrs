@@ -1,7 +1,8 @@
-import {browser} from '$app/environment';
+import type {Languages} from '@papyrs/stylo';
 import {switchLang as switchUILang} from '@papyrs/ui';
 import {writable} from 'svelte/store';
-import en from '../i18n/en.json';
+import en from '$lib/i18n/en.json';
+import {getLocalStorageLang, setLocalStorageItem} from '$lib/utils/local-storage.utils';
 
 const esI18n = async (): Promise<I18n> => {
   return {
@@ -55,8 +56,8 @@ const loadLanguage = (lang: Languages): Promise<I18n> => {
 
 const switchLanguage = async (lang: Languages) => {
   await switchUILang(lang);
-  localStorage.setItem('lang', lang);
-}
+  setLocalStorageItem({key: 'lang', value: lang});
+};
 
 export const initI18n = () => {
   const {subscribe, set} = writable<I18n>({
@@ -68,7 +69,7 @@ export const initI18n = () => {
     subscribe,
 
     init: async () => {
-      const {lang}: Storage = browser ? localStorage : ({lang: 'en'} as unknown as Storage);
+      const lang: Languages = getLocalStorageLang();
 
       if (lang === 'en') {
         await switchLanguage(lang);
@@ -86,8 +87,6 @@ export const initI18n = () => {
     switchLang: async (lang: Languages) => {
       const bundle: I18n = await loadLanguage(lang);
       set(bundle);
-
-      localStorage.setItem('lang', lang);
 
       await switchLanguage(lang);
     }
