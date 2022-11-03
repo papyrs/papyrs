@@ -18,8 +18,6 @@
   export let doc: Doc;
   export let interaction: CountInteraction | undefined;
 
-  $: (() => console.log(interaction))();
-
   let deleteDoc = false;
   let shareDoc: boolean;
 
