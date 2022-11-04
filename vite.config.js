@@ -12,7 +12,11 @@ const config = {
   define: {
     VITE_APP_VERSION: JSON.stringify(version),
     VITE_IC_FEED_CANISTER_SECRET: JSON.stringify(process.env.FEED_SECRET)
-  }
+  },
+  build: { target: "es2020" },
+  optimizeDeps: {
+    esbuildOptions: { target: "es2020", supported: { bigint: true } },
+  },
 };
 
 export default config;
