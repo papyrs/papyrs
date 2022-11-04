@@ -62,7 +62,7 @@
     "@deckdeckgo/studio": "^0.0.23",
     "@deckdeckgo/sync": "^0.0.39",
     "@papyrs/stylo": "^0.0.40",
-    "@papyrs/ui": "^0.0.7",
+    "@papyrs/ui": "^0.0.8",
     "@stencil/core": "^2.19.2",
     "web-social-share": "^9.1.0"
   }
