@@ -1,3 +1,9 @@
+# 0.0.19 (2022-11-04)
+
+### Features
+
+- sign-in on any blogspaces of Papyrs with the same identity
+
 # 0.0.18 (2022-09-18)
 
 ### Fix
