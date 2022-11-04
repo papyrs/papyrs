@@ -139,5 +139,9 @@
     "smart_contracts": "Smart contracts",
     "principal_id": "Su principal id",
     "cycles": "{0} se utilizan para pagar la ejecución de sus contratos inteligentes de contenedor que almacenan sus datos y proporcionan sus publicaciones de blog en la web. Si alguna vez tiene muy poca potencia informática, comuníquese con {1}."
+  },
+  "interaction": {
+    "like": "Like",
+    "dislike": "Eliminar Like"
   }
 }

@@ -12,8 +12,11 @@
   import {toastsError} from '$lib/stores/toasts.store';
   import {i18n} from '$lib/stores/i18n.store';
   import PostNoDelete from './PostNoDelete.svelte';
+  import type {CountInteraction} from '../../types/interaction';
+  import PostLikes from '$lib/components/posts/PostLikes.svelte';
 
   export let doc: Doc;
+  export let interaction: CountInteraction | undefined;
 
   let deleteDoc = false;
   let shareDoc: boolean;
@@ -55,6 +58,8 @@
   </div>
 
   <div class="toolbar">
+    <PostLikes {interaction} {doc} />
+
     {#if shareDoc}
       <SharePost {doc} />
     {/if}
@@ -77,5 +82,9 @@
   .active {
     box-shadow: 3px 3px var(--color-secondary);
     border: 2px solid var(--color-secondary);
+  }
+
+  .toolbar {
+    position: relative;
   }
 </style>

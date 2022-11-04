@@ -49,7 +49,11 @@
 
     <!-- Init theme as fast as possible -->
     <script>
-      document.documentElement.setAttribute('theme', localStorage.theme ?? 'papaya-whip');
+      try {
+        document.documentElement.setAttribute('theme', localStorage.theme ?? 'papaya-whip');
+      } catch (err) {
+        // We ignore the error until we can extra proxy/signin to auth.papy.rs
+      }
     </script>
 
     %sveltekit.head%

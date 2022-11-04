@@ -31,7 +31,7 @@
   },
   "sign_in": {
     "title": "Unleash the full power of Papyrs",
-    "overview": "By signing in you can save your posts online, publish them, and more.",
+    "overview": "By signing in you can publish blog posts online, interact with the community and more.",
     "internet_identity": "Sign in with Internet Identity"
   },
   "settings": {
@@ -139,5 +139,9 @@
     "smart_contracts": "Smart contracts",
     "principal_id": "Your principal id",
     "cycles": "{0} are used to pay for running your canister smart contracts which hold your data and provide your blog posts on the web. If you ever get too few computing power, reach out on {1}."
+  },
+  "interaction": {
+    "like": "Like",
+    "dislike": "Remove given like"
   }
 }

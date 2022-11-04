@@ -1,5 +1,6 @@
 import {browser} from '$app/environment';
 import type {Theme} from '$lib/types/theme';
+import {setLocalStorageItem} from "./local-storage.utils";
 
 export const applyTheme = (theme: Theme) => {
   if (!browser) {
@@ -13,7 +14,7 @@ export const applyTheme = (theme: Theme) => {
   const color: string = getComputedStyle(documentElement).getPropertyValue('--color-theme');
   head.children.namedItem('theme-color').setAttribute('content', color.trim());
 
-  localStorage.setItem('theme', theme);
+  setLocalStorageItem({key: 'theme', value: theme});
 };
 
 export const themeColor = (): string => {

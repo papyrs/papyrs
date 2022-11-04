@@ -1,6 +1,6 @@
 <script lang="ts">
-  import '../lib/themes/monaco.scss';
-  import '../lib/themes/print.scss';
+  import '../../lib/themes/monaco.scss';
+  import '../../lib/themes/print.scss';
 
   import {onDestroy, onMount} from 'svelte';
   import {initSync} from '@deckdeckgo/sync';
@@ -42,7 +42,7 @@
 {/await}
 
 <style lang="scss" global>
-  @use '../../node_modules/@papyrs/ui/styles/mixins/main';
+  @use '../../../node_modules/@papyrs/ui/styles/mixins/main';
 
   @import '@papyrs/ui/styles/global.scss';
 

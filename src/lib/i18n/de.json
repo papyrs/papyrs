@@ -139,5 +139,9 @@
     "smart_contracts": "Smart contracts",
     "principal_id": "Dein Principal id",
     "cycles": "{0} werden verwendet, um für die Ausführung deiner Canister Smart Contracts zu bezahlen, die deine Daten enthalten und Blog-Posts im Internet bereitstellen. Wenn du jemals zu wenig Rechenleistung bekommst, wendest du dich an {1}."
+  },
+  "interaction": {
+    "like": "Like",
+    "dislike": "Entferne gegebene Like"
   }
 }

@@ -2,7 +2,7 @@
   "name": "papyrs",
   "private": true,
   "description": "Blog on web3",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "author": "David Dal Busco <david@fluster.io>",
   "license": "AGPL-3.0-or-later",
   "type": "module",
@@ -55,15 +55,15 @@
     "url": "https://github.com/papyrs/papyrs/issues"
   },
   "dependencies": {
-    "@deckdeckgo/editor": "^8.2.0",
+    "@deckdeckgo/editor": "file:../../deckgo/deckdeckgo/utils/editor",
     "@deckdeckgo/highlight-code": "^4.4.0",
     "@deckdeckgo/offline": "^0.0.7",
     "@deckdeckgo/social-img": "^1.4.0",
     "@deckdeckgo/studio": "^0.0.23",
     "@deckdeckgo/sync": "^0.0.39",
-    "@papyrs/stylo": "^0.0.39",
-    "@papyrs/ui": "^0.0.4-1",
-    "@stencil/core": "^2.17.4",
+    "@papyrs/stylo": "^0.0.40",
+    "@papyrs/ui": "^0.0.7",
+    "@stencil/core": "^2.19.2",
     "web-social-share": "^9.1.0"
   }
 }
