@@ -33,7 +33,7 @@
 
 <svelte:window on:ddgLog={onDdgLog} on:ddgSignOut={idleSignOut} />
 
-{#await i18n.init() then}
+{#await i18n.init() then _}
   <slot />
 
   <Share />
