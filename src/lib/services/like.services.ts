@@ -1,5 +1,4 @@
-import type {Doc} from '@deckdeckgo/editor';
-import type {Interaction} from '@deckdeckgo/editor';
+import type {Doc, Interaction} from '@deckdeckgo/editor';
 import type {CountInteractions} from '../types/interaction';
 import {cloudProvider} from '../utils/providers.utils';
 
@@ -21,8 +20,8 @@ export const likeDislike = async ({
   docId,
   like
 }: {
-  docId: string,
-  like: Interaction | undefined
+  docId: string;
+  like: Interaction | undefined;
 }): Promise<Interaction> => {
   const {putInteraction} = await cloudProvider<{
     putInteraction: (params: {

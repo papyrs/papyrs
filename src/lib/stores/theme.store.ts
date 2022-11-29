@@ -1,7 +1,7 @@
 import type {Theme} from '$lib/types/theme';
+import {getLocalStorageTheme} from '$lib/utils/local-storage.utils';
 import {applyTheme} from '$lib/utils/theme.utils';
 import {writable} from 'svelte/store';
-import {getLocalStorageTheme} from '$lib/utils/local-storage.utils';
 
 const initialTheme: Theme = getLocalStorageTheme();
 applyTheme(initialTheme);

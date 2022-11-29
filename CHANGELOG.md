@@ -18,7 +18,7 @@
 
 ### Build
 
-- generate `sha256` for the CSP representation of the script tags 
+- generate `sha256` for the CSP representation of the script tags
 
 # 0.0.16 (2022-09-18)
 

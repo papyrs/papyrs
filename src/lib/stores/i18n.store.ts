@@ -1,8 +1,8 @@
+import en from '$lib/i18n/en.json';
+import {getLocalStorageLang, setLocalStorageItem} from '$lib/utils/local-storage.utils';
 import type {Languages} from '@papyrs/stylo';
 import {switchLang as switchUILang} from '@papyrs/ui';
 import {writable} from 'svelte/store';
-import en from '$lib/i18n/en.json';
-import {getLocalStorageLang, setLocalStorageItem} from '$lib/utils/local-storage.utils';
 
 const esI18n = async (): Promise<I18n> => {
   return {

@@ -1,12 +1,12 @@
 <script lang="ts">
-    import {Toasts} from '@papyrs/ui';
-    import {i18n} from '$lib/stores/i18n.store';
+  import {Toasts} from '@papyrs/ui';
+  import {i18n} from '$lib/stores/i18n.store';
 </script>
 
 {#await i18n.init() then}
-    <slot />
+  <slot />
 
-    <Toasts />
+  <Toasts />
 {/await}
 
 <style lang="scss" global>

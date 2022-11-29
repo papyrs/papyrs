@@ -43,7 +43,8 @@
 </main>
 
 <style lang="scss">
-  :global(:root[theme]), :global(:root) {
+  :global(:root[theme]),
+  :global(:root) {
     background: transparent;
 
     main {

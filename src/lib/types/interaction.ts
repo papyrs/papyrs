@@ -1,4 +1,4 @@
-import type {Interaction} from "@deckdeckgo/editor";
+import type {Interaction} from '@deckdeckgo/editor';
 
 export interface CountInteraction {
   countLikes: bigint;

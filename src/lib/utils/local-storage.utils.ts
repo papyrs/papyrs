@@ -1,6 +1,6 @@
 import {browser} from '$app/environment';
-import type {Languages} from '@papyrs/stylo';
 import {Theme} from '$lib/types/theme';
+import type {Languages} from '@papyrs/stylo';
 
 export const setLocalStorageItem = ({key, value}: {key: string; value: string}) => {
   try {

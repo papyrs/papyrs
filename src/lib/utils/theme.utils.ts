@@ -1,6 +1,6 @@
 import {browser} from '$app/environment';
 import type {Theme} from '$lib/types/theme';
-import {setLocalStorageItem} from "./local-storage.utils";
+import {setLocalStorageItem} from './local-storage.utils';
 
 export const applyTheme = (theme: Theme) => {
   if (!browser) {
