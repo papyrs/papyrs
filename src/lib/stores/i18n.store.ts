@@ -1,6 +1,5 @@
 import en from '$lib/i18n/en.json';
 import {getLocalStorageLang, setLocalStorageItem} from '$lib/utils/local-storage.utils';
-import type {Languages} from '@papyrs/stylo';
 import {switchLang as switchUILang} from '@papyrs/ui';
 import {writable} from 'svelte/store';
 
@@ -32,6 +31,13 @@ const jaI18n = async (): Promise<I18n> => {
   };
 };
 
+const zhCnI18n = async (): Promise<I18n> => {
+  return {
+    lang: 'zh-cn',
+    ...(await import(`../i18n/zh-cn.json`))
+  };
+};
+
 const enI18n = (): I18n => {
   return {
     lang: 'en',
@@ -49,6 +55,8 @@ const loadLanguage = (lang: Languages): Promise<I18n> => {
       return nlI18n();
     case 'ja':
       return jaI18n();
+    case 'zh-cn':
+      return zhCnI18n();
     default:
       return Promise.resolve(enI18n());
   }

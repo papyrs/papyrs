@@ -10,4 +10,5 @@
   <option value="es"> Español </option>
   <option value="nl"> Nederlands </option>
   <option value="ja"> 日本語 </option>
+  <option value="zh-cn"> 中国大陆 </option>
 </select>

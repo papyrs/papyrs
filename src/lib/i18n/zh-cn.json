@@ -122,7 +122,7 @@
     "cloud_pending": "保存中...",
     "cloud_init": "初始化中...",
     "info": "你做的每个更改都会自动保存到云上.",
-    "status": "云状态,
+    "status": "云状态",
     "wait": "请等待知道云同步完成"
   },
   "links": {
@@ -130,7 +130,7 @@
     "privacy_policy": "隐私条款"
   },
   "share": {
-    "content_by": "{0} 被 {1} 用 {2} 创建"，
+    "content_by": "{0} 被 {1} 用 {2} 创建",
     "content_no_author": "{0} 用 {1} 创建",
     "a_blog_post": "一个博客"
   },
