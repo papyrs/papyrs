@@ -1,0 +1,147 @@
+{
+  "core": {
+    "close": "关闭",
+    "loading": "加载中...",
+    "in_progress": "处理中...",
+    "yes": "是",
+    "no": "否",
+    "reset": "重置",
+    "ok": "确认",
+    "save": "保存",
+    "delete": "删除",
+    "sure": "你十分确定？",
+    "add": "增加",
+    "submit": "提交",
+    "cancel": "取消",
+    "got_it": "明白",
+    "back": "回退"
+  },
+  "nav": {
+    "menu": "菜单",
+    "sign_out": "退出",
+    "sign_in": "登录",
+    "ready_to_share": "准备分享？",
+    "settings": "设置",
+    "billing": "账单",
+    "more": "更多"
+  },
+  "menu": {
+    "assets": "资料",
+    "posts": "博客"
+  },
+  "sign_in": {
+    "title": "释放 Papyrs 的全部能量",
+    "overview": "登录后，你可以在线发布博客，跟社区交互以及更多...",
+    "internet_identity": "用Internet Identity登录"
+  },
+  "settings": {
+    "cannot_undone": "这个操作不能回退，一旦操作将永久删除你的用户。",
+    "type_ddg_to_confirm": "请输入{0}以确认",
+    "i_understand": "我明白，删除我的用户",
+    "customization": "定制",
+    "profile": "个人资料",
+    "access_settings": "{0} 访问个人资料和设置.",
+    "access_posts": "{0} 分享你的在线博客.",
+    "access_assets": "{0} 访问你的在线资料（图片和数据）.",
+    "name": "名字",
+    "email": "邮箱",
+    "newsletter": "给我发送新闻邮件",
+    "username": "用户名",
+    "danger_zone": "危险区域",
+    "no_way_back": "一旦你删除了你的用户，将无法回退，请确认.",
+    "delete_user": "删除我的用户",
+    "profile_picture": "个人资料图片",
+    "profile_picture_tips": "提示：最好用方块图图片",
+    "summary": "总结",
+    "bio": "你的简介或自我介绍",
+    "custom": "定制",
+    "custom_url": "你的网站或任何网址（比如：{0})",
+    "switch_theme": "切换主题颜色为 {0}",
+    "no_delete": "正在编辑的文档无法删除.",
+    "profile_publish_info": "你的个人资料显示在你的博客里，当你发布文章和名字就会公开显示给所有人."
+  },
+  "dashboard": {
+    "published": "已发布的",
+    "edited": "编辑过的"
+  },
+  "editor": {
+    "your_collection_empty": "你的收藏夹是空的.",
+    "languages": "语言",
+    "language": "语言",
+    "display_line_number": "显示行号码",
+    "action_cannot_undone": "这个操作不能回退",
+    "delete_question": "删除?",
+    "code": "代码",
+    "gifs": "GIFs",
+    "stock_photo": "Unsplash",
+    "photos_by_unsplash": "Photos by Unsplash",
+    "searching": "搜索中",
+    "help": "帮助",
+    "share": "分享",
+    "export": "导出",
+    "search_term": "查询条件",
+    "upload_image": "上传一个新图片",
+    "unplash_credit": "照片 by {0} on {1}",
+    "edit_code": "编辑代码",
+    "delete_code": "删除代码",
+    "edit_excalidraw": "编辑 Excalidraw"
+  },
+  "publish_done": {
+    "hooray": "万岁",
+    "did_it": "你做到了",
+    "applause": "鼓掌",
+    "thumbs_up": "竖大拇指",
+    "post_published": "你的文章已经发布.",
+    "share": "{0} 它给世界!"
+  },
+  "publish_edit": {
+    "title_max_chars": "标题应该为拉丁字母，阿拉伯数字以及空格，且长度不超过 {0} 字符.",
+    "description": "描述（可选）",
+    "tags": "标签(可选)",
+    "title": "标题",
+    "publish_now": "发布",
+    "canonical_url": "网址(可选)",
+    "language": "语言（可选，默认是英文）",
+    "submit_feed": "把博客分享到社区",
+    "submit_feed_info": "如果你选择加入（可选），博客会被提交到Papyrs去通过我们不同的渠道（Twitter,Discord等等）宣传，并且也通过我们的\"Feed\"的智能合约形式提供给开发者使用。未来也会被分享到其他创作者平台供阅读.",
+    "submit_feed_done": "博客已经提交到 Papyrs",
+    "update_published": "更新已经发布的博客",
+    "update_now": "更新"
+  },
+  "tools": {
+    "new": "创建",
+    "open": "打开",
+    "user": "用户",
+    "profile_image": "个人资料照片"
+  },
+  "sync": {
+    "cloud": "云",
+    "cloud_error": "云同步出错 <br/><br/>如果错误始终存在，请试着重新加载 <a href=\"/posts\">post</a> 或联系.",
+    "cloud_in_progress": "保存中...",
+    "cloud_idle": "所有的更改已经保存.",
+    "cloud_pending": "保存中...",
+    "cloud_init": "初始化中...",
+    "info": "你做的每个更改都会自动保存到云上.",
+    "status": "云状态,
+    "wait": "请等待知道云同步完成"
+  },
+  "links": {
+    "terms_of_use": "使用守则",
+    "privacy_policy": "隐私条款"
+  },
+  "share": {
+    "content_by": "{0} 被 {1} 用 {2} 创建"，
+    "content_no_author": "{0} 用 {1} 创建",
+    "a_blog_post": "一个博客"
+  },
+  "billing": {
+    "beta": "在还是Beta版本期间，Papyrs是免费使用的，最终我们会引入订阅模式和选项，通过这个你可以从内容发布中获利.",
+    "smart_contracts": "智能合约",
+    "principal_id": "你的 principal id",
+    "cycles": "{0} 是用于支付那些你保存数据并提供服务的智能合约费用。如果任何时候你遇到过低能量，请联系 {1}."
+  },
+  "interaction": {
+    "like": "喜欢",
+    "dislike": "不喜欢"
+  }
+}
