@@ -1,3 +1,15 @@
+# 0.0.21 (2022-12-17)
+
+### Features
+
+- support for simplified Chinese
+
+# 0.0.20 (2022-11-11)
+
+### Features
+
+- blockquote plugin - i.e. author can now add blockquotes to their content
+
 # 0.0.19 (2022-11-04)
 
 ### Features
