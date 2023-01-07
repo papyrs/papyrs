@@ -29,7 +29,7 @@ Here are some useful links:
 This repo is the web editor of Papyrs. It can be used as a standalone app but uses other projects we are developing to be fully deployed:
 
 - [IC](https://github.com/papyrs/ic): canisters and sign-in providers
-- [CDN](https://github.com/papyrs/cdn): libraries and assets we are using accross the platform
+- [CDN](https://github.com/papyrs/cdn): libraries and assets we are using across the platform
 - [Unsplash-proxy](https://github.com/papyrs/unsplash-proxy): a proxy we have to use to query Unsplash
 - [Stylo](https://github.com/papyrs/stylo): another kind of rich text editor
 - [Kit](https://github.com/papyrs/kit): the templates for the blog posts we deploy for the users
