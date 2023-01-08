@@ -1,3 +1,10 @@
+# 0.0.22 (2023-01-08)
+
+### Fix
+
+- delete blog post feature
+- various typo in Chinese translation and documentation
+
 # 0.0.21 (2022-12-17)
 
 ### Features
