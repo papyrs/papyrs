@@ -29,18 +29,18 @@ const config = {
             'self',
             'data:',
             'blob:',
-            'https://cdn.papy.rs',
+            'https://cdn.deckdeckgo.com',
             'https://media.tenor.com/',
             'https://images.unsplash.com/',
             'https://*.raw.ic0.app'
           ],
           'manifest-src': ['self'],
-          'style-src': ['self', 'unsafe-inline', 'https://cdn.papy.rs'],
-          'font-src': ['self', 'https://cdn.papy.rs'],
+          'style-src': ['self', 'unsafe-inline', 'https://cdn.deckdeckgo.com'],
+          'font-src': ['self', 'https://cdn.deckdeckgo.com'],
           'script-src': [
             'self',
             'unsafe-eval',
-            'https://cdn.papy.rs/',
+            'https://cdn.deckdeckgo.com/',
             'https://tuwbw-byaaa-aaaad-qblpq-cai.raw.ic0.app/',
             '{{EXTRA_SHAS}}'
           ],
