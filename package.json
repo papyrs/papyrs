@@ -22,7 +22,7 @@
     "@deckdeckgo/excalidraw": "^1.2.0",
     "@deckdeckgo/monaco-editor": "^1.5.0",
     "@sveltejs/adapter-static": "^2.0.1",
-    "@sveltejs/kit": "^1.9.0",
+    "@sveltejs/kit": "^1.9.1",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "autoprefixer": "^10.4.13",
@@ -62,7 +62,7 @@
     "@deckdeckgo/studio": "^0.0.23",
     "@deckdeckgo/sync": "^0.0.40",
     "@papyrs/stylo": "^0.0.42",
-    "@papyrs/ui": "^0.0.11-1",
+    "@papyrs/ui": "^0.0.12",
     "@stencil/core": "^2.19.2",
     "web-social-share": "^9.1.0"
   }
