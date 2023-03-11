@@ -106,4 +106,4 @@ dfx canister --network ic call "undmj-fiaaa-aaaan-qaocq-cai" list --query
 
 The function has an optional filter parameter that can be used to select a subset of entries. Notably a `storageId` (of type `Principal`).
 
-e.g. David's blog URL is `https://6zvwc-sqaaa-aaaal-aalma-cai.raw.ic0.app/` so `6zvwc-sqaaa-aaaal-aalma-cai` can be used to select only David's blog posts.
+e.g. David's blog URL is `https://6zvwc-sqaaa-aaaal-aalma-cai.raw.icp0.io/` so `6zvwc-sqaaa-aaaal-aalma-cai` can be used to select only David's blog posts.

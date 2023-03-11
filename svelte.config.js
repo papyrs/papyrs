@@ -32,7 +32,8 @@ const config = {
             'https://cdn.deckdeckgo.com',
             'https://media.tenor.com/',
             'https://images.unsplash.com/',
-            'https://*.raw.ic0.app'
+            'https://*.raw.ic0.app',
+            'https://*.raw.icp0.io'
           ],
           'manifest-src': ['self'],
           'style-src': ['self', 'unsafe-inline', 'https://cdn.deckdeckgo.com'],
@@ -42,12 +43,15 @@ const config = {
             'unsafe-eval',
             'https://cdn.deckdeckgo.com/',
             'https://tuwbw-byaaa-aaaad-qblpq-cai.raw.ic0.app/',
+            'https://tuwbw-byaaa-aaaad-qblpq-cai.raw.icp0.io/',
             '{{EXTRA_SHAS}}'
           ],
           'connect-src': [
             'blob:',
             'https://ic0.app',
+            'https://icp0.io',
             'https://*.raw.ic0.app',
+            'https://*.raw.icp0.io',
             'https://us-central1-unsplash-proxy.cloudfunctions.net/',
             'https://api.tenor.com/',
             'https://images.unsplash.com/',
