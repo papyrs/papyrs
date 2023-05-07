@@ -41,9 +41,7 @@
 
 <main>
   <section class="overview">
-    <h1>{$i18n.sign_in.title}</h1>
-
-    <p>{$i18n.sign_in.overview}</p>
+    <p>{@html $i18n.sign_in.deprecated}</p>
   </section>
 
   <section class="sign-in">
@@ -104,6 +102,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    max-width: 400px;
 
     @media (min-width: 768px) {
       flex-grow: unset;

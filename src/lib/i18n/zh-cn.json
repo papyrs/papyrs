@@ -32,7 +32,8 @@
   "sign_in": {
     "title": "释放 Papyrs 的全部能量",
     "overview": "登录后，你可以在线发布博客，跟社区交互以及更多...",
-    "internet_identity": "用Internet Identity登录"
+    "internet_identity": "用Internet Identity登录",
+    "deprecated": "Hi 👋, Papyrs is <strong>deprecated</strong>.<br/>Sign-in is restricted to existing users."
   },
   "settings": {
     "cannot_undone": "这个操作不能回退，一旦操作将永久删除你的用户。",

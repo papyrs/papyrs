@@ -32,7 +32,8 @@
   "sign_in": {
     "title": "Papyrsをフル活用する",
     "overview": "サインインすることで、投稿をオンラインで保存したり、公開したりできるようになります。",
-    "internet_identity": "Internet Identity でサインイン"
+    "internet_identity": "Internet Identity でサインイン",
+    "deprecated": "Hi 👋, Papyrs is <strong>deprecated</strong>.<br/>Sign-in is restricted to existing users."
   },
   "settings": {
     "cannot_undone": "この操作は元に戻すことができません。これによりあなたのユーザー情報は永久に削除されます。",

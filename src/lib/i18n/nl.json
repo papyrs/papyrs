@@ -32,7 +32,8 @@
   "sign_in": {
     "title": "Unleash the full power of Papyrs",
     "overview": "Door u aan te melden kunt u uw berichten online opslaan, publiceren en meer.",
-    "internet_identity": "Log in met Internet Identity"
+    "internet_identity": "Log in met Internet Identity",
+    "deprecated": "Hi 👋, Papyrs is <strong>deprecated</strong>.<br/>Sign-in is restricted to existing users."
   },
   "settings": {
     "cannot_undone": "Deze actie kan niet ongedaan gemaakt worden. Hiermee wordt uw gebruiker definitief verwijderd.",

@@ -50,6 +50,15 @@ export const idleSignOut = async () => {
   });
 };
 
+export const initUserError = async ({detail: err}: CustomEvent<Error>) => {
+  await signUserOut({clearLocalEdit: false});
+
+  toastsError({
+    text: 'Cannot initialize the user.',
+    detail: err
+  });
+};
+
 export const initAuth = async () => {
   try {
     await initAuthSync(icConfig());

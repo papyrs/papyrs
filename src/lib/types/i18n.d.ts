@@ -39,6 +39,7 @@ interface I18nSign_in {
   title: string;
   overview: string;
   internet_identity: string;
+  deprecated: string;
 }
 
 interface I18nSettings {
