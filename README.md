@@ -17,6 +17,10 @@
 
 [Papyrs] is an open-source, privacy-first, decentralized blogging platform that lives 100% on chain. Papyrs runs on the [Internet Computer](https://smartcontracts.org/), the world's first blockchain that runs at web speed and serves content on the web.
 
+### 👀 Deprecated
+
+[Papyrs] is still available for use, but new user sign-ups have been disabled. The platform is no longer being actively developed or maintained.
+
 ### Links & Projects
 
 Here are some useful links:

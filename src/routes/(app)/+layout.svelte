@@ -7,7 +7,7 @@
   import {cloudConfig, jszipConfig} from '$lib/utils/env.utils';
   import type {Log} from '@deckdeckgo/editor';
   import {logs} from '$lib/stores/logs.store';
-  import {idleSignOut, initAuth} from '$lib/services/auth.services';
+  import {idleSignOut, initAuth, initUserError} from '$lib/services/auth.services';
   import {Toasts} from '@papyrs/ui';
   import Share from '$lib/components/share/Share.svelte';
   import Busy from '$lib/components/core/Busy.svelte';
@@ -31,7 +31,10 @@
   const onDdgLog = ({detail}: CustomEvent<Log>) => ($logs = [...$logs, detail].slice(-100));
 </script>
 
-<svelte:window on:ddgLog={onDdgLog} on:ddgSignOut={idleSignOut} />
+<svelte:window
+  on:ddgLog={onDdgLog}
+  on:ddgSignOut={idleSignOut}
+  on:ddgInitUserError={initUserError} />
 
 {#await i18n.init() then _}
   <slot />

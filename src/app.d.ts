@@ -19,6 +19,7 @@ declare namespace svelte.JSX {
   interface HTMLAttributes<T> {
     onddgLog?: (event: any) => any;
     onddgSignOut?: (event: any) => any;
+    onddgInitUserError?: (event: any) => any;
     onpapyShare?: (event: any) => any;
     onsubmit?: (event: any) => any;
     onpapyPublish?: (event: any) => any;

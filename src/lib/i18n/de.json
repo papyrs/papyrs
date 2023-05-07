@@ -32,7 +32,8 @@
   "sign_in": {
     "title": "Unleash the full power of Papyrs",
     "overview": "Wenn du dich anmeldest, kannst du deine Beiträge online speichern, veröffentlichen und vieles mehr.",
-    "internet_identity": "Log in mit Internet Identity"
+    "internet_identity": "Log in mit Internet Identity",
+    "deprecated": "Hi 👋, Papyrs is <strong>deprecated</strong>.<br/>Sign-in is restricted to existing users."
   },
   "settings": {
     "cannot_undone": "Diese Aktion kann nicht rückgängig gemacht werden. Damit wird deinen Benutzer dauerhaft gelöscht.",
