@@ -15,7 +15,7 @@
 
 ---
 
-## ⚠️ Deprecated
+### ⚠️ Deprecated
 
 [Papyrs] is still available for use, but new user sign-ups have been disabled. The platform is no longer being actively developed or maintained.
 
