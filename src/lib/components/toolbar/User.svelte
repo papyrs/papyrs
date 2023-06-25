@@ -36,27 +36,29 @@
   {#if $sync.dirty}
     <Dirty />
   {:else}
-    <button
-      type="button"
-      role="menuitem"
-      aria-haspopup="menu"
-      on:click={async () => await goto('/profile')}
-      class="menu">
-      <IconUser />
-      <span>{$i18n.nav.profile}</span>
-    </button>
-
     {#if $auth.loggedIn}
       <button
         type="button"
         role="menuitem"
         aria-haspopup="menu"
-        on:click={async () => await goto('/settings')}
+        on:click={async () => await goto('/profile')}
         class="menu">
-        <IconSettings />
-        <span>{$i18n.nav.settings}</span>
+        <IconUser />
+        <span>{$i18n.nav.profile}</span>
       </button>
+    {/if}
 
+    <button
+      type="button"
+      role="menuitem"
+      aria-haspopup="menu"
+      on:click={async () => await goto('/settings')}
+      class="menu">
+      <IconSettings />
+      <span>{$i18n.nav.settings}</span>
+    </button>
+
+    {#if $auth.loggedIn}
       <button
         type="button"
         role="menuitem"

@@ -4,11 +4,16 @@
   import {i18n} from '$lib/stores/i18n.store';
   import SignIn from '$lib/components/core/SignIn.svelte';
   import Settings from '$lib/components/settings/Settings.svelte';
+  import Customization from '$lib/components/profile/Customization.svelte';
 </script>
 
 <Nav />
 
 <main>
+  <section>
+    <Customization />
+  </section>
+
   {#if !$auth.authUser}
     <SignIn text={$i18n.profile.access_settings} />
   {:else}
