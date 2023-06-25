@@ -1,8 +1,8 @@
 <script lang="ts">
   import Nav from '$lib/components/core/Nav.svelte';
-  import Profile from '$lib/components/settings/Profile.svelte';
-  import DeleteUser from '$lib/components/settings/DeleteUser.svelte';
-  import Customization from '$lib/components/settings/Customization.svelte';
+  import Profile from '$lib/components/profile/Profile.svelte';
+  import DeleteUser from '$lib/components/profile/DeleteUser.svelte';
+  import Customization from '$lib/components/profile/Customization.svelte';
   import {auth} from '$lib/stores/auth.store';
 </script>
 

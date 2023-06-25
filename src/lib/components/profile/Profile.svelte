@@ -1,7 +1,7 @@
 <script lang="ts">
   import {i18n} from '$lib/stores/i18n.store';
   import Avatar from '$lib/components/core/Avatar.svelte';
-  import SocialInput from '$lib/components/settings/SocialInput.svelte';
+  import SocialInput from '$lib/components/profile/SocialInput.svelte';
   import {user} from '$lib/stores/user.store';
   import {i18nFormat} from '$lib/utils/i18n.utils';
   import {updateProfile} from '$lib/services/settings.services';

@@ -16,7 +16,7 @@
 
 <main>
   {#if !$auth.authUser}
-    <SignIn text={$i18n.settings.access_assets} />
+    <SignIn text={$i18n.profile.access_assets} />
   {:else}
     <Assets on:papySelectAsset={openAsset}>
       <h1 slot="title">{$i18n.menu.assets}</h1>

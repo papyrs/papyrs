@@ -10,7 +10,7 @@
 
 <main>
   {#if !$auth.authUser}
-    <SignIn text={$i18n.settings.access_posts} />
+    <SignIn text={$i18n.profile.access_posts} />
   {:else}
     <Posts />
   {/if}
