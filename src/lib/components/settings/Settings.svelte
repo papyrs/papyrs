@@ -7,7 +7,7 @@
   import {getPrincipal} from '$lib/services/auth.services';
   import type {Principal} from '$lib/types/ic';
   import {Spinner} from '@papyrs/ui';
-  import AddController from "$lib/components/settings/AddController.svelte";
+  import AddController from '$lib/components/settings/AddController.svelte';
 
   let settings: {
     label: string;
@@ -64,7 +64,7 @@
     await initSettings();
 
     loading = false;
-  }
+  };
 
   onMount(async () => {
     await Promise.all([initSettings(), initPrincipal()]);
@@ -84,11 +84,13 @@
         <p>Balance: {cycles} cycles</p>
         <p>Canister id: {canisterId}</p>
 
-        <p class="controllers">Controllers:</p>
+        <p>Controllers:</p>
 
-        {#each controllers as controller}
-          <p>{controller.toText()}</p>
-        {/each}
+        <ul>
+          {#each controllers as controller}
+            <li>{controller.toText()}</li>
+          {/each}
+        </ul>
       </article>
     {/each}
   </div>
@@ -107,6 +109,12 @@
   .grid {
     @include grid.posts;
 
+    grid-template-columns: 1fr;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, calc((100% - (1 * 0.75rem)) / 2));
+    }
+
     margin-bottom: 1.45rem;
   }
 
@@ -114,7 +122,9 @@
     @include card.card(false);
   }
 
-  .controllers {
-    padding: var(--padding) 0 0;
+  ul {
+    font-size: var(--font-size-very-small);
+    margin: 0;
+    padding: 0 0 0 1rem;
   }
 </style>
