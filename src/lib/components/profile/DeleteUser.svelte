@@ -40,22 +40,22 @@
   };
 </script>
 
-<h1>{$i18n.settings.danger_zone}</h1>
-<p>{$i18n.settings.no_way_back}</p>
+<h1>{$i18n.profile.danger_zone}</h1>
+<p>{$i18n.profile.no_way_back}</p>
 
 <button
   type="button"
   disabled={saving || $auth.authUser === null || !$auth.loggedIn}
   on:click={() => (visible = true)}>
-  {$i18n.settings.delete_user}
+  {$i18n.profile.delete_user}
 </button>
 
 <Popover bind:visible center={true} closeButton={true}>
   <div class="content">
-    <p>{$i18n.settings.cannot_undone}</p>
+    <p>{$i18n.profile.cannot_undone}</p>
 
     <p class="please">
-      <I18n text={$i18n.settings.type_ddg_to_confirm} placeholder={`{0}`}
+      <I18n text={$i18n.profile.type_ddg_to_confirm} placeholder={`{0}`}
         ><strong>papyrs</strong></I18n>
     </p>
 
@@ -63,14 +63,14 @@
       <input
         bind:value={confirmText}
         type="text"
-        aria-label={`${i18nFormat($i18n.settings.type_ddg_to_confirm, [
+        aria-label={`${i18nFormat($i18n.profile.type_ddg_to_confirm, [
           {placeholder: '{0}', value: 'papyrs'}
         ])}`}
         maxlength={64}
         disabled={saving} />
 
       <button type="submit" disabled={saving || !validConfirm}>
-        {$i18n.settings.i_understand}
+        {$i18n.profile.i_understand}
       </button>
     </form>
   </div>

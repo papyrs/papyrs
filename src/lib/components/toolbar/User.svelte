@@ -1,6 +1,6 @@
 <script lang="ts">
   import Avatar from '$lib/components/core/Avatar.svelte';
-  import {Popover, Button} from '@papyrs/ui';
+  import {Popover, Button, IconUser} from '@papyrs/ui';
   import {user} from '$lib/stores/user.store';
   import {i18n} from '$lib/stores/i18n.store';
   import {signUserOut} from '$lib/services/auth.services';
@@ -36,6 +36,18 @@
   {#if $sync.dirty}
     <Dirty />
   {:else}
+    {#if $auth.loggedIn}
+      <button
+        type="button"
+        role="menuitem"
+        aria-haspopup="menu"
+        on:click={async () => await goto('/profile')}
+        class="menu">
+        <IconUser />
+        <span>{$i18n.nav.profile}</span>
+      </button>
+    {/if}
+
     <button
       type="button"
       role="menuitem"
@@ -47,16 +59,6 @@
     </button>
 
     {#if $auth.loggedIn}
-      <button
-        type="button"
-        role="menuitem"
-        aria-haspopup="menu"
-        on:click={async () => await goto('/billing')}
-        class="menu">
-        <IconCreditCard />
-        <span>{$i18n.nav.billing}</span>
-      </button>
-
       <button
         type="button"
         role="menuitem"

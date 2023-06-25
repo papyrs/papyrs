@@ -25,3 +25,8 @@ export interface CanistersBalance {
   data: CanisterBalance;
   storage: CanisterBalance;
 }
+
+export interface CanistersControllers {
+  data: Principal[];
+  storage: Principal[];
+}

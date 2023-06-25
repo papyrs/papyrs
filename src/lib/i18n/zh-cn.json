@@ -21,8 +21,8 @@
     "sign_out": "退出",
     "sign_in": "登录",
     "ready_to_share": "准备分享？",
-    "settings": "设置",
-    "billing": "账单",
+    "profile": "Profile",
+    "settings": "Settings",
     "more": "更多"
   },
   "menu": {
@@ -35,7 +35,7 @@
     "internet_identity": "用Internet Identity登录",
     "deprecated": "Hi 👋, Papyrs is <strong>deprecated</strong>.<br/>Sign-in is restricted to existing users."
   },
-  "settings": {
+  "profile": {
     "cannot_undone": "这个操作不能回退，一旦操作将永久删除你的用户。",
     "type_ddg_to_confirm": "请输入{0}以确认",
     "i_understand": "我明白，删除我的用户",
@@ -135,11 +135,9 @@
     "content_no_author": "{0} 用 {1} 创建",
     "a_blog_post": "一个博客"
   },
-  "billing": {
-    "beta": "在还是Beta版本期间，Papyrs是免费使用的，最终我们会引入订阅模式和选项，通过这个你可以从内容发布中获利.",
+  "settings": {
     "smart_contracts": "智能合约",
-    "principal_id": "你的 principal id",
-    "cycles": "{0} 是用于支付那些你保存数据并提供服务的智能合约费用。如果任何时候你遇到过低能量，请联系 {1}."
+    "principal_id": "你的 principal id"
   },
   "interaction": {
     "like": "喜欢",

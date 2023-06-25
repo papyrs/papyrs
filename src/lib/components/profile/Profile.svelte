@@ -1,7 +1,7 @@
 <script lang="ts">
   import {i18n} from '$lib/stores/i18n.store';
   import Avatar from '$lib/components/core/Avatar.svelte';
-  import SocialInput from '$lib/components/settings/SocialInput.svelte';
+  import SocialInput from '$lib/components/profile/SocialInput.svelte';
   import {user} from '$lib/stores/user.store';
   import {i18nFormat} from '$lib/utils/i18n.utils';
   import {updateProfile} from '$lib/services/settings.services';
@@ -50,8 +50,8 @@
   let custom: HTMLInputElement | undefined;
 </script>
 
-<h1>{$i18n.settings.profile}</h1>
-<p>{$i18n.settings.profile_publish_info}</p>
+<h1>{$i18n.profile.profile}</h1>
+<p>{$i18n.profile.profile_publish_info}</p>
 
 <form
   on:submit={async ($event) => await handleSubmit($event)}
@@ -60,9 +60,9 @@
   }}>
   <input
     bind:value={name}
-    aria-label={$i18n.settings.name}
+    aria-label={$i18n.profile.name}
     name="title"
-    placeholder={$i18n.settings.name}
+    placeholder={$i18n.profile.name}
     type="text"
     maxlength={64}
     disabled={saving} />
@@ -78,7 +78,7 @@
 
   <textarea
     name="summary"
-    placeholder={$i18n.settings.bio}
+    placeholder={$i18n.profile.bio}
     rows={3}
     bind:value={summary}
     maxlength={192} />
@@ -107,10 +107,10 @@
   <SocialInput
     value={$user.social?.custom}
     bind:input={custom}
-    custom={`${i18nFormat($i18n.settings.custom_url, [
+    custom={`${i18nFormat($i18n.profile.custom_url, [
       {placeholder: '{0}', value: 'https://papy.rs'}
     ])}`}
-    arialLabel={$i18n.settings.custom}
+    arialLabel={$i18n.profile.custom}
     {saving} />
 
   <button type="submit" disabled={saving}>

@@ -21,8 +21,8 @@
     "sign_out": "Sign out",
     "sign_in": "Sign in",
     "ready_to_share": "Ready to share?",
+    "profile": "Profile",
     "settings": "Settings",
-    "billing": "Billing",
     "more": "More"
   },
   "menu": {
@@ -35,7 +35,7 @@
     "internet_identity": "Sign in with Internet Identity",
     "deprecated": "Hi 👋, Papyrs is <strong>deprecated</strong>.<br/>Sign-in is restricted to existing users."
   },
-  "settings": {
+  "profile": {
     "cannot_undone": "This action cannot be undone. This will permanently delete your user.",
     "type_ddg_to_confirm": "Please type {0} to confirm.",
     "i_understand": "I understand, delete my user",
@@ -135,11 +135,9 @@
     "content_no_author": "{0} created with {1}",
     "a_blog_post": "A blog post"
   },
-  "billing": {
-    "beta": "While in beta, Papyrs can be used free of charge. Ultimately we will introduce a subscription model and options that will allow you to monetize your content.",
+  "settings": {
     "smart_contracts": "Smart contracts",
-    "principal_id": "Your principal id",
-    "cycles": "{0} are used to pay for running your canister smart contracts which hold your data and provide your blog posts on the web. If you ever get too few computing power, reach out on {1}."
+    "principal_id": "Your principal id"
   },
   "interaction": {
     "like": "Like",

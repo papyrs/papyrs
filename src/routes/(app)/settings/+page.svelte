@@ -1,23 +1,30 @@
 <script lang="ts">
   import Nav from '$lib/components/core/Nav.svelte';
-  import Profile from '$lib/components/settings/Profile.svelte';
-  import DeleteUser from '$lib/components/settings/DeleteUser.svelte';
-  import Customization from '$lib/components/settings/Customization.svelte';
   import {auth} from '$lib/stores/auth.store';
+  import {i18n} from '$lib/stores/i18n.store';
+  import SignIn from '$lib/components/core/SignIn.svelte';
+  import Settings from '$lib/components/settings/Settings.svelte';
+  import Customization from '$lib/components/profile/Customization.svelte';
 </script>
 
 <Nav />
 
 <main>
-  <section class="profile">
+  <section>
     <Customization />
-
-    {#if $auth.loggedIn}
-      <Profile />
-    {/if}
-
-    {#if $auth.loggedIn}
-      <DeleteUser />
-    {/if}
   </section>
+
+  {#if !$auth.authUser}
+    <SignIn text={$i18n.profile.access_settings} />
+  {:else}
+    <section>
+      <Settings />
+    </section>
+  {/if}
 </main>
+
+<style lang="scss">
+  section {
+    margin-bottom: 2.45rem;
+  }
+</style>

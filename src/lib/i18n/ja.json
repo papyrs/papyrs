@@ -21,8 +21,8 @@
     "sign_out": "サインアウト",
     "sign_in": "サインイン",
     "ready_to_share": "シェアする準備はできましたか？",
-    "settings": "設定",
-    "billing": "お支払い",
+    "profile": "Profile",
+    "settings": "Settings",
     "more": "さらに表示"
   },
   "menu": {
@@ -35,7 +35,7 @@
     "internet_identity": "Internet Identity でサインイン",
     "deprecated": "Hi 👋, Papyrs is <strong>deprecated</strong>.<br/>Sign-in is restricted to existing users."
   },
-  "settings": {
+  "profile": {
     "cannot_undone": "この操作は元に戻すことができません。これによりあなたのユーザー情報は永久に削除されます。",
     "type_ddg_to_confirm": "{0} を入力して確定してください。",
     "i_understand": "理解しました、ユーザー情報を削除します。",
@@ -135,11 +135,9 @@
     "content_no_author": "{0} は {1} で作成されました",
     "a_blog_post": "ブログ記事"
   },
-  "billing": {
-    "beta": "ベータ版の間、Papyrs は無料で使用できます。最終的にはサブスクリプションモデルや、コンテンツを収益化できるようなオプションを導入する予定です。",
+  "settings": {
     "smart_contracts": "スマートコントラクト",
-    "principal_id": "あなたのプリンシパルID",
-    "cycles": "{0} は、あなたのデータを保持し、ウェブ上でブログ投稿を提供するキャニスタースマートコントラクトの実行料金を支払うために使用されます。もし計算能力が不足している場合は、{1} に連絡してください。"
+    "principal_id": "あなたのプリンシパルID"
   },
   "interaction": {
     "like": "Like",

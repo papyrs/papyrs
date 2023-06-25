@@ -12,7 +12,7 @@
     <button
       type="button"
       class={listTheme}
-      aria-label={`${i18nFormat($i18n.settings.switch_theme, [
+      aria-label={`${i18nFormat($i18n.profile.switch_theme, [
         {placeholder: '{0}', value: listTheme}
       ])}`}
       on:click={() => theme.select(listTheme)}
