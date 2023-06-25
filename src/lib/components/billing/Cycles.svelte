@@ -53,11 +53,11 @@
   onMount(async () => await Promise.all([initCycles(), initPrincipal()]));
 </script>
 
-<h1>{$i18n.nav.billing}</h1>
+<h1>{$i18n.nav.settings}</h1>
 
-<p>{$i18n.billing.beta}</p>
+<p>{$i18n.settings.beta}</p>
 
-<h2>{$i18n.billing.smart_contracts}</h2>
+<h2>{$i18n.settings.smart_contracts}</h2>
 
 <div class="grid">
   {#each cycles as { cycles, canisterId, label }}
@@ -70,10 +70,10 @@
   {/each}
 </div>
 
-<p>{$i18n.billing.principal_id}: {principal}</p>
+<p>{$i18n.settings.principal_id}: {principal}</p>
 
 <p>
-  {@html i18nFormat($i18n.billing.cycles, [
+  {@html i18nFormat($i18n.settings.cycles, [
     {
       placeholder: '{0}',
       value:

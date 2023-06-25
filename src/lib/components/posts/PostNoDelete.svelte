@@ -15,7 +15,7 @@
 
 <Popover bind:visible center={true}>
   <div class="content">
-    <p>{$i18n.settings.no_delete}</p>
+    <p>{$i18n.profile.no_delete}</p>
 
     <button type="button" on:click|stopPropagation={() => (visible = false)}>
       {$i18n.core.ok}

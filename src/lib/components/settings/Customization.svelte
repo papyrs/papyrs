@@ -5,6 +5,6 @@
   let selected = $i18n.lang;
 </script>
 
-<h1>{$i18n.settings.customization}</h1>
+<h1>{$i18n.profile.customization}</h1>
 
 <AppLang bind:selected on:change={async () => await i18n.switchLang(selected)} />

@@ -25,8 +25,8 @@ interface I18nNav {
   sign_out: string;
   sign_in: string;
   ready_to_share: string;
+  profile: string;
   settings: string;
-  billing: string;
   more: string;
 }
 
@@ -42,7 +42,7 @@ interface I18nSign_in {
   deprecated: string;
 }
 
-interface I18nSettings {
+interface I18nProfile {
   cannot_undone: string;
   type_ddg_to_confirm: string;
   i_understand: string;
@@ -151,7 +151,7 @@ interface I18nShare {
   a_blog_post: string;
 }
 
-interface I18nBilling {
+interface I18nSettings {
   beta: string;
   smart_contracts: string;
   principal_id: string;
@@ -169,7 +169,7 @@ interface I18n {
   nav: I18nNav;
   menu: I18nMenu;
   sign_in: I18nSign_in;
-  settings: I18nSettings;
+  profile: I18nProfile;
   dashboard: I18nDashboard;
   editor: I18nEditor;
   publish_done: I18nPublish_done;
@@ -178,6 +178,6 @@ interface I18n {
   sync: I18nSync;
   links: I18nLinks;
   share: I18nShare;
-  billing: I18nBilling;
+  settings: I18nSettings;
   interaction: I18nInteraction;
 }

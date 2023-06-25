@@ -21,8 +21,8 @@
     "sign_out": "Cerrar sesión",
     "sign_in": "Iniciar sesión",
     "ready_to_share": "¿Listo para compartir?",
-    "settings": "Ajustes",
-    "billing": "Transacciones",
+    "profile": "Profile",
+    "settings": "Settings",
     "more": "Más"
   },
   "menu": {
@@ -35,7 +35,7 @@
     "internet_identity": "Iniciar sesión con Internet Identity",
     "deprecated": "Hi 👋, Papyrs is <strong>deprecated</strong>.<br/>Sign-in is restricted to existing users."
   },
-  "settings": {
+  "profile": {
     "cannot_undone": "Esta acción no se puede deshacer. Esto eliminará permanentemente su usuario.",
     "type_ddg_to_confirm": "Por favor, escriba {0} para confirmar.",
     "i_understand": "Comprendo, borre mi usuario",
@@ -135,7 +135,7 @@
     "content_no_author": "{0} creada con {1}",
     "a_blog_post": "Un blog"
   },
-  "billing": {
+  "settings": {
     "beta": "Mientras está en versión beta, Papyrs se puede usar de forma gratuita. En última instancia, presentaremos un modelo de suscripción y opciones que le permitirán monetizar su contenido.",
     "smart_contracts": "Smart contracts",
     "principal_id": "Su principal id",
