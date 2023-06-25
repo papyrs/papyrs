@@ -12,3 +12,9 @@ export const canistersControllers = async (): Promise<CanistersControllers> => {
 
   return queryCanistersControllers();
 };
+
+export const setCanistersController = async (controller: string) => {
+  const {addCanistersController: updateAddCanistersController} = await cloudProvider();
+
+  await updateAddCanistersController(controller);
+};

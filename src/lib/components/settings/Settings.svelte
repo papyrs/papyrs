@@ -7,8 +7,9 @@
   import {getPrincipal} from '$lib/services/auth.services';
   import type {Principal} from '$lib/types/ic';
   import {Spinner} from '@papyrs/ui';
+  import AddController from "$lib/components/settings/AddController.svelte";
 
-  let cycles: {
+  let settings: {
     label: string;
     cycles: string;
     canisterId: string;
@@ -24,7 +25,7 @@
       const [{data, storage}, {data: dataControllers, storage: storageControllers}] =
         await Promise.all([canistersBalance(), canistersControllers()]);
 
-      cycles = [
+      settings = [
         {
           label: 'Data',
           cycles: formatCycles(data.balance),
@@ -57,6 +58,14 @@
     }
   };
 
+  const reloadSettings = async () => {
+    loading = true;
+
+    await initSettings();
+
+    loading = false;
+  }
+
   onMount(async () => {
     await Promise.all([initSettings(), initPrincipal()]);
 
@@ -68,7 +77,7 @@
   <h1>{$i18n.settings.smart_contracts}</h1>
 
   <div class="grid">
-    {#each cycles as { cycles, canisterId, label, controllers }}
+    {#each settings as { cycles, canisterId, label, controllers }}
       <article>
         <h3>{label}</h3>
 
@@ -85,6 +94,8 @@
   </div>
 
   <p>{$i18n.settings.principal_id}: {principal}</p>
+
+  <AddController on:papyControllerAdded={reloadSettings} />
 {:else}
   <Spinner />
 {/if}
