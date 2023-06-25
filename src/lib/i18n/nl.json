@@ -136,10 +136,8 @@
     "a_blog_post": "Een blogbericht"
   },
   "settings": {
-    "beta": "In bèta kan Papyrs gratis worden gebruikt. Uiteindelijk zullen we een subscription model en opties introduceren waarmee u inkomsten kunt genereren met uw inhoud.",
     "smart_contracts": "Smart contracts",
-    "principal_id": "Uw principal id",
-    "cycles": "{0} worden gebruikt om te betalen voor het uitvoeren van slimme contracten voor uw bus die uw gegevens bevatten en uw blogberichten op internet aanbieden. Als je ooit te weinig rekenkracht krijgt, neem dan contact op met {1}."
+    "principal_id": "Uw principal id"
   },
   "interaction": {
     "like": "Like",

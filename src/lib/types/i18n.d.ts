@@ -152,10 +152,8 @@ interface I18nShare {
 }
 
 interface I18nSettings {
-  beta: string;
   smart_contracts: string;
   principal_id: string;
-  cycles: string;
 }
 
 interface I18nInteraction {

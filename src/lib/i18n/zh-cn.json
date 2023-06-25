@@ -136,10 +136,8 @@
     "a_blog_post": "一个博客"
   },
   "settings": {
-    "beta": "在还是Beta版本期间，Papyrs是免费使用的，最终我们会引入订阅模式和选项，通过这个你可以从内容发布中获利.",
     "smart_contracts": "智能合约",
-    "principal_id": "你的 principal id",
-    "cycles": "{0} 是用于支付那些你保存数据并提供服务的智能合约费用。如果任何时候你遇到过低能量，请联系 {1}."
+    "principal_id": "你的 principal id"
   },
   "interaction": {
     "like": "喜欢",

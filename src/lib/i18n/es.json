@@ -136,10 +136,8 @@
     "a_blog_post": "Un blog"
   },
   "settings": {
-    "beta": "Mientras está en versión beta, Papyrs se puede usar de forma gratuita. En última instancia, presentaremos un modelo de suscripción y opciones que le permitirán monetizar su contenido.",
     "smart_contracts": "Smart contracts",
-    "principal_id": "Su principal id",
-    "cycles": "{0} se utilizan para pagar la ejecución de sus contratos inteligentes de contenedor que almacenan sus datos y proporcionan sus publicaciones de blog en la web. Si alguna vez tiene muy poca potencia informática, comuníquese con {1}."
+    "principal_id": "Su principal id"
   },
   "interaction": {
     "like": "Like",

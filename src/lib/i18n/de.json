@@ -136,10 +136,8 @@
     "a_blog_post": "Ein Blogbeitrag "
   },
   "settings": {
-    "beta": "Während der Betaphase kann Papyrs kostenlos verwendet werden. Letztendlich werden wir ein Subscriptionsmodel und Optionen einführen, mit denen du deine Inhalte monetarisieren kannst.",
     "smart_contracts": "Smart contracts",
-    "principal_id": "Dein Principal id",
-    "cycles": "{0} werden verwendet, um für die Ausführung deiner Canister Smart Contracts zu bezahlen, die deine Daten enthalten und Blog-Posts im Internet bereitstellen. Wenn du jemals zu wenig Rechenleistung bekommst, wendest du dich an {1}."
+    "principal_id": "Dein Principal id"
   },
   "interaction": {
     "like": "Like",

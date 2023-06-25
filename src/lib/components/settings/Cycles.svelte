@@ -53,11 +53,7 @@
   onMount(async () => await Promise.all([initCycles(), initPrincipal()]));
 </script>
 
-<h1>{$i18n.nav.settings}</h1>
-
-<p>{$i18n.settings.beta}</p>
-
-<h2>{$i18n.settings.smart_contracts}</h2>
+<h1>{$i18n.settings.smart_contracts}</h1>
 
 <div class="grid">
   {#each cycles as { cycles, canisterId, label }}
@@ -71,21 +67,6 @@
 </div>
 
 <p>{$i18n.settings.principal_id}: {principal}</p>
-
-<p>
-  {@html i18nFormat($i18n.settings.cycles, [
-    {
-      placeholder: '{0}',
-      value:
-        '<a href="https://internetcomputer.org/docs/current/concepts/tokens-cycles/" rel="external noopener norefferer">Cycles</a>'
-    },
-    {
-      placeholder: '{1}',
-      value:
-        '<a href="https://discord.gg/EV76WqDuZW" rel="external noopener norefferer">Discord</a>'
-    }
-  ])}
-</p>
 
 <style lang="scss">
   @use '@papyrs/ui/styles/mixins/grid';
