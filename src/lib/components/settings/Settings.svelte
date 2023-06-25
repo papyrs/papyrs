@@ -76,6 +76,8 @@
 {#if !loading}
   <h1>{$i18n.settings.smart_contracts}</h1>
 
+  <p>{$i18n.settings.principal_id}: {principal}</p>
+
   <div class="grid">
     {#each settings as { cycles, canisterId, label, controllers }}
       <article>
@@ -94,8 +96,6 @@
       </article>
     {/each}
   </div>
-
-  <p>{$i18n.settings.principal_id}: {principal}</p>
 
   <AddController on:papyControllerAdded={reloadSettings} />
 {:else}
