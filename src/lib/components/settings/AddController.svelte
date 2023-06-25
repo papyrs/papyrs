@@ -1,7 +1,6 @@
 <script lang="ts">
   import {auth} from '$lib/stores/auth.store';
   import {Popover} from '@papyrs/ui';
-  import {reloadApp} from '$lib/utils/nav.utils';
   import {toastsError, toastsShow} from '$lib/stores/toasts.store';
   import {busy} from '$lib/stores/busy.store';
   import {setCanistersController} from '$lib/services/admin.services';
